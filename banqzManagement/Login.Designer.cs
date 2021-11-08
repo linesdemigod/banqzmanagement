@@ -36,6 +36,12 @@
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.chkBoxSHowPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUser
@@ -173,12 +179,50 @@
             this.guna2Panel1.Size = new System.Drawing.Size(130, 414);
             this.guna2Panel1.TabIndex = 8;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox3.Image = global::banqzManagement.Properties.Resources.Minimize_icon;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(386, 4);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
+            this.guna2PictureBox3.Size = new System.Drawing.Size(21, 19);
+            this.guna2PictureBox3.TabIndex = 11;
+            this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox2.Image = global::banqzManagement.Properties.Resources.Maximize_icon1;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(413, 4);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(21, 19);
+            this.guna2PictureBox2.TabIndex = 10;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2PictureBox1.Image = global::banqzManagement.Properties.Resources.Close_icon1;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(440, 4);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(21, 19);
+            this.guna2PictureBox1.TabIndex = 9;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.ClientSize = new System.Drawing.Size(468, 414);
+            this.Controls.Add(this.guna2PictureBox3);
+            this.Controls.Add(this.guna2PictureBox2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.chkBoxSHowPassword);
             this.Controls.Add(this.btnLogin);
@@ -195,6 +239,9 @@
             this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Login_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +257,9 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2CheckBox chkBoxSHowPassword;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }
 

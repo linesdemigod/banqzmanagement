@@ -133,6 +133,17 @@ namespace banqzManagement
         {
             lastPoint = new Point(e.X, e.Y);
         }
+
         #endregion
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
