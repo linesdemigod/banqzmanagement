@@ -29,3 +29,5 @@ C:\Users\Banks\source\repos\banqzManagement\banqzManagement\bin\Debug\ComponentF
 C:\Users\Banks\source\repos\banqzManagement\banqzManagement\bin\Debug\Guna.UI2.dll
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.Dashboard.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.LoadingBar.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Officer.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.AddOfficer.resources
