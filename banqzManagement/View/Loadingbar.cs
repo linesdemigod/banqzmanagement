@@ -39,13 +39,13 @@ namespace banqzManagement.View
                 Dashboard waiter = new Dashboard();
                 waiter.Show();
                 this.Hide();
-                Login.L_role = "Cashier";
+                Login.L_role = "Officer";
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //progressBar1.Value += 2;
+
             guna2CircleProgressBar1.Value = guna2CircleProgressBar1.Value + 1;
 
             if (guna2CircleProgressBar1.Value >= 99)
