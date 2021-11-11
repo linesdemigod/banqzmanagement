@@ -38,5 +38,36 @@ namespace banqzManagement.Controller
             dta.Fill(ds);
             dt = ds.Tables[0];
         }
+
+        //Delete officer
+        public void deleteOfficer()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM officer WHERE officer_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }

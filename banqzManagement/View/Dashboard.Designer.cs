@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dashboardShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.PanelTopDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnPermission = new Guna.UI2.WinForms.Guna2Button();
@@ -37,9 +35,6 @@
             this.btnBackup = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
-            this.picMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PanelDasboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panelOverview = new Guna.UI2.WinForms.Guna2Panel();
@@ -65,9 +60,6 @@
             this.btnOfficer = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.PanelTopDashboard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.PanelDasboard.SuspendLayout();
             this.panelOverview.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -91,9 +83,6 @@
             this.PanelTopDashboard.Controls.Add(this.btnBackup);
             this.PanelTopDashboard.Controls.Add(this.guna2HtmlLabel1);
             this.PanelTopDashboard.Controls.Add(this.btnSettings);
-            this.PanelTopDashboard.Controls.Add(this.picMinimize);
-            this.PanelTopDashboard.Controls.Add(this.picMaximize);
-            this.PanelTopDashboard.Controls.Add(this.picClose);
             this.PanelTopDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelTopDashboard.Location = new System.Drawing.Point(201, 0);
             this.PanelTopDashboard.Name = "PanelTopDashboard";
@@ -180,48 +169,6 @@
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
             this.btnSettings.Size = new System.Drawing.Size(79, 44);
             this.btnSettings.TabIndex = 18;
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimize.Image = global::banqzManagement.Properties.Resources.Minimize_icon;
-            this.picMinimize.Location = new System.Drawing.Point(760, 6);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.ShadowDecoration.Parent = this.picMinimize;
-            this.picMinimize.Size = new System.Drawing.Size(21, 19);
-            this.picMinimize.TabIndex = 17;
-            this.picMinimize.TabStop = false;
-            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            this.picMinimize.MouseHover += new System.EventHandler(this.picMinimize_MouseHover);
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximize.Image = global::banqzManagement.Properties.Resources.Maximize_icon1;
-            this.picMaximize.Location = new System.Drawing.Point(787, 6);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.ShadowDecoration.Parent = this.picMaximize;
-            this.picMaximize.Size = new System.Drawing.Size(21, 19);
-            this.picMaximize.TabIndex = 16;
-            this.picMaximize.TabStop = false;
-            this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
-            this.picMaximize.MouseHover += new System.EventHandler(this.picMaximize_MouseHover);
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::banqzManagement.Properties.Resources.Close_icon1;
-            this.picClose.Location = new System.Drawing.Point(814, 6);
-            this.picClose.Name = "picClose";
-            this.picClose.ShadowDecoration.Parent = this.picClose;
-            this.picClose.Size = new System.Drawing.Size(21, 19);
-            this.picClose.TabIndex = 15;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            this.picClose.MouseHover += new System.EventHandler(this.picClose_MouseHover);
             // 
             // PanelDasboard
             // 
@@ -562,7 +509,6 @@
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.PanelTopDashboard);
             this.Controls.Add(this.guna2Panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -571,9 +517,6 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseMove);
             this.PanelTopDashboard.ResumeLayout(false);
             this.PanelTopDashboard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.PanelDasboard.ResumeLayout(false);
             this.panelOverview.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
@@ -591,7 +534,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2ShadowForm dashboardShadowForm;
         private Guna.UI2.WinForms.Guna2Panel PanelTopDashboard;
         private Guna.UI2.WinForms.Guna2Panel PanelDasboard;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
@@ -602,9 +544,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel PanelOfficer;
         private Guna.UI2.WinForms.Guna2Button btnOfficer;
-        private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
-        private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
-        private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private Guna.UI2.WinForms.Guna2Panel PanelReport;
         private Guna.UI2.WinForms.Guna2Button btnReport;
         private Guna.UI2.WinForms.Guna2Panel PanelProfile;
