@@ -85,5 +85,24 @@ namespace banqzManagement.View
 
             }
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            Profile user = new Profile();
+            user.TopLevel = false;
+            //this.WindowState = FormWindowState.Maximized;
+            user.FormBorderStyle = FormBorderStyle.None;
+            user.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(user);
+            panelMain.Tag = user;
+            user.BringToFront();
+            user.Show();
+        }
+
+        private void btnBackup_Click(object sender, EventArgs e)
+        {
+            Backup backup = new Backup();
+            backup.ShowDialog();
+        }
     }
 }

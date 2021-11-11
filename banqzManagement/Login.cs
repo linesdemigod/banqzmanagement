@@ -27,6 +27,7 @@ namespace banqzManagement
         public static string Login_fname { get; set; }
         public static string Login_lname { get; set; }
         public static string Login_role { get; set; }
+        public static string Login_dob { get; set; }
 
         public Login()
         {
@@ -66,6 +67,7 @@ namespace banqzManagement
                         Login_lname = user.lname;
                         Login_phone = user.phone;
                         Login_gender = user.gender;
+                        Login_dob = user.dob;
 
                         
                         Loadingbar load = new Loadingbar();

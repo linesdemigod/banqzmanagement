@@ -16,6 +16,7 @@ namespace banqzManagement.Controller
         public string gender { get; set; }
         public string fname { get; set; }
         public string lname { get; set; }
+        public string dob { get; set; }
 
 
         //Method to check and verify the data in the db
@@ -43,6 +44,7 @@ namespace banqzManagement.Controller
                     lname = rd.GetString("officer_lname");
                     gender = rd.GetString("officer_gender");
                     phone = rd.GetString("officer_phone");
+                    dob = rd.GetString("officer_dob");
                 }
 
                 conn.Close();
