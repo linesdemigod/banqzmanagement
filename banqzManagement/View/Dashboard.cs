@@ -72,5 +72,18 @@ namespace banqzManagement.View
             user.BringToFront();
             user.Show();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Are you sure you want to logout? ", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                Login form = new Login();
+                form.Show();
+                this.Hide();
+
+            }
+        }
     }
 }

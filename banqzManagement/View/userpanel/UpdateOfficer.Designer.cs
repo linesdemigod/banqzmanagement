@@ -1,6 +1,6 @@
 ﻿namespace banqzManagement.View.userpanel
 {
-    partial class AddOfficer
+    partial class UpdateOfficer
     {
         /// <summary>
         /// Required designer variable.
@@ -33,13 +33,12 @@
             this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.comboStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtSubmit = new Guna.UI2.WinForms.Guna2Button();
+            this.txtUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.comboRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,9 +70,9 @@
             this.PanelTopOfficer.Name = "PanelTopOfficer";
             this.PanelTopOfficer.ShadowDecoration.Parent = this.PanelTopOfficer;
             this.PanelTopOfficer.Size = new System.Drawing.Size(823, 55);
-            this.PanelTopOfficer.TabIndex = 21;
-            this.PanelTopOfficer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddOfficer_MouseDown);
-            this.PanelTopOfficer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddOfficer_MouseMove);
+            this.PanelTopOfficer.TabIndex = 23;
+            this.PanelTopOfficer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.UpdateOfficer_MouseDown);
+            this.PanelTopOfficer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.UpdateOfficer_MouseMove);
             // 
             // picMinimize
             // 
@@ -116,13 +115,12 @@
             // 
             // guna2GroupBox1
             // 
+            this.guna2GroupBox1.Controls.Add(this.txtId);
             this.guna2GroupBox1.Controls.Add(this.comboStatus);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel10);
-            this.guna2GroupBox1.Controls.Add(this.txtSubmit);
+            this.guna2GroupBox1.Controls.Add(this.txtUpdate);
             this.guna2GroupBox1.Controls.Add(this.comboRole);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel9);
-            this.guna2GroupBox1.Controls.Add(this.txtConfirmPassword);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel8);
             this.guna2GroupBox1.Controls.Add(this.txtPassword);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2GroupBox1.Controls.Add(this.txtUsername);
@@ -146,8 +144,35 @@
             this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(798, 534);
-            this.guna2GroupBox1.TabIndex = 22;
-            this.guna2GroupBox1.Text = "Add Officer";
+            this.guna2GroupBox1.TabIndex = 24;
+            // 
+            // txtId
+            // 
+            this.txtId.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId.BorderRadius = 6;
+            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtId.DefaultText = "";
+            this.txtId.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.DisabledState.Parent = this.txtId;
+            this.txtId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtId.FocusedState.Parent = this.txtId;
+            this.txtId.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtId.HoverState.Parent = this.txtId;
+            this.txtId.Location = new System.Drawing.Point(662, 78);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Name = "txtId";
+            this.txtId.PasswordChar = '\0';
+            this.txtId.PlaceholderText = "";
+            this.txtId.SelectedText = "";
+            this.txtId.ShadowDecoration.Parent = this.txtId;
+            this.txtId.Size = new System.Drawing.Size(44, 30);
+            this.txtId.TabIndex = 22;
+            this.txtId.Visible = false;
             // 
             // comboStatus
             // 
@@ -165,7 +190,7 @@
             "Active",
             "Inactive"});
             this.comboStatus.ItemsAppearance.Parent = this.comboStatus;
-            this.comboStatus.Location = new System.Drawing.Point(172, 288);
+            this.comboStatus.Location = new System.Drawing.Point(181, 288);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.ShadowDecoration.Parent = this.comboStatus;
             this.comboStatus.Size = new System.Drawing.Size(184, 36);
@@ -174,29 +199,30 @@
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(172, 263);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(181, 263);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(33, 15);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(41, 19);
             this.guna2HtmlLabel10.TabIndex = 20;
             this.guna2HtmlLabel10.Text = "Status";
             // 
-            // txtSubmit
+            // txtUpdate
             // 
-            this.txtSubmit.BorderRadius = 12;
-            this.txtSubmit.CheckedState.Parent = this.txtSubmit;
-            this.txtSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSubmit.CustomImages.Parent = this.txtSubmit;
-            this.txtSubmit.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubmit.ForeColor = System.Drawing.Color.White;
-            this.txtSubmit.HoverState.Parent = this.txtSubmit;
-            this.txtSubmit.Location = new System.Drawing.Point(172, 471);
-            this.txtSubmit.Name = "txtSubmit";
-            this.txtSubmit.ShadowDecoration.Parent = this.txtSubmit;
-            this.txtSubmit.Size = new System.Drawing.Size(452, 39);
-            this.txtSubmit.TabIndex = 19;
-            this.txtSubmit.Text = "Submit";
-            this.txtSubmit.Click += new System.EventHandler(this.txtSubmit_Click);
+            this.txtUpdate.BorderRadius = 12;
+            this.txtUpdate.CheckedState.Parent = this.txtUpdate;
+            this.txtUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtUpdate.CustomImages.Parent = this.txtUpdate;
+            this.txtUpdate.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdate.ForeColor = System.Drawing.Color.White;
+            this.txtUpdate.HoverState.Parent = this.txtUpdate;
+            this.txtUpdate.Location = new System.Drawing.Point(181, 471);
+            this.txtUpdate.Name = "txtUpdate";
+            this.txtUpdate.ShadowDecoration.Parent = this.txtUpdate;
+            this.txtUpdate.Size = new System.Drawing.Size(452, 39);
+            this.txtUpdate.TabIndex = 19;
+            this.txtUpdate.Text = "Update";
+            this.txtUpdate.Click += new System.EventHandler(this.txtUpdate_Click);
             // 
             // comboRole
             // 
@@ -211,7 +237,7 @@
             this.comboRole.HoverState.Parent = this.comboRole;
             this.comboRole.ItemHeight = 30;
             this.comboRole.ItemsAppearance.Parent = this.comboRole;
-            this.comboRole.Location = new System.Drawing.Point(426, 288);
+            this.comboRole.Location = new System.Drawing.Point(435, 288);
             this.comboRole.Name = "comboRole";
             this.comboRole.ShadowDecoration.Parent = this.comboRole;
             this.comboRole.Size = new System.Drawing.Size(184, 36);
@@ -220,50 +246,13 @@
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(426, 267);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(435, 267);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(25, 15);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(31, 19);
             this.guna2HtmlLabel9.TabIndex = 17;
             this.guna2HtmlLabel9.Text = "Role";
-            // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConfirmPassword.BorderRadius = 6;
-            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPassword.DefaultText = "";
-            this.txtConfirmPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.DisabledState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtConfirmPassword.FocusedState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtConfirmPassword.HoverState.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(426, 422);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '\0';
-            this.txtConfirmPassword.PlaceholderText = "";
-            this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.ShadowDecoration.Parent = this.txtConfirmPassword;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(184, 30);
-            this.txtConfirmPassword.TabIndex = 16;
-            // 
-            // guna2HtmlLabel8
-            // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(426, 396);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(120, 19);
-            this.guna2HtmlLabel8.TabIndex = 15;
-            this.guna2HtmlLabel8.Text = "Confirm Password";
             // 
             // txtPassword
             // 
@@ -282,14 +271,14 @@
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(172, 422);
+            this.txtPassword.Location = new System.Drawing.Point(181, 422);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
-            this.txtPassword.Size = new System.Drawing.Size(184, 30);
+            this.txtPassword.Size = new System.Drawing.Size(438, 30);
             this.txtPassword.TabIndex = 14;
             // 
             // guna2HtmlLabel7
@@ -297,7 +286,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(172, 396);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(181, 396);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(64, 19);
             this.guna2HtmlLabel7.TabIndex = 13;
@@ -320,7 +309,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.txtUsername.HoverState.Parent = this.txtUsername;
-            this.txtUsername.Location = new System.Drawing.Point(172, 358);
+            this.txtUsername.Location = new System.Drawing.Point(181, 358);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -335,7 +324,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(172, 332);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(181, 332);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(66, 19);
             this.guna2HtmlLabel6.TabIndex = 11;
@@ -357,7 +346,7 @@
             "Male",
             "Female"});
             this.comboGender.ItemsAppearance.Parent = this.comboGender;
-            this.comboGender.Location = new System.Drawing.Point(426, 215);
+            this.comboGender.Location = new System.Drawing.Point(435, 215);
             this.comboGender.Name = "comboGender";
             this.comboGender.ShadowDecoration.Parent = this.comboGender;
             this.comboGender.Size = new System.Drawing.Size(184, 36);
@@ -368,7 +357,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(426, 189);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(435, 189);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 19);
             this.guna2HtmlLabel5.TabIndex = 9;
@@ -391,7 +380,7 @@
             this.txtTelephone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelephone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.txtTelephone.HoverState.Parent = this.txtTelephone;
-            this.txtTelephone.Location = new System.Drawing.Point(172, 142);
+            this.txtTelephone.Location = new System.Drawing.Point(181, 142);
             this.txtTelephone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.PasswordChar = '\0';
@@ -406,7 +395,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(172, 116);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(181, 116);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(69, 19);
             this.guna2HtmlLabel4.TabIndex = 7;
@@ -421,7 +410,7 @@
             this.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateDob.HoverState.BorderColor = System.Drawing.Color.Black;
             this.dateDob.HoverState.Parent = this.dateDob;
-            this.dateDob.Location = new System.Drawing.Point(172, 215);
+            this.dateDob.Location = new System.Drawing.Point(181, 215);
             this.dateDob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateDob.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateDob.Name = "dateDob";
@@ -435,7 +424,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(172, 189);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(181, 189);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(83, 19);
             this.guna2HtmlLabel3.TabIndex = 5;
@@ -458,7 +447,7 @@
             this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtLastname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.txtLastname.HoverState.Parent = this.txtLastname;
-            this.txtLastname.Location = new System.Drawing.Point(426, 78);
+            this.txtLastname.Location = new System.Drawing.Point(435, 78);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.PasswordChar = '\0';
@@ -473,7 +462,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(426, 52);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(435, 52);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(66, 19);
             this.guna2HtmlLabel2.TabIndex = 3;
@@ -496,7 +485,7 @@
             this.txtFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtFirstname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.txtFirstname.HoverState.Parent = this.txtFirstname;
-            this.txtFirstname.Location = new System.Drawing.Point(172, 78);
+            this.txtFirstname.Location = new System.Drawing.Point(181, 78);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.PasswordChar = '\0';
@@ -511,13 +500,13 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(172, 52);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(181, 52);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(64, 19);
             this.guna2HtmlLabel1.TabIndex = 1;
             this.guna2HtmlLabel1.Text = "Firstname";
             // 
-            // AddOfficer
+            // UpdateOfficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -525,12 +514,10 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.PanelTopOfficer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddOfficer";
+            this.Name = "UpdateOfficer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddOfficer";
-            this.Load += new System.EventHandler(this.AddOfficer_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddOfficer_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddOfficer_MouseMove);
+            this.Text = "UpdateOfficer";
+            this.Load += new System.EventHandler(this.UpdateOfficer_Load);
             this.PanelTopOfficer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
@@ -542,23 +529,16 @@
         }
 
         #endregion
-
         private Guna.UI2.WinForms.Guna2Panel PanelTopOfficer;
         private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
         private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtFirstname;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dateDob;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button txtSubmit;
+        private Guna.UI2.WinForms.Guna2ComboBox comboStatus;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2Button txtUpdate;
         private Guna.UI2.WinForms.Guna2ComboBox comboRole;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
@@ -567,7 +547,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtTelephone;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2ComboBox comboStatus;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateDob;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2TextBox txtLastname;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2TextBox txtFirstname;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtId;
     }
 }

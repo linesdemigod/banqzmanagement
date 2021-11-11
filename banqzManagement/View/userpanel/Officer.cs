@@ -79,19 +79,21 @@ namespace banqzManagement.View.userpanel
                 //code for the update
                 if (dataGridViewOfficer.Columns[e.ColumnIndex].HeaderText == "Update")
                 {
-                    string id, role, fname, lname, phone, gender, username, password;
+                    string id, role, fname, lname, dob, phone, gender, username, password, status;
 
-                    id = dataGridViewOfficer.Rows[e.RowIndex].Cells["IDColumn"].Value.ToString();
-                    role = dataGridViewOfficer.Rows[e.RowIndex].Cells["RoleColumn"].Value.ToString();
-                    fname = dataGridViewOfficer.Rows[e.RowIndex].Cells["FirstnameColumn"].Value.ToString();
-                    lname = dataGridViewOfficer.Rows[e.RowIndex].Cells["LastnameColumn"].Value.ToString();
-                    phone = dataGridViewOfficer.Rows[e.RowIndex].Cells["PhoneColumn"].Value.ToString();
-                    gender = dataGridViewOfficer.Rows[e.RowIndex].Cells["GenderColumn"].Value.ToString();
-                    username = dataGridViewOfficer.Rows[e.RowIndex].Cells["UsernameColumn"].Value.ToString();
-                    password = dataGridViewOfficer.Rows[e.RowIndex].Cells["PasswordColumn"].Value.ToString();
+                    id = dataGridViewOfficer.Rows[e.RowIndex].Cells["ID"].Value.ToString();
+                    role = dataGridViewOfficer.Rows[e.RowIndex].Cells["Role"].Value.ToString();
+                    fname = dataGridViewOfficer.Rows[e.RowIndex].Cells["Firstname"].Value.ToString();
+                    lname = dataGridViewOfficer.Rows[e.RowIndex].Cells["Lastname"].Value.ToString();
+                    dob = dataGridViewOfficer.Rows[e.RowIndex].Cells["DoB"].Value.ToString();
+                    phone = dataGridViewOfficer.Rows[e.RowIndex].Cells["Phone"].Value.ToString();
+                    gender = dataGridViewOfficer.Rows[e.RowIndex].Cells["Gender"].Value.ToString();
+                    username = dataGridViewOfficer.Rows[e.RowIndex].Cells["Username"].Value.ToString();
+                    password = dataGridViewOfficer.Rows[e.RowIndex].Cells["Password"].Value.ToString();
+                    status = dataGridViewOfficer.Rows[e.RowIndex].Cells["Status"].Value.ToString();
 
-                    //Updateuser user = new Updateuser(id, role, fname, lname, phone, gender, username, password);
-                    //user.ShowDialog();
+                    UpdateOfficer user = new UpdateOfficer(id, role, fname, lname, dob, phone, gender, username, password, status);
+                    user.ShowDialog();
                 }
             }
             catch (Exception )
@@ -105,6 +107,14 @@ namespace banqzManagement.View.userpanel
         private void Officer_Activated(object sender, EventArgs e)
         {
             getUsersData();
+        }
+
+        private void dataGridViewOfficer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 9 && e.Value != null)
+            {
+                e.Value = new string('*', e.Value.ToString().Length);
+            }
         }
     }
 }

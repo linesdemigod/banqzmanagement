@@ -69,5 +69,44 @@ namespace banqzManagement.Controller
             }
 
         }
+
+        //Update
+        public void updateUser()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    string subsql = "SELECT role_id FROM role WHERE role = @role";
+
+                    cmd.CommandText = "UPDATE officer SET role_id=(" + subsql + "), officer_fname = @firstname, officer_lname=@lastname, officer_dob = @dob, officer_phone=@telephone, officer_gender=@gender, officer_uid=@username, officer_password = @password, officer_status = @status  WHERE officer_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.Parameters.Add("@firstname", MySqlDbType.VarChar).Value = firstName;
+                    cmd.Parameters.Add("@lastname", MySqlDbType.VarChar).Value = lastName;
+                    cmd.Parameters.Add("@dob", MySqlDbType.VarChar).Value = dob;
+                    cmd.Parameters.Add("@telephone", MySqlDbType.VarChar).Value = telephone;
+                    cmd.Parameters.Add("@gender", MySqlDbType.VarChar).Value = gender;
+                    cmd.Parameters.Add("@username", MySqlDbType.VarChar).Value = username;
+                    cmd.Parameters.Add("@password", MySqlDbType.VarChar).Value = password;
+                    cmd.Parameters.Add("@role", MySqlDbType.VarChar).Value = role;
+                    cmd.Parameters.Add("@status", MySqlDbType.VarChar).Value = status;
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
     }
 }

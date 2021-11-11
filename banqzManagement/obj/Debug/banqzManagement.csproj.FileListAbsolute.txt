@@ -31,3 +31,4 @@ C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManag
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.LoadingBar.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Officer.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.AddOfficer.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.UpdateOfficer.resources
