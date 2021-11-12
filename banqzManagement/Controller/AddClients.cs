@@ -42,10 +42,10 @@ namespace banqzManagement.Controller
                 conn.Open();
                 using (var cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM client officer WHERE client_account_num = @account";
+                    cmd.CommandText = "SELECT * FROM client WHERE client_account_num = @account";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@username", MySqlDbType.VarChar).Value = accountNumber;
+                    cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = accountNumber;
 
                     rd = cmd.ExecuteReader();
                     while (rd.Read())

@@ -1,6 +1,6 @@
 ﻿namespace banqzManagement.View.userpanel
 {
-    partial class AddClient
+    partial class UpdateClient
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PanelTopOfficer = new Guna.UI2.WinForms.Guna2Panel();
-            this.picMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControlClient = new System.Windows.Forms.TabControl();
             this.addClientTab = new System.Windows.Forms.TabPage();
@@ -54,7 +50,7 @@
             this.txtFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.addGuarantorTab = new System.Windows.Forms.TabPage();
-            this.txtSubmit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.txtGAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGTelephone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,67 +59,20 @@
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtGFirstname = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.PanelTopOfficer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            this.PanelTopOfficer = new Guna.UI2.WinForms.Guna2Panel();
+            this.picMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1.SuspendLayout();
             this.tabControlClient.SuspendLayout();
             this.addClientTab.SuspendLayout();
             this.addGuarantorTab.SuspendLayout();
+            this.PanelTopOfficer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PanelTopOfficer
-            // 
-            this.PanelTopOfficer.Controls.Add(this.picMinimize);
-            this.PanelTopOfficer.Controls.Add(this.picMaximize);
-            this.PanelTopOfficer.Controls.Add(this.picClose);
-            this.PanelTopOfficer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTopOfficer.Location = new System.Drawing.Point(0, 0);
-            this.PanelTopOfficer.Name = "PanelTopOfficer";
-            this.PanelTopOfficer.ShadowDecoration.Parent = this.PanelTopOfficer;
-            this.PanelTopOfficer.Size = new System.Drawing.Size(823, 55);
-            this.PanelTopOfficer.TabIndex = 23;
-            this.PanelTopOfficer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddClient_MouseDown);
-            this.PanelTopOfficer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddClient_MouseMove);
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimize.Image = global::banqzManagement.Properties.Resources.Minimize_icon;
-            this.picMinimize.Location = new System.Drawing.Point(736, 12);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.ShadowDecoration.Parent = this.picMinimize;
-            this.picMinimize.Size = new System.Drawing.Size(21, 19);
-            this.picMinimize.TabIndex = 23;
-            this.picMinimize.TabStop = false;
-            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximize.Image = global::banqzManagement.Properties.Resources.Maximize_icon1;
-            this.picMaximize.Location = new System.Drawing.Point(763, 12);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.ShadowDecoration.Parent = this.picMaximize;
-            this.picMaximize.Size = new System.Drawing.Size(21, 19);
-            this.picMaximize.TabIndex = 22;
-            this.picMaximize.TabStop = false;
-            // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClose.Image = global::banqzManagement.Properties.Resources.Close_icon1;
-            this.picClose.Location = new System.Drawing.Point(790, 12);
-            this.picClose.Name = "picClose";
-            this.picClose.ShadowDecoration.Parent = this.picClose;
-            this.picClose.Size = new System.Drawing.Size(21, 19);
-            this.picClose.TabIndex = 21;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // guna2GroupBox1
             // 
@@ -137,8 +86,7 @@
             this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(798, 534);
-            this.guna2GroupBox1.TabIndex = 24;
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
+            this.guna2GroupBox1.TabIndex = 26;
             // 
             // tabControlClient
             // 
@@ -156,6 +104,7 @@
             // addClientTab
             // 
             this.addClientTab.BackColor = System.Drawing.Color.White;
+            this.addClientTab.Controls.Add(this.txtID);
             this.addClientTab.Controls.Add(this.txtIdNumber);
             this.addClientTab.Controls.Add(this.guna2HtmlLabel16);
             this.addClientTab.Controls.Add(this.ComboIdType);
@@ -393,6 +342,7 @@
             this.txtTelephone.ShadowDecoration.Parent = this.txtTelephone;
             this.txtTelephone.Size = new System.Drawing.Size(438, 30);
             this.txtTelephone.TabIndex = 29;
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // guna2HtmlLabel4
             // 
@@ -513,7 +463,7 @@
             // 
             // addGuarantorTab
             // 
-            this.addGuarantorTab.Controls.Add(this.txtSubmit);
+            this.addGuarantorTab.Controls.Add(this.btnUpdate);
             this.addGuarantorTab.Controls.Add(this.txtGAddress);
             this.addGuarantorTab.Controls.Add(this.guna2HtmlLabel7);
             this.addGuarantorTab.Controls.Add(this.txtGTelephone);
@@ -530,22 +480,22 @@
             this.addGuarantorTab.Text = "Guarantor";
             this.addGuarantorTab.UseVisualStyleBackColor = true;
             // 
-            // txtSubmit
+            // btnUpdate
             // 
-            this.txtSubmit.BorderRadius = 12;
-            this.txtSubmit.CheckedState.Parent = this.txtSubmit;
-            this.txtSubmit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtSubmit.CustomImages.Parent = this.txtSubmit;
-            this.txtSubmit.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubmit.ForeColor = System.Drawing.Color.White;
-            this.txtSubmit.HoverState.Parent = this.txtSubmit;
-            this.txtSubmit.Location = new System.Drawing.Point(161, 336);
-            this.txtSubmit.Name = "txtSubmit";
-            this.txtSubmit.ShadowDecoration.Parent = this.txtSubmit;
-            this.txtSubmit.Size = new System.Drawing.Size(452, 39);
-            this.txtSubmit.TabIndex = 54;
-            this.txtSubmit.Text = "Submit";
-            this.txtSubmit.Click += new System.EventHandler(this.txtSubmit_Click);
+            this.btnUpdate.BorderRadius = 12;
+            this.btnUpdate.CheckedState.Parent = this.btnUpdate;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.CustomImages.Parent = this.btnUpdate;
+            this.btnUpdate.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.HoverState.Parent = this.btnUpdate;
+            this.btnUpdate.Location = new System.Drawing.Point(161, 336);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ShadowDecoration.Parent = this.btnUpdate;
+            this.btnUpdate.Size = new System.Drawing.Size(452, 39);
+            this.btnUpdate.TabIndex = 54;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtGAddress
             // 
@@ -611,6 +561,7 @@
             this.txtGTelephone.ShadowDecoration.Parent = this.txtGTelephone;
             this.txtGTelephone.Size = new System.Drawing.Size(438, 30);
             this.txtGTelephone.TabIndex = 47;
+            this.txtGTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // guna2HtmlLabel11
             // 
@@ -699,7 +650,88 @@
             this.guna2HtmlLabel14.TabIndex = 40;
             this.guna2HtmlLabel14.Text = "Firstname";
             // 
-            // AddClient
+            // PanelTopOfficer
+            // 
+            this.PanelTopOfficer.Controls.Add(this.picMinimize);
+            this.PanelTopOfficer.Controls.Add(this.picMaximize);
+            this.PanelTopOfficer.Controls.Add(this.picClose);
+            this.PanelTopOfficer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTopOfficer.Location = new System.Drawing.Point(0, 0);
+            this.PanelTopOfficer.Name = "PanelTopOfficer";
+            this.PanelTopOfficer.ShadowDecoration.Parent = this.PanelTopOfficer;
+            this.PanelTopOfficer.Size = new System.Drawing.Size(823, 55);
+            this.PanelTopOfficer.TabIndex = 25;
+            this.PanelTopOfficer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AddClient_MouseDown);
+            this.PanelTopOfficer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddClient_MouseMove);
+            // 
+            // picMinimize
+            // 
+            this.picMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimize.Image = global::banqzManagement.Properties.Resources.Minimize_icon;
+            this.picMinimize.Location = new System.Drawing.Point(736, 12);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.ShadowDecoration.Parent = this.picMinimize;
+            this.picMinimize.Size = new System.Drawing.Size(21, 19);
+            this.picMinimize.TabIndex = 23;
+            this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
+            // picMaximize
+            // 
+            this.picMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximize.Image = global::banqzManagement.Properties.Resources.Maximize_icon1;
+            this.picMaximize.Location = new System.Drawing.Point(763, 12);
+            this.picMaximize.Name = "picMaximize";
+            this.picMaximize.ShadowDecoration.Parent = this.picMaximize;
+            this.picMaximize.Size = new System.Drawing.Size(21, 19);
+            this.picMaximize.TabIndex = 22;
+            this.picMaximize.TabStop = false;
+            this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
+            // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picClose.Image = global::banqzManagement.Properties.Resources.Close_icon1;
+            this.picClose.Location = new System.Drawing.Point(790, 12);
+            this.picClose.Name = "picClose";
+            this.picClose.ShadowDecoration.Parent = this.picClose;
+            this.picClose.Size = new System.Drawing.Size(21, 19);
+            this.picClose.TabIndex = 21;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.BorderRadius = 6;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.DefaultText = "";
+            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.DisabledState.Parent = this.txtID;
+            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtID.FocusedState.Parent = this.txtID;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtID.HoverState.Parent = this.txtID;
+            this.txtID.Location = new System.Drawing.Point(40, 46);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Name = "txtID";
+            this.txtID.PasswordChar = '\0';
+            this.txtID.PlaceholderText = "";
+            this.txtID.SelectedText = "";
+            this.txtID.ShadowDecoration.Parent = this.txtID;
+            this.txtID.Size = new System.Drawing.Size(52, 30);
+            this.txtID.TabIndex = 62;
+            this.txtID.Visible = false;
+            // 
+            // UpdateClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -707,33 +739,33 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.PanelTopOfficer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddClient";
+            this.Name = "UpdateClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddClient";
-            this.Load += new System.EventHandler(this.AddClient_Load);
-            this.PanelTopOfficer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            this.Text = "UpdateClient";
+            this.Load += new System.EventHandler(this.UpdateClient_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.tabControlClient.ResumeLayout(false);
             this.addClientTab.ResumeLayout(false);
             this.addClientTab.PerformLayout();
             this.addGuarantorTab.ResumeLayout(false);
             this.addGuarantorTab.PerformLayout();
+            this.PanelTopOfficer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel PanelTopOfficer;
-        private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
-        private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
-        private Guna.UI2.WinForms.Guna2PictureBox picClose;
+
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private System.Windows.Forms.TabControl tabControlClient;
         private System.Windows.Forms.TabPage addClientTab;
-        private System.Windows.Forms.TabPage addGuarantorTab;
+        private Guna.UI2.WinForms.Guna2TextBox txtIdNumber;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboIdType;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2TextBox txtAccountNumber;
@@ -748,6 +780,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstname;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private System.Windows.Forms.TabPage addGuarantorTab;
+        private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2TextBox txtGAddress;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtGTelephone;
@@ -756,10 +790,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2TextBox txtGFirstname;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2TextBox txtIdNumber;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2ComboBox ComboIdType;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2Button txtSubmit;
+        private Guna.UI2.WinForms.Guna2Panel PanelTopOfficer;
+        private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
+        private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
+        private Guna.UI2.WinForms.Guna2PictureBox picClose;
+        private Guna.UI2.WinForms.Guna2TextBox txtID;
     }
 }

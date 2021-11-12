@@ -48,3 +48,5 @@ C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\System.Run
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Backup.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Client.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.AddClient.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\Tulpep.NotificationWindow.dll
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.UpdateClient.resources

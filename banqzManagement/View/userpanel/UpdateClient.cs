@@ -8,23 +8,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Tulpep.NotificationWindow;
 
 namespace banqzManagement.View.userpanel
 {
-    public partial class AddClient : Form
+    public partial class UpdateClient : Form
     {
-        AddClients client = new AddClients();
+        Clients client = new Clients();
 
-        public AddClient()
+
+        string CId, officerName, firstname, lastname, dobs, telephone, sex, CAddress, CIdType, CIdNumber, CAccountNumber, GFirstname, GLastname, GPhone, GAddress;
+
+
+        public UpdateClient(string id, string officer, string fname, string lname, string dob, string phone, string gender, string address, string idType, string idNumber, string accountNumber, string gFirstname, string gLastname, string gPhone, string gAddress)
         {
             InitializeComponent();
+
+            CId = id;
+            officerName = officer;
+            firstname = fname;
+            lastname = lname;
+            dobs = dob;
+            telephone = phone;
+            sex = gender;
+            CAddress = address;
+            CIdType = idType;
+            CIdNumber = idNumber;
+            CAccountNumber = accountNumber;
+            GFirstname = gFirstname;
+            GLastname = gLastname;
+            GPhone = gPhone;
+            GAddress = gAddress;
         }
 
-        private void AddClient_Load(object sender, EventArgs e)
+        //when forms load
+        private void UpdateClient_Load(object sender, EventArgs e)
         {
-          //generate random number as accountnumber
-            getRand();
+            loadClientInfo();
         }
 
         //when the control button is clicked 
@@ -66,17 +85,37 @@ namespace banqzManagement.View.userpanel
 
         #endregion
 
-        //generate random number
-        private void getRand()
+
+        //handle the update client
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Random rand = new Random();
-            txtAccountNumber.Text = "000" + rand.Next();
+            updateClient();
         }
 
 
-        private void createClient()
+        //load the values from the datagridview to the various textbox and combobox
+        private void loadClientInfo()
         {
-            
+            txtFirstname.Text = firstname;
+            txtLastname.Text = lastname;
+            dateDob.Text = dobs;
+            txtTelephone.Text = telephone;
+            comboGender.Text = sex;
+            txtAddress.Text = CAddress;
+            ComboIdType.Text = CIdType;
+            txtIdNumber.Text = CIdNumber;
+            txtGFirstname.Text = GFirstname;
+            txtGLastname.Text = GLastname;
+            txtGTelephone.Text = GPhone;
+            txtGAddress.Text = GAddress;
+            txtAccountNumber.Text = CAccountNumber;
+
+            txtID.Text = CId;
+        }
+
+        private void updateClient()
+        {
+           
             //assign the properties of the AddUsers class to the textbox and trim user input
             client.firstName = txtFirstname.Text.Trim();
             client.lastName = txtLastname.Text.Trim();
@@ -92,12 +131,11 @@ namespace banqzManagement.View.userpanel
             client.guarantorPhone = txtGTelephone.Text;
             client.guarantorAddress = txtGAddress.Text;
             client.officer = Login.Login_username;
-
-            //check if the username exist
-            bool accountNumberExist = client.accountNumberExist();
+            client.id = txtID.Text;
+            
 
             //check if username exist
-            
+
 
             //check if the textboxes are empty
             if (client.firstName == "" || client.lastName == "" || client.telephone == "" || client.gender == "" || client.idNumber == "" || client.idType == "" || client.address == "" || client.guarantorFirstname == "" || client.dob == "" || client.guarantorLastname == "" || client.guarantorPhone == "" || client.guarantorAddress == "")
@@ -107,20 +145,12 @@ namespace banqzManagement.View.userpanel
                 return;
 
             }
-
-
-            if (accountNumberExist == true)
-            {
-                accountExistPopoutMsg();
-
-                return;
-            }
-
+            
 
 
             //call the method in the AddClient class
-            client.createUser();
-            MessageBox.Show("New Client created");
+            client.updateClient();
+            MessageBox.Show("Client Account Updated");
 
             //clear textbox after successful insert
             client.firstName = txtFirstname.Text = "";
@@ -137,37 +167,18 @@ namespace banqzManagement.View.userpanel
             client.guarantorAddress = txtGAddress.Text = "";
 
             //client.role = comboRole.Text = "";
+
+            Close();
         }
 
-        private void accountExistPopoutMsg()
+        //format textbox to accept only numbers
+        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            PopupNotifier popup = new PopupNotifier();
-            popup.AnimationDuration = 1000;
-            popup.AnimationInterval = 1;
-            popup.ContentFont = new Font("Century Gothic", 12F);
-            popup.TitleFont = new Font("Century Gothic", 12F);
-            popup.ContentPadding = new Padding(20,0,20,0);
-            popup.BorderColor = Color.FromArgb(168, 228, 247);
-            popup.TitleText = "Account Number Duplicate";
-            popup.ContentText = "Account Reset";
-            
-            popup.Popup();
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
-
-        //event handler for the insert click data
-        private void txtSubmit_Click(object sender, EventArgs e)
-        {
-            createClient();
-                getRand();
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
+    
 }
