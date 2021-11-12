@@ -467,6 +467,7 @@
             this.btnClient.Size = new System.Drawing.Size(180, 40);
             this.btnClient.TabIndex = 0;
             this.btnClient.Text = "Client";
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnOfficer
             // 

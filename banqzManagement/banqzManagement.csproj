@@ -108,6 +108,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AddClients.cs" />
+    <Compile Include="Controller\Clients.cs" />
     <Compile Include="Controller\AddOfficers.cs" />
     <Compile Include="Controller\Backups.cs" />
     <Compile Include="Controller\Database.cs" />
@@ -134,6 +136,12 @@
     <Compile Include="View\Loadingbar.Designer.cs">
       <DependentUpon>Loadingbar.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\userpanel\AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\userpanel\AddOfficer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +153,12 @@
     </Compile>
     <Compile Include="View\userpanel\Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\Officer.cs">
       <SubType>Form</SubType>
@@ -183,11 +197,17 @@
     <EmbeddedResource Include="View\Loadingbar.resx">
       <DependentUpon>Loadingbar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\AddOfficer.resx">
       <DependentUpon>AddOfficer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Officer.resx">
       <DependentUpon>Officer.cs</DependentUpon>
@@ -268,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

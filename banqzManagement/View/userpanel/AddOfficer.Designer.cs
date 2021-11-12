@@ -152,6 +152,7 @@
             // comboStatus
             // 
             this.comboStatus.BackColor = System.Drawing.Color.Transparent;
+            this.comboStatus.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboStatus.FocusedColor = System.Drawing.Color.Empty;
@@ -159,6 +160,7 @@
             this.comboStatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboStatus.FormattingEnabled = true;
+            this.comboStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.comboStatus.HoverState.Parent = this.comboStatus;
             this.comboStatus.ItemHeight = 30;
             this.comboStatus.Items.AddRange(new object[] {
@@ -201,6 +203,7 @@
             // comboRole
             // 
             this.comboRole.BackColor = System.Drawing.Color.Transparent;
+            this.comboRole.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRole.FocusedColor = System.Drawing.Color.Empty;
@@ -208,6 +211,7 @@
             this.comboRole.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboRole.FormattingEnabled = true;
+            this.comboRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.comboRole.HoverState.Parent = this.comboRole;
             this.comboRole.ItemHeight = 30;
             this.comboRole.ItemsAppearance.Parent = this.comboRole;
@@ -344,6 +348,7 @@
             // comboGender
             // 
             this.comboGender.BackColor = System.Drawing.Color.Transparent;
+            this.comboGender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboGender.FocusedColor = System.Drawing.Color.Empty;
@@ -351,6 +356,7 @@
             this.comboGender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.comboGender.FormattingEnabled = true;
+            this.comboGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.comboGender.HoverState.Parent = this.comboGender;
             this.comboGender.ItemHeight = 30;
             this.comboGender.Items.AddRange(new object[] {
@@ -400,6 +406,7 @@
             this.txtTelephone.ShadowDecoration.Parent = this.txtTelephone;
             this.txtTelephone.Size = new System.Drawing.Size(438, 30);
             this.txtTelephone.TabIndex = 8;
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // guna2HtmlLabel4
             // 
@@ -414,12 +421,13 @@
             // 
             // dateDob
             // 
+            this.dateDob.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dateDob.BorderRadius = 6;
             this.dateDob.CheckedState.Parent = this.dateDob;
             this.dateDob.FillColor = System.Drawing.Color.Transparent;
             this.dateDob.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateDob.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.dateDob.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.dateDob.HoverState.Parent = this.dateDob;
             this.dateDob.Location = new System.Drawing.Point(172, 215);
             this.dateDob.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);

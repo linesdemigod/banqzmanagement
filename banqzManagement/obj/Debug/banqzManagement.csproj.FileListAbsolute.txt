@@ -46,3 +46,5 @@ C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\System.Mem
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Backup.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Client.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.AddClient.resources

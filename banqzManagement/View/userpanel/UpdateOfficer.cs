@@ -48,6 +48,15 @@ namespace banqzManagement.View.userpanel
             setupUserAccess();
         }
 
+        //format textbox to accept only numbers
+        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         //when the control button is clicked 
         #region minimize maximize close

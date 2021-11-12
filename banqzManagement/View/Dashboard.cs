@@ -56,10 +56,8 @@ namespace banqzManagement.View
 
         #endregion
 
-     
-
-        
-
+      
+        //open the officer forms
         private void btnOfficer_Click(object sender, EventArgs e)
         {
             Officer user = new Officer();
@@ -73,6 +71,7 @@ namespace banqzManagement.View
             user.Show();
         }
 
+        //logout user out
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult confirm = MessageBox.Show("Are you sure you want to logout? ", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -86,6 +85,7 @@ namespace banqzManagement.View
             }
         }
 
+        //open the profile form
         private void btnProfile_Click(object sender, EventArgs e)
         {
             Profile user = new Profile();
@@ -99,10 +99,23 @@ namespace banqzManagement.View
             user.Show();
         }
 
+        //open the backup forms
         private void btnBackup_Click(object sender, EventArgs e)
         {
             Backup backup = new Backup();
             backup.ShowDialog();
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            Client user = new Client();
+            user.TopLevel = false;
+            user.FormBorderStyle = FormBorderStyle.None;
+            user.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(user);
+            panelMain.Tag = user;
+            user.BringToFront();
+            user.Show();
         }
     }
 }

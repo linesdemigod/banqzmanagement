@@ -152,5 +152,14 @@ namespace banqzManagement.View.userpanel
         {
             createOfficer();
         }
+
+        //format txtbox to accept only numbers
+        private void txtTelephone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
