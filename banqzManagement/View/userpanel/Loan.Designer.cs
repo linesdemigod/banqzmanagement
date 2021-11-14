@@ -55,6 +55,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.addLoanFeeTab = new System.Windows.Forms.TabPage();
             this.addLoanTopupTab = new System.Windows.Forms.TabPage();
+            this.lblLoanSearchMsg = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBoxOfficer.SuspendLayout();
             this.tabControlClient.SuspendLayout();
             this.addLoanTab.SuspendLayout();
@@ -94,6 +95,7 @@
             // addLoanTab
             // 
             this.addLoanTab.BackColor = System.Drawing.Color.White;
+            this.addLoanTab.Controls.Add(this.lblLoanSearchMsg);
             this.addLoanTab.Controls.Add(this.lblInterestLoanDisbursed);
             this.addLoanTab.Controls.Add(this.guna2HtmlLabel11);
             this.addLoanTab.Controls.Add(this.btnLoanSearch);
@@ -131,10 +133,9 @@
             this.lblInterestLoanDisbursed.ForeColor = System.Drawing.Color.Black;
             this.lblInterestLoanDisbursed.Location = new System.Drawing.Point(581, 138);
             this.lblInterestLoanDisbursed.Name = "lblInterestLoanDisbursed";
-            this.lblInterestLoanDisbursed.Size = new System.Drawing.Size(35, 22);
+            this.lblInterestLoanDisbursed.Size = new System.Drawing.Size(6, 22);
             this.lblInterestLoanDisbursed.TabIndex = 76;
-            this.lblInterestLoanDisbursed.Text = "loan";
-            this.lblInterestLoanDisbursed.Visible = false;
+            this.lblInterestLoanDisbursed.Text = "l";
             // 
             // guna2HtmlLabel11
             // 
@@ -147,7 +148,6 @@
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(98, 20);
             this.guna2HtmlLabel11.TabIndex = 75;
             this.guna2HtmlLabel11.Text = "Int & amount:";
-            this.guna2HtmlLabel11.Visible = false;
             // 
             // btnLoanSearch
             // 
@@ -342,11 +342,11 @@
             this.lblInterestRateCom.BackColor = System.Drawing.Color.Transparent;
             this.lblInterestRateCom.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInterestRateCom.ForeColor = System.Drawing.Color.Black;
-            this.lblInterestRateCom.Location = new System.Drawing.Point(181, 148);
+            this.lblInterestRateCom.Location = new System.Drawing.Point(155, 148);
             this.lblInterestRateCom.Name = "lblInterestRateCom";
-            this.lblInterestRateCom.Size = new System.Drawing.Size(96, 20);
+            this.lblInterestRateCom.Size = new System.Drawing.Size(125, 20);
             this.lblInterestRateCom.TabIndex = 64;
-            this.lblInterestRateCom.Text = "Interest rate :";
+            this.lblInterestRateCom.Text = "Interest rate (%) :";
             // 
             // txtLoanDisbursed
             // 
@@ -375,6 +375,7 @@
             this.txtLoanDisbursed.ShadowDecoration.Parent = this.txtLoanDisbursed;
             this.txtLoanDisbursed.Size = new System.Drawing.Size(184, 30);
             this.txtLoanDisbursed.TabIndex = 63;
+            this.txtLoanDisbursed.TextChanged += new System.EventHandler(this.txtLoanDisbursed_TextChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -398,6 +399,7 @@
             this.lblLoanPhone.Name = "lblLoanPhone";
             this.lblLoanPhone.Size = new System.Drawing.Size(3, 2);
             this.lblLoanPhone.TabIndex = 61;
+            this.lblLoanPhone.Text = null;
             // 
             // lblLoanName
             // 
@@ -409,6 +411,7 @@
             this.lblLoanName.Name = "lblLoanName";
             this.lblLoanName.Size = new System.Drawing.Size(3, 2);
             this.lblLoanName.TabIndex = 60;
+            this.lblLoanName.Text = null;
             // 
             // guna2HtmlLabel3
             // 
@@ -479,6 +482,7 @@
             this.txtLoanSearch.ShadowDecoration.Parent = this.txtLoanSearch;
             this.txtLoanSearch.Size = new System.Drawing.Size(171, 30);
             this.txtLoanSearch.TabIndex = 56;
+            this.txtLoanSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLoanSearch_KeyUp);
             // 
             // guna2HtmlLabel1
             // 
@@ -510,6 +514,17 @@
             this.addLoanTopupTab.TabIndex = 2;
             this.addLoanTopupTab.Text = "Loan Top-up";
             this.addLoanTopupTab.UseVisualStyleBackColor = true;
+            // 
+            // lblLoanSearchMsg
+            // 
+            this.lblLoanSearchMsg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLoanSearchMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoanSearchMsg.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoanSearchMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblLoanSearchMsg.Location = new System.Drawing.Point(266, 50);
+            this.lblLoanSearchMsg.Name = "lblLoanSearchMsg";
+            this.lblLoanSearchMsg.Size = new System.Drawing.Size(3, 2);
+            this.lblLoanSearchMsg.TabIndex = 77;
             // 
             // Loan
             // 
@@ -558,5 +573,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLoanSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblInterestLoanDisbursed;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLoanSearchMsg;
     }
 }
