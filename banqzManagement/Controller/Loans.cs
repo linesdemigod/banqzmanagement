@@ -158,13 +158,13 @@ namespace banqzManagement.Controller
             conn.Open();
             using (MySqlCommand cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT outstanding FROM repayment WHERE client_account_num = @account";
+                cmd.CommandText = "SELECT outstanding FROM repayment WHERE client_account_num = @account ORDER BY repay_id DESC LIMIT 1";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = conn;
 
                 cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;
                 rd = cmd.ExecuteReader();
-                if (rd.Read() == true)
+               while (rd.Read() == true)
                 {
 
                     getOutstanding = rd.GetString("outstanding");

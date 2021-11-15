@@ -25,6 +25,7 @@ namespace banqzManagement.View.userpanel
             getInterestRates();
         }
 
+        #region NEW LOANS
         //add the loan duration to the contract to the get expiry date
         private void calcExpiryDate()
         {
@@ -37,7 +38,7 @@ namespace banqzManagement.View.userpanel
 
                 DateTime expiry = date.AddMonths(months);
 
-                txtLoanExpiry.Text = expiry.ToShortDateString();
+                txtLoanExpiry.Text = expiry.ToString("yyyy-MM-dd");
             }
             catch (Exception)
             {
@@ -47,6 +48,7 @@ namespace banqzManagement.View.userpanel
            
         }
 
+        //call the new loan when the button is clicked
         private void btnLoan_Click(object sender, EventArgs e)
         {
             createNewLoan();
@@ -145,11 +147,10 @@ namespace banqzManagement.View.userpanel
                 double duration = Convert.ToDouble(txtLoanDuration.Text);
                 double amountDisbursed = Convert.ToDouble(txtLoanDisbursed.Text);
 
-                double interest = interestRate / 100;
-                double interestDuration = interest * duration;
-                double totalInterest = interestDuration * amountDisbursed;
+                //calculate the interest on the loans
+                double interest = ((interestRate / 100) * duration) * amountDisbursed;
 
-                txtLoanInterest.Text = totalInterest.ToString(); //assign the result value to the interest txtbox
+                txtLoanInterest.Text = interest.ToString(); //assign the result value to the interest txtbox
             }
             catch (Exception ex)
             {
@@ -204,45 +205,50 @@ namespace banqzManagement.View.userpanel
                 loan.dateStart = dateLoanDate.Text;
                 loan.interestAmount = lblInterestLoanDisbursed.Text;
                 loan.dateExpiry = txtLoanExpiry.Text;
-                //check if the username exist
 
+
+                
+                loan.account = txtLoanSearch.Text;
+                loan.getOutstanding = "0";
                 //check if the outstanding is created than zero
                 loan.checkForOutstanding();
+
                 double amount = Convert.ToDouble(loan.getOutstanding); //covert the outstanding value to double
-                
-               
+                //MessageBox.Show(loan.getOutstanding);
+
                 //validate the textbox
                 if (txtLoanSearch.Text == "" || txtLoanDisbursed.Text == "" || txtLoanDuration.Text == "")
                 {
-                    MessageBox.Show("Fill all field");
+                    MessageBox.Show("Please, fill all field");
 
                     return;
                 }
 
-                //check for the outstanding value
-                if (amount > 0)
+              if (amount > 0) //check for the outstanding value
                 {
+                    //MessageBox.Show(amount.ToString());
                     MessageBox.Show("Client has running contract \n You can top up the loan ");
 
                     return;
                 }
 
+               
+                    loan.insertNewLoan();
+                    insertRepayment(); //call the isertrepayment function
+                    MessageBox.Show("Loan created");
 
 
-                loan.insertNewLoan();
-                insertRepayment(); //call the isertrepayment function
-                MessageBox.Show("Loan created");
+                    //clear the textbox 
+                    lblLoanName.Text = "";
+                    lblLoanPhone.Text = "";
+                    txtLoanDisbursed.Text = "";
+                    txtLoanInterest.Text = "";
+                    txtLoanDuration.Text = "";
+                    txtLoanExpiry.Text = "";
+                    lblInterestLoanDisbursed.Text = "";
+                    txtLoanSearch.Text = "";
 
-
-                //clear the textbox 
-                lblLoanName.Text = "";
-                lblLoanPhone.Text = "";
-                txtLoanDisbursed.Text = "";
-                txtLoanInterest.Text = "";
-                txtLoanDuration.Text = "";
-                txtLoanExpiry.Text = "";
-                lblInterestLoanDisbursed.Text = "";
-                txtLoanSearch.Text = "";
+                
             }
             catch (Exception ex)
             {
@@ -262,6 +268,40 @@ namespace banqzManagement.View.userpanel
             loan.insertToRepayment();
             
         }
-       
+
+        private void txtLoanDisbursed_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLoanDuration_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion
+
+
+        //search for the info
+        private void btnTopSearch_Click(object sender, EventArgs e)
+        {
+            if (txtLoanSearch.Text == "")
+            {
+                lblLoanSearchMsg.Text = "Enter client account number";
+
+                return;
+            }
+            else
+            {
+                getAccountInfos();
+
+                lblLoanSearchMsg.Text = "";
+            }
+        }
     }
 }

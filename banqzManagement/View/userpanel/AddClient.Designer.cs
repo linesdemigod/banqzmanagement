@@ -393,6 +393,7 @@
             this.txtTelephone.ShadowDecoration.Parent = this.txtTelephone;
             this.txtTelephone.Size = new System.Drawing.Size(438, 30);
             this.txtTelephone.TabIndex = 29;
+            this.txtTelephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelephone_KeyPress);
             // 
             // guna2HtmlLabel4
             // 
