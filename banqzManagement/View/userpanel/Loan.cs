@@ -26,6 +26,9 @@ namespace banqzManagement.View.userpanel
         }
 
         #region NEW LOANS
+
+
+        #region LOAN TOP-UP
         //add the loan duration to the contract to the get expiry date
         private void calcExpiryDate()
         {
@@ -128,7 +131,9 @@ namespace banqzManagement.View.userpanel
             try
             {
                 loan.getInterestRate();
-                lblLoanInterestRate.Text = loan.interestRate;
+                lblLoanInterestRate.Text = loan.interestRate; //set the interest rate in the new loan TAB
+               
+                lblTopInterestRate.Text = loan.interestRate; //set the interest rate in the Top up loan TAB
             }
             catch (Exception)
             {
@@ -167,6 +172,7 @@ namespace banqzManagement.View.userpanel
             getLoanAndinterest(); //add loan and interest
         }
 
+        //allow user to press ENTER key once he enter the account and press enter
         private void txtLoanSearch_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -175,6 +181,7 @@ namespace banqzManagement.View.userpanel
             }
         }
 
+        //add the amount disbursed and the interest
         private void getLoanAndinterest()
         {
             try
@@ -235,7 +242,7 @@ namespace banqzManagement.View.userpanel
                
                     loan.insertNewLoan();
                     insertRepayment(); //call the isertrepayment function
-                    MessageBox.Show("Loan created");
+                    MessageBox.Show("Loan has been Top-up");
 
 
                     //clear the textbox 
@@ -269,15 +276,9 @@ namespace banqzManagement.View.userpanel
             
         }
 
-        private void txtLoanDisbursed_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
+        
 
-        private void txtLoanDuration_KeyPress(object sender, KeyPressEventArgs e)
+        private void acceptNumberOnly(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
@@ -287,21 +288,233 @@ namespace banqzManagement.View.userpanel
         #endregion
 
 
+        //calculate the expiry date
+        private void calcTopExpiryDate()
+        {
+            try
+            {
+
+                DateTime date = Convert.ToDateTime(dateTopDate.Text);
+
+                int months = Convert.ToInt32(txtTopDuration.Text);
+
+                DateTime expiry = date.AddMonths(months);
+
+                txtTopExpiry.Text = expiry.ToString("yyyy-MM-dd");
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+        }
+
+
+        //add the amount disbursed and the interest
+        private void getTopLoanAndinterest()
+        {
+            try
+            {
+                double amountDisbursed = Convert.ToDouble(txtTopAmountDisbursed.Text);
+                double loanInterest = Convert.ToDouble(txtTopInterest.Text);
+                double result = loanInterest + amountDisbursed;
+                lblTopInterestLoanDisbursed.Text = result.ToString();
+            }
+            catch (Exception)
+            {
+
+
+            }
+
+        }
+
         //search for the info
         private void btnTopSearch_Click(object sender, EventArgs e)
         {
-            if (txtLoanSearch.Text == "")
+            if (txtTopSearch.Text == "")
             {
-                lblLoanSearchMsg.Text = "Enter client account number";
+                lblTopSearchMsg.Text = "Enter client account number";
 
                 return;
             }
             else
             {
-                getAccountInfos();
+                getAccountInfoTop();
 
-                lblLoanSearchMsg.Text = "";
+                lblTopSearchMsg.Text = "";
             }
         }
+
+        //get the client info
+        private void getAccountInfoTop()
+        {
+            try
+            {
+                loan.account = txtTopSearch.Text;
+                loan.getAccountInfo();
+                lblTopName.Text = loan.fname + " " + loan.lname;
+                lblTopPhone.Text = loan.phone;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        //press enter to search once the account number is entered in the textbox
+        private void txtTopSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                getAccountInfos();
+            }
+        }
+
+        //calc the Top Up interest on the amount disbursed
+        private void calcTopInterest()
+        {
+            try
+            {
+                double interestRate = Convert.ToDouble(lblTopInterestRate.Text); //assign the values of the textboxes to a double variable
+                double duration = Convert.ToDouble(txtTopDuration.Text);
+                double amountDisbursed = Convert.ToDouble(txtTopAmountDisbursed.Text);
+
+                //calculate the interest on the loans
+                double interest = ((interestRate / 100) * duration) * amountDisbursed;
+
+                txtTopInterest.Text = interest.ToString(); //assign the result value to the interest txtbox
+            }
+            catch (Exception ex)
+            {
+
+                //MessageBox.Show(ex.Message);
+            }
+        }
+
+        //calculate the interest when the value change in the amount disbursed textbox
+        private void txtTopAmountDisbursed_TextChanged(object sender, EventArgs e)
+        {
+            calcTopInterest(); //calculate loan interest
+            getTopLoanAndinterest(); //add interest and loan
+        }
+
+        //call the various function when the value of the duration is changed in the Top up
+        private void txtTopDuration_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtTopDuration.Text == "")//check if the loan duration textbox is empty set the loan expiry to empty
+                {
+                    txtTopExpiry.Text = "";
+
+                }
+                else
+                {
+                    calcTopExpiryDate(); //calc the expiry date
+                    calcTopInterest(); //calc the interest
+                    getTopLoanAndinterest(); //add interest and loan
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        //set the value of the Duration at the top to empty when the contract date is changed
+        private void dateTopDate_ValueChanged(object sender, EventArgs e)
+        {
+            txtTopDuration.Text = "";
+        }
+
+
+        //insert into as new loan
+        private void createTopUpLoan()
+        {
+            try
+            {
+                loan.officer = Login.Login_username;
+                loan.account = txtTopSearch.Text;
+                loan.amount = txtTopAmountDisbursed.Text;
+                loan.interest = txtTopInterest.Text;
+                loan.duration = txtTopDuration.Text;
+                loan.dateStart = dateTopDate.Text;
+                loan.interestAmount = lblTopInterestLoanDisbursed.Text;
+                loan.dateExpiry = txtTopExpiry.Text;
+
+
+
+                loan.account = txtTopSearch.Text;
+                loan.getOutstanding = "0";
+                //check if the outstanding is created than zero
+                loan.checkForOutstanding();
+
+                double amount = Convert.ToDouble(loan.getOutstanding); //covert the outstanding value to double
+                //MessageBox.Show(loan.getOutstanding);
+
+                //validate the textbox
+                if (txtTopSearch.Text == "" || txtTopAmountDisbursed.Text == "" || txtTopDuration.Text == "")
+                {
+                    MessageBox.Show("Please, fill all field");
+
+                    return;
+                }
+
+                if (amount <= 0) //check for the outstanding value
+                {
+                    //MessageBox.Show(amount.ToString());
+                    MessageBox.Show("You cannot Top-up loan \n Please assign him/her a new loan");
+
+                    return;
+                }
+
+
+                loan.insertNewLoan();
+                insertRepaymentTop(amount); //call the isertrepayment function and pass amount left as argument
+                MessageBox.Show("Loan created");
+
+
+                //clear the textbox 
+                lblTopName.Text = "";
+                lblTopPhone.Text = "";
+                txtTopAmountDisbursed.Text = "";
+                txtTopInterest.Text = "";
+                txtTopDuration.Text = "";
+                txtTopExpiry.Text = "";
+                lblTopInterestLoanDisbursed.Text = "";
+                txtTopSearch.Text = "";
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        //insert the new loan to repayment
+        private void insertRepaymentTop(double amountLeft)
+        {
+            loan.officer = Login.Login_username;
+            loan.account = txtTopSearch.Text;
+            loan.amount = "0";
+            double interestAmountDisbursed = Convert.ToDouble(lblTopInterestLoanDisbursed.Text);
+
+            double result = interestAmountDisbursed + amountLeft;
+            loan.outstanding = result.ToString();
+            loan.insertToRepayment();
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            createTopUpLoan();
+        }
+
+        #endregion
     }
 }
