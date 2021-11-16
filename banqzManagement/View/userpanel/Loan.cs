@@ -242,7 +242,7 @@ namespace banqzManagement.View.userpanel
                
                     loan.insertNewLoan();
                     insertRepayment(); //call the isertrepayment function
-                    MessageBox.Show("Loan has been Top-up");
+                    MessageBox.Show("New Loan Created");
 
 
                     //clear the textbox 
@@ -271,6 +271,7 @@ namespace banqzManagement.View.userpanel
             loan.officer = Login.Login_username;
             loan.account = txtLoanSearch.Text;
             loan.amount = "0";
+            loan.remark = lblLoanRemark.Text;
             loan.outstanding = lblInterestLoanDisbursed.Text;
             loan.insertToRepayment();
             
@@ -473,7 +474,7 @@ namespace banqzManagement.View.userpanel
 
                 loan.insertNewLoan();
                 insertRepaymentTop(amount); //call the isertrepayment function and pass amount left as argument
-                MessageBox.Show("Loan created");
+                MessageBox.Show("Loan is Top-up");
 
 
                 //clear the textbox 
@@ -502,6 +503,7 @@ namespace banqzManagement.View.userpanel
             loan.officer = Login.Login_username;
             loan.account = txtTopSearch.Text;
             loan.amount = "0";
+            loan.remark = lblTopRemark.Text;
             double interestAmountDisbursed = Convert.ToDouble(lblTopInterestLoanDisbursed.Text);
 
             double result = interestAmountDisbursed + amountLeft;
@@ -515,6 +517,77 @@ namespace banqzManagement.View.userpanel
             createTopUpLoan();
         }
 
+        #endregion
+
+        #region LOAN FEE
+        //get the client info in the Loan fees
+        private void getAccountInfoFee()
+        {
+            try
+            {
+                loan.account = txtFeeSearch.Text;
+                loan.getAccountInfo();
+                lblFeeName.Text = loan.fname + " " + loan.lname;
+                lblFeePhone.Text = loan.phone;
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        //call the search for client function
+        private void btnFeeSearch_Click(object sender, EventArgs e)
+        {
+            if (txtFeeSearch.Text == "")
+            {
+                lblFeeSearchMsg.Text = "Enter client account number";
+
+                return;
+            }
+            else
+            {
+                getAccountInfoFee();
+
+                lblFeeSearchMsg.Text = "";
+            }
+        }
+
+       private void insertLoanFee()
+        {
+            loan.account = txtFeeSearch.Text;
+            loan.officer = Login.Login_username;
+            loan.purpose = comboFeePurpose.Text;
+            loan.amount = txtFeeAmount.Text;
+           
+
+            //validate the textbox
+            if (txtFeeSearch.Text == "" || txtFeeAmount.Text == "" || comboFeePurpose.Text == "")
+            {
+                MessageBox.Show("Please, fill all field");
+
+                return;
+            }
+
+
+            loan.insertToLoanFee(); //insert into loan fees
+            MessageBox.Show(comboFeePurpose.Text + " inserted");
+
+
+            lblFeeName.Text = "";
+            lblFeePhone.Text = "";
+            txtFeeAmount.Text = "";
+            txtFeeSearch.Text = "";
+            comboFeePurpose.SelectedItem = null;
+
+           
+
+        }
+
+        private void btnFeeSubmit_Click(object sender, EventArgs e)
+        {
+            insertLoanFee();
+        }
         #endregion
     }
 }

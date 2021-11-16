@@ -24,6 +24,8 @@ namespace banqzManagement.Controller
         public string dateExpiry { get; set; }
         public string outstanding { get; set; }
         public string getOutstanding { get; set; }
+        public string purpose { get; set; }
+        public string remark { get; set; }
 
         //SEARCH Client
         public void getAccountInfo()
@@ -127,7 +129,7 @@ namespace banqzManagement.Controller
                 using (var cmd = new MySqlCommand())
                 {
                     string sql = "SELECT officer_id FROM officer WHERE officer_uid = @officer";
-                    cmd.CommandText = "INSERT INTO repayment(officer_id, client_account_num, amount, outstanding) VALUES((" + sql + "), @account, @amount, @outstanding)";
+                    cmd.CommandText = "INSERT INTO repayment(officer_id, client_account_num, amount, outstanding, remark) VALUES((" + sql + "), @account, @amount, @outstanding, @remark)";
 
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = conn;
@@ -135,6 +137,7 @@ namespace banqzManagement.Controller
                     cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;
                     cmd.Parameters.Add("@amount", MySqlDbType.VarChar).Value = amount;
                     cmd.Parameters.Add("@outstanding", MySqlDbType.VarChar).Value = outstanding;
+                    cmd.Parameters.Add("@remark", MySqlDbType.VarChar).Value = remark;
                     cmd.ExecuteNonQuery();
 
                     conn.Close();
@@ -173,6 +176,37 @@ namespace banqzManagement.Controller
             conn.Close();
         }
 
-       
+        public void insertToLoanFee()
+        {
+            try
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    string sql = "SELECT officer_id FROM officer WHERE officer_uid = @officer";
+                    cmd.CommandText = "INSERT INTO loanfee(officer_id, client_account_num, fee_purpose, amount) VALUES((" + sql + "), @account, @purpose, @amount)";
+
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@officer", MySqlDbType.VarChar).Value = officer;
+                    cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;
+                    cmd.Parameters.Add("@purpose", MySqlDbType.VarChar).Value = purpose;
+                    cmd.Parameters.Add("@amount", MySqlDbType.VarChar).Value = amount;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
