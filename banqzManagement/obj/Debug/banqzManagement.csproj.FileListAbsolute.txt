@@ -51,3 +51,4 @@ C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManag
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\bin\Debug\Tulpep.NotificationWindow.dll
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.UpdateClient.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Loan.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.LoansManagement.resources

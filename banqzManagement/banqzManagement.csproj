@@ -117,6 +117,7 @@
     <Compile Include="Controller\Backups.cs" />
     <Compile Include="Controller\Database.cs" />
     <Compile Include="Controller\Loans.cs" />
+    <Compile Include="Controller\LoansManagements.cs" />
     <Compile Include="Controller\Logins.cs" />
     <Compile Include="Controller\Officers.cs" />
     <Compile Include="Controller\Profiles.cs" />
@@ -169,6 +170,12 @@
     </Compile>
     <Compile Include="View\userpanel\Loan.Designer.cs">
       <DependentUpon>Loan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\LoansManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\LoansManagement.Designer.cs">
+      <DependentUpon>LoansManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\Officer.cs">
       <SubType>Form</SubType>
@@ -227,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Loan.resx">
       <DependentUpon>Loan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\LoansManagement.resx">
+      <DependentUpon>LoansManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Officer.resx">
       <DependentUpon>Officer.cs</DependentUpon>
