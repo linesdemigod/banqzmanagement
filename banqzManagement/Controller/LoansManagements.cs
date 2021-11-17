@@ -10,12 +10,17 @@ namespace banqzManagement.Controller
 {
     class LoansManagements : Database
     {
+        public string id { get; set; }
+        public string idFee { get; set; }
 
         //Read data
         public DataTable dt = new DataTable();
         private DataSet ds = new DataSet();
 
-        //READ DATA
+        public DataTable dat = new DataTable();
+        private DataSet das = new DataSet();
+
+        //Get the loan from the database
         public void getLoans()
         {
             string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = loaninfo.officer_id";
@@ -24,6 +29,81 @@ namespace banqzManagement.Controller
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
+        }
+
+
+        //Delete client
+        public void deleteLoan()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM loaninfo WHERE loan_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        //READ LOAN FEE DATA
+        public void getLoanFee()
+        {
+            string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = loanfee.officer_id";
+            dat.Clear();
+            string sql = "SELECT fee_id, client_account_num, fee_purpose, amount, (" + subsql + ") AS Officer FROM loanfee ORDER BY fee_id DESC";
+            MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
+            dta.Fill(das);
+            dat = das.Tables[0];
+        }
+
+
+        //Delete client
+        public void deleteLoanFee()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM loanfee WHERE fee_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = idFee;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
     }
 }

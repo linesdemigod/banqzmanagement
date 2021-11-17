@@ -25,10 +25,10 @@ namespace banqzManagement.View.userpanel
             getInterestRates();
         }
 
-        #region NEW LOANS
+        
 
 
-        #region LOAN TOP-UP
+        #region NEW LOAN
         //add the loan duration to the contract to the get expiry date
         private void calcExpiryDate()
         {
@@ -94,19 +94,28 @@ namespace banqzManagement.View.userpanel
         //method to search for the client details
         private void getAccountInfos()
         {
-            try
-            {
-                loan.account = txtLoanSearch.Text;
-                loan.getAccountInfo();
-                lblLoanName.Text = loan.fname + " " + loan.lname;
-                lblLoanPhone.Text = loan.phone;
-            }
-            catch (Exception)
+            loan.account = txtLoanSearch.Text;
+            bool accExist = loan.accountExist(); // check if account number exist
+
+            if (accExist == false)
             {
                 
+                lblLoanName.Text = ".";
+                lblLoanPhone.Text = ".";
+                lblLoanSearchMsg.Text = "Account Number does not exist";
+
+                return;
             }
-             
+
+            lblLoanSearchMsg.Text = "";
+            loan.account = txtLoanSearch.Text;
+            loan.getAccountInfo(); //call the getAccountInfo at the Loans class
+            lblLoanName.Text = loan.fname + " " + loan.lname;
+            lblLoanPhone.Text = loan.phone;
+            lblAccountNum.Text = loan.account;
         }
+
+       
 
         //search with the account number and the various result on the txtbox
         private void btnLoanSearch_Click(object sender, EventArgs e)
@@ -120,7 +129,7 @@ namespace banqzManagement.View.userpanel
             {
                 getAccountInfos();
 
-                lblLoanSearchMsg.Text = "";
+                
             }
            
         }
@@ -205,7 +214,7 @@ namespace banqzManagement.View.userpanel
             try
             {
                 loan.officer = Login.Login_username;
-                loan.account = txtLoanSearch.Text;
+                loan.account = lblAccountNum.Text;
                 loan.amount = txtLoanDisbursed.Text;
                 loan.interest = txtLoanInterest.Text;
                 loan.duration = txtLoanDuration.Text;
@@ -215,21 +224,24 @@ namespace banqzManagement.View.userpanel
 
 
                 
-                loan.account = txtLoanSearch.Text;
+                loan.account = lblAccountNum.Text;
                 loan.getOutstanding = "0";
                 //check if the outstanding is created than zero
                 loan.checkForOutstanding();
 
+               
                 double amount = Convert.ToDouble(loan.getOutstanding); //covert the outstanding value to double
                 //MessageBox.Show(loan.getOutstanding);
-
+                
                 //validate the textbox
-                if (txtLoanSearch.Text == "" || txtLoanDisbursed.Text == "" || txtLoanDuration.Text == "")
+                if (txtLoanSearch.Text == "" || txtLoanDisbursed.Text == "" || txtLoanDuration.Text == "" || lblLoanName.Text == "." )
                 {
                     MessageBox.Show("Please, fill all field");
 
                     return;
                 }
+
+               
 
               if (amount > 0) //check for the outstanding value
                 {
@@ -254,6 +266,7 @@ namespace banqzManagement.View.userpanel
                     txtLoanExpiry.Text = "";
                     lblInterestLoanDisbursed.Text = "";
                     txtLoanSearch.Text = "";
+                    lblAccountNum.Text = "";
 
                 
             }
@@ -271,7 +284,7 @@ namespace banqzManagement.View.userpanel
             loan.officer = Login.Login_username;
             loan.account = txtLoanSearch.Text;
             loan.amount = "0";
-            loan.remark = lblLoanRemark.Text;
+            loan.remark = "Repayment";
             loan.outstanding = lblInterestLoanDisbursed.Text;
             loan.insertToRepayment();
             
@@ -289,6 +302,7 @@ namespace banqzManagement.View.userpanel
         #endregion
 
 
+        #region LOAN TOP-UP
         //calculate the expiry date
         private void calcTopExpiryDate()
         {
@@ -343,7 +357,7 @@ namespace banqzManagement.View.userpanel
             {
                 getAccountInfoTop();
 
-                lblTopSearchMsg.Text = "";
+                
             }
         }
 
@@ -353,9 +367,24 @@ namespace banqzManagement.View.userpanel
             try
             {
                 loan.account = txtTopSearch.Text;
+                bool accExist = loan.accountExist(); // check if account number exist
+
+                if (accExist == false)
+                {
+
+                    lblTopName.Text = ".";
+                    lblTopPhone.Text = ".";
+                    lblTopSearchMsg.Text = "Account Number does not exist";
+
+                    return;
+                }
+
+                lblTopSearchMsg.Text = "";
+                loan.account = txtTopSearch.Text;
                 loan.getAccountInfo();
                 lblTopName.Text = loan.fname + " " + loan.lname;
                 lblTopPhone.Text = loan.phone;
+                lblTopAccount.Text = loan.account;
             }
             catch (Exception)
             {
@@ -437,7 +466,7 @@ namespace banqzManagement.View.userpanel
             try
             {
                 loan.officer = Login.Login_username;
-                loan.account = txtTopSearch.Text;
+                loan.account = lblTopAccount.Text;
                 loan.amount = txtTopAmountDisbursed.Text;
                 loan.interest = txtTopInterest.Text;
                 loan.duration = txtTopDuration.Text;
@@ -447,7 +476,7 @@ namespace banqzManagement.View.userpanel
 
 
 
-                loan.account = txtTopSearch.Text;
+                loan.account = lblTopAccount.Text;
                 loan.getOutstanding = "0";
                 //check if the outstanding is created than zero
                 loan.checkForOutstanding();
@@ -456,7 +485,7 @@ namespace banqzManagement.View.userpanel
                 //MessageBox.Show(loan.getOutstanding);
 
                 //validate the textbox
-                if (txtTopSearch.Text == "" || txtTopAmountDisbursed.Text == "" || txtTopDuration.Text == "")
+                if (txtTopSearch.Text == "" || txtTopAmountDisbursed.Text == "" || txtTopDuration.Text == "" || lblTopName.Text == ".")
                 {
                     MessageBox.Show("Please, fill all field");
 
@@ -486,6 +515,7 @@ namespace banqzManagement.View.userpanel
                 txtTopExpiry.Text = "";
                 lblTopInterestLoanDisbursed.Text = "";
                 txtTopSearch.Text = "";
+                lblTopAccount.Text = "";
 
 
             }
@@ -503,7 +533,7 @@ namespace banqzManagement.View.userpanel
             loan.officer = Login.Login_username;
             loan.account = txtTopSearch.Text;
             loan.amount = "0";
-            loan.remark = lblTopRemark.Text;
+            loan.remark = "Repayment";
             double interestAmountDisbursed = Convert.ToDouble(lblTopInterestLoanDisbursed.Text);
 
             double result = interestAmountDisbursed + amountLeft;
@@ -526,9 +556,25 @@ namespace banqzManagement.View.userpanel
             try
             {
                 loan.account = txtFeeSearch.Text;
+                bool accExist = loan.accountExist(); // check if account number exist
+
+                if (accExist == false)
+                {
+
+                    lblFeeName.Text = ".";
+                    lblFeePhone.Text = ".";
+                    lblFeeSearchMsg.Text = "Account Number does not exist";
+
+                    return;
+                }
+
+                lblFeeSearchMsg.Text = "";
+
+                loan.account = txtFeeSearch.Text;
                 loan.getAccountInfo();
                 lblFeeName.Text = loan.fname + " " + loan.lname;
                 lblFeePhone.Text = loan.phone;
+                lblFeeAccount.Text = loan.account;
             }
             catch (Exception)
             {
@@ -548,21 +594,20 @@ namespace banqzManagement.View.userpanel
             else
             {
                 getAccountInfoFee();
-
-                lblFeeSearchMsg.Text = "";
+                
             }
         }
 
        private void insertLoanFee()
         {
-            loan.account = txtFeeSearch.Text;
+            loan.account = lblFeeAccount.Text; 
             loan.officer = Login.Login_username;
             loan.purpose = comboFeePurpose.Text;
             loan.amount = txtFeeAmount.Text;
            
 
             //validate the textbox
-            if (txtFeeSearch.Text == "" || txtFeeAmount.Text == "" || comboFeePurpose.Text == "")
+            if (txtFeeSearch.Text == "" || txtFeeAmount.Text == "" || comboFeePurpose.Text == "" || lblFeeName.Text == ".")
             {
                 MessageBox.Show("Please, fill all field");
 
@@ -579,6 +624,7 @@ namespace banqzManagement.View.userpanel
             txtFeeAmount.Text = "";
             txtFeeSearch.Text = "";
             comboFeePurpose.SelectedItem = null;
+            lblFeeAccount.Text = "";
 
            
 

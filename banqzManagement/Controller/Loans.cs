@@ -26,6 +26,8 @@ namespace banqzManagement.Controller
         public string getOutstanding { get; set; }
         public string purpose { get; set; }
         public string remark { get; set; }
+        public string checkAccount { get; set; }
+        public string outCheck { get; set; }
 
         //SEARCH Client
         public void getAccountInfo()
@@ -206,6 +208,47 @@ namespace banqzManagement.Controller
             {
                 conn.Close();
             }
+        }
+
+
+        //check if the username exist
+        public bool accountExist()
+        {
+            bool check = false;
+            try
+            {
+
+                conn.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM client WHERE client_account_num = @account";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;
+
+                    rd = cmd.ExecuteReader();
+                    while (rd.Read())
+                    {
+                        check = true;
+                        checkAccount = rd.GetString("client_account_num");
+                    }
+
+                    conn.Close();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return check;
         }
 
     }

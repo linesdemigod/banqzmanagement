@@ -31,6 +31,8 @@
             this.groupBoxOfficer = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControlClient = new System.Windows.Forms.TabControl();
             this.addLoanTab = new System.Windows.Forms.TabPage();
+            this.lblAccountNum = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLoanSearchMsg = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblInterestLoanDisbursed = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -92,9 +94,9 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.txtTopSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblLoanRemark = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopRemark = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTopAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblFeeAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel25 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBoxOfficer.SuspendLayout();
             this.tabControlClient.SuspendLayout();
@@ -137,8 +139,8 @@
             // addLoanTab
             // 
             this.addLoanTab.BackColor = System.Drawing.Color.White;
-            this.addLoanTab.Controls.Add(this.lblLoanRemark);
-            this.addLoanTab.Controls.Add(this.guna2HtmlLabel6);
+            this.addLoanTab.Controls.Add(this.lblAccountNum);
+            this.addLoanTab.Controls.Add(this.guna2HtmlLabel21);
             this.addLoanTab.Controls.Add(this.lblLoanSearchMsg);
             this.addLoanTab.Controls.Add(this.lblInterestLoanDisbursed);
             this.addLoanTab.Controls.Add(this.guna2HtmlLabel11);
@@ -168,6 +170,32 @@
             this.addLoanTab.Size = new System.Drawing.Size(763, 468);
             this.addLoanTab.TabIndex = 0;
             this.addLoanTab.Text = "New Loan";
+            // 
+            // lblAccountNum
+            // 
+            this.lblAccountNum.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAccountNum.BackColor = System.Drawing.Color.Transparent;
+            this.lblAccountNum.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAccountNum.ForeColor = System.Drawing.Color.Black;
+            this.lblAccountNum.Location = new System.Drawing.Point(581, 235);
+            this.lblAccountNum.Name = "lblAccountNum";
+            this.lblAccountNum.Size = new System.Drawing.Size(8, 22);
+            this.lblAccountNum.TabIndex = 81;
+            this.lblAccountNum.Text = "r";
+            this.lblAccountNum.Visible = false;
+            // 
+            // guna2HtmlLabel21
+            // 
+            this.guna2HtmlLabel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel21.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(581, 206);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(70, 20);
+            this.guna2HtmlLabel21.TabIndex = 80;
+            this.guna2HtmlLabel21.Text = "Account:";
+            this.guna2HtmlLabel21.Visible = false;
             // 
             // lblLoanSearchMsg
             // 
@@ -458,9 +486,9 @@
             this.lblLoanPhone.ForeColor = System.Drawing.Color.Black;
             this.lblLoanPhone.Location = new System.Drawing.Point(298, 112);
             this.lblLoanPhone.Name = "lblLoanPhone";
-            this.lblLoanPhone.Size = new System.Drawing.Size(3, 2);
+            this.lblLoanPhone.Size = new System.Drawing.Size(7, 22);
             this.lblLoanPhone.TabIndex = 61;
-            this.lblLoanPhone.Text = null;
+            this.lblLoanPhone.Text = ".";
             // 
             // lblLoanName
             // 
@@ -470,9 +498,9 @@
             this.lblLoanName.ForeColor = System.Drawing.Color.Black;
             this.lblLoanName.Location = new System.Drawing.Point(298, 75);
             this.lblLoanName.Name = "lblLoanName";
-            this.lblLoanName.Size = new System.Drawing.Size(3, 2);
+            this.lblLoanName.Size = new System.Drawing.Size(7, 22);
             this.lblLoanName.TabIndex = 60;
-            this.lblLoanName.Text = null;
+            this.lblLoanName.Text = ".";
             // 
             // guna2HtmlLabel3
             // 
@@ -559,6 +587,8 @@
             // 
             // addLoanFeeTab
             // 
+            this.addLoanFeeTab.Controls.Add(this.lblFeeAccount);
+            this.addLoanFeeTab.Controls.Add(this.guna2HtmlLabel25);
             this.addLoanFeeTab.Controls.Add(this.comboFeePurpose);
             this.addLoanFeeTab.Controls.Add(this.btnFeeSubmit);
             this.addLoanFeeTab.Controls.Add(this.lblFeeSearchMsg);
@@ -631,6 +661,7 @@
             this.lblFeeSearchMsg.Name = "lblFeeSearchMsg";
             this.lblFeeSearchMsg.Size = new System.Drawing.Size(3, 2);
             this.lblFeeSearchMsg.TabIndex = 89;
+            this.lblFeeSearchMsg.Text = null;
             // 
             // btnFeeSearch
             // 
@@ -712,9 +743,9 @@
             this.lblFeePhone.ForeColor = System.Drawing.Color.Black;
             this.lblFeePhone.Location = new System.Drawing.Point(297, 172);
             this.lblFeePhone.Name = "lblFeePhone";
-            this.lblFeePhone.Size = new System.Drawing.Size(3, 2);
+            this.lblFeePhone.Size = new System.Drawing.Size(7, 22);
             this.lblFeePhone.TabIndex = 83;
-            this.lblFeePhone.Text = null;
+            this.lblFeePhone.Text = ".";
             // 
             // lblFeeName
             // 
@@ -724,9 +755,9 @@
             this.lblFeeName.ForeColor = System.Drawing.Color.Black;
             this.lblFeeName.Location = new System.Drawing.Point(297, 135);
             this.lblFeeName.Name = "lblFeeName";
-            this.lblFeeName.Size = new System.Drawing.Size(3, 2);
+            this.lblFeeName.Size = new System.Drawing.Size(7, 22);
             this.lblFeeName.TabIndex = 82;
-            this.lblFeeName.Text = null;
+            this.lblFeeName.Text = ".";
             // 
             // guna2HtmlLabel26
             // 
@@ -794,8 +825,8 @@
             // 
             // addLoanTopupTab
             // 
-            this.addLoanTopupTab.Controls.Add(this.lblTopRemark);
-            this.addLoanTopupTab.Controls.Add(this.guna2HtmlLabel25);
+            this.addLoanTopupTab.Controls.Add(this.lblTopAccount);
+            this.addLoanTopupTab.Controls.Add(this.guna2HtmlLabel10);
             this.addLoanTopupTab.Controls.Add(this.lblTopSearchMsg);
             this.addLoanTopupTab.Controls.Add(this.lblTopInterestLoanDisbursed);
             this.addLoanTopupTab.Controls.Add(this.guna2HtmlLabel12);
@@ -1115,9 +1146,9 @@
             this.lblTopPhone.ForeColor = System.Drawing.Color.Black;
             this.lblTopPhone.Location = new System.Drawing.Point(296, 113);
             this.lblTopPhone.Name = "lblTopPhone";
-            this.lblTopPhone.Size = new System.Drawing.Size(3, 2);
+            this.lblTopPhone.Size = new System.Drawing.Size(7, 22);
             this.lblTopPhone.TabIndex = 84;
-            this.lblTopPhone.Text = null;
+            this.lblTopPhone.Text = ".";
             // 
             // lblTopName
             // 
@@ -1127,9 +1158,9 @@
             this.lblTopName.ForeColor = System.Drawing.Color.Black;
             this.lblTopName.Location = new System.Drawing.Point(296, 76);
             this.lblTopName.Name = "lblTopName";
-            this.lblTopName.Size = new System.Drawing.Size(3, 2);
+            this.lblTopName.Size = new System.Drawing.Size(7, 22);
             this.lblTopName.TabIndex = 83;
-            this.lblTopName.Text = null;
+            this.lblTopName.Text = ".";
             // 
             // guna2HtmlLabel22
             // 
@@ -1214,44 +1245,43 @@
             this.guna2HtmlLabel24.TabIndex = 78;
             this.guna2HtmlLabel24.Text = "Account number:";
             // 
-            // guna2HtmlLabel6
+            // lblTopAccount
             // 
-            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(581, 194);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(70, 20);
-            this.guna2HtmlLabel6.TabIndex = 78;
-            this.guna2HtmlLabel6.Text = "Remarks:";
-            this.guna2HtmlLabel6.Visible = false;
+            this.lblTopAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTopAccount.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopAccount.ForeColor = System.Drawing.Color.Black;
+            this.lblTopAccount.Location = new System.Drawing.Point(579, 224);
+            this.lblTopAccount.Name = "lblTopAccount";
+            this.lblTopAccount.Size = new System.Drawing.Size(8, 22);
+            this.lblTopAccount.TabIndex = 104;
+            this.lblTopAccount.Text = "r";
+            this.lblTopAccount.Visible = false;
             // 
-            // lblLoanRemark
+            // guna2HtmlLabel10
             // 
-            this.lblLoanRemark.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLoanRemark.BackColor = System.Drawing.Color.Transparent;
-            this.lblLoanRemark.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoanRemark.ForeColor = System.Drawing.Color.Black;
-            this.lblLoanRemark.Location = new System.Drawing.Point(581, 223);
-            this.lblLoanRemark.Name = "lblLoanRemark";
-            this.lblLoanRemark.Size = new System.Drawing.Size(83, 22);
-            this.lblLoanRemark.TabIndex = 79;
-            this.lblLoanRemark.Text = "repayment";
-            this.lblLoanRemark.Visible = false;
+            this.guna2HtmlLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(579, 195);
+            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(70, 20);
+            this.guna2HtmlLabel10.TabIndex = 103;
+            this.guna2HtmlLabel10.Text = "Account:";
+            this.guna2HtmlLabel10.Visible = false;
             // 
-            // lblTopRemark
+            // lblFeeAccount
             // 
-            this.lblTopRemark.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopRemark.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopRemark.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopRemark.ForeColor = System.Drawing.Color.Black;
-            this.lblTopRemark.Location = new System.Drawing.Point(579, 224);
-            this.lblTopRemark.Name = "lblTopRemark";
-            this.lblTopRemark.Size = new System.Drawing.Size(83, 22);
-            this.lblTopRemark.TabIndex = 102;
-            this.lblTopRemark.Text = "repayment";
-            this.lblTopRemark.Visible = false;
+            this.lblFeeAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFeeAccount.BackColor = System.Drawing.Color.Transparent;
+            this.lblFeeAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeeAccount.ForeColor = System.Drawing.Color.Black;
+            this.lblFeeAccount.Location = new System.Drawing.Point(557, 234);
+            this.lblFeeAccount.Name = "lblFeeAccount";
+            this.lblFeeAccount.Size = new System.Drawing.Size(8, 22);
+            this.lblFeeAccount.TabIndex = 106;
+            this.lblFeeAccount.Text = "r";
             // 
             // guna2HtmlLabel25
             // 
@@ -1259,12 +1289,11 @@
             this.guna2HtmlLabel25.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel25.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel25.Location = new System.Drawing.Point(579, 195);
+            this.guna2HtmlLabel25.Location = new System.Drawing.Point(557, 205);
             this.guna2HtmlLabel25.Name = "guna2HtmlLabel25";
             this.guna2HtmlLabel25.Size = new System.Drawing.Size(70, 20);
-            this.guna2HtmlLabel25.TabIndex = 101;
-            this.guna2HtmlLabel25.Text = "Remarks:";
-            this.guna2HtmlLabel25.Visible = false;
+            this.guna2HtmlLabel25.TabIndex = 105;
+            this.guna2HtmlLabel25.Text = "Account:";
             // 
             // Loan
             // 
@@ -1354,9 +1383,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel27;
         private Guna.UI2.WinForms.Guna2TextBox txtFeeSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel28;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblLoanRemark;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopRemark;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblAccountNum;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopAccount;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblFeeAccount;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel25;
     }
 }
