@@ -67,31 +67,16 @@
             this.txtTransferSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel29 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.addOutstandingCheck = new System.Windows.Forms.TabPage();
-            this.lblTopAccount = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopSearchMsg = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopInterestLoanDisbursed = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnTopSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.txtTopExpiry = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblOutOutstanding = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dateTopDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTopDuration = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTopInterest = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopInterestRate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblOutSearchMsg = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnOutSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.lblOutPhone = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblOutName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTopAmountDisbursed = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopPhone = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblTopName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtOutSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtTopSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel24 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBoxOfficer.SuspendLayout();
             this.tabControlClient.SuspendLayout();
             this.addRepayment.SuspendLayout();
@@ -759,31 +744,16 @@
             // 
             // addOutstandingCheck
             // 
-            this.addOutstandingCheck.Controls.Add(this.lblTopAccount);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel10);
-            this.addOutstandingCheck.Controls.Add(this.lblTopSearchMsg);
-            this.addOutstandingCheck.Controls.Add(this.lblTopInterestLoanDisbursed);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel12);
-            this.addOutstandingCheck.Controls.Add(this.btnTopSearch);
-            this.addOutstandingCheck.Controls.Add(this.txtTopExpiry);
+            this.addOutstandingCheck.Controls.Add(this.lblOutOutstanding);
             this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel13);
-            this.addOutstandingCheck.Controls.Add(this.dateTopDate);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel14);
-            this.addOutstandingCheck.Controls.Add(this.txtTopDuration);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel15);
-            this.addOutstandingCheck.Controls.Add(this.txtTopInterest);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel16);
-            this.addOutstandingCheck.Controls.Add(this.lblTopInterestRate);
+            this.addOutstandingCheck.Controls.Add(this.lblOutSearchMsg);
+            this.addOutstandingCheck.Controls.Add(this.btnOutSearch);
+            this.addOutstandingCheck.Controls.Add(this.lblOutPhone);
+            this.addOutstandingCheck.Controls.Add(this.lblOutName);
             this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel18);
-            this.addOutstandingCheck.Controls.Add(this.txtTopAmountDisbursed);
             this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel19);
-            this.addOutstandingCheck.Controls.Add(this.lblTopPhone);
-            this.addOutstandingCheck.Controls.Add(this.lblTopName);
+            this.addOutstandingCheck.Controls.Add(this.txtOutSearch);
             this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel22);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel23);
-            this.addOutstandingCheck.Controls.Add(this.guna2Button2);
-            this.addOutstandingCheck.Controls.Add(this.txtTopSearch);
-            this.addOutstandingCheck.Controls.Add(this.guna2HtmlLabel24);
             this.addOutstandingCheck.Location = new System.Drawing.Point(4, 26);
             this.addOutstandingCheck.Name = "addOutstandingCheck";
             this.addOutstandingCheck.Size = new System.Drawing.Size(763, 468);
@@ -791,116 +761,17 @@
             this.addOutstandingCheck.Text = "Client Outstanding";
             this.addOutstandingCheck.UseVisualStyleBackColor = true;
             // 
-            // lblTopAccount
+            // lblOutOutstanding
             // 
-            this.lblTopAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopAccount.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopAccount.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopAccount.ForeColor = System.Drawing.Color.Black;
-            this.lblTopAccount.Location = new System.Drawing.Point(582, 225);
-            this.lblTopAccount.Name = "lblTopAccount";
-            this.lblTopAccount.Size = new System.Drawing.Size(8, 22);
-            this.lblTopAccount.TabIndex = 104;
-            this.lblTopAccount.Text = "r";
-            this.lblTopAccount.Visible = false;
-            // 
-            // guna2HtmlLabel10
-            // 
-            this.guna2HtmlLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(582, 196);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(70, 20);
-            this.guna2HtmlLabel10.TabIndex = 103;
-            this.guna2HtmlLabel10.Text = "Account:";
-            this.guna2HtmlLabel10.Visible = false;
-            // 
-            // lblTopSearchMsg
-            // 
-            this.lblTopSearchMsg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopSearchMsg.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopSearchMsg.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopSearchMsg.ForeColor = System.Drawing.Color.Red;
-            this.lblTopSearchMsg.Location = new System.Drawing.Point(267, 52);
-            this.lblTopSearchMsg.Name = "lblTopSearchMsg";
-            this.lblTopSearchMsg.Size = new System.Drawing.Size(3, 2);
-            this.lblTopSearchMsg.TabIndex = 100;
-            this.lblTopSearchMsg.Text = null;
-            // 
-            // lblTopInterestLoanDisbursed
-            // 
-            this.lblTopInterestLoanDisbursed.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopInterestLoanDisbursed.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopInterestLoanDisbursed.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopInterestLoanDisbursed.ForeColor = System.Drawing.Color.Black;
-            this.lblTopInterestLoanDisbursed.Location = new System.Drawing.Point(582, 140);
-            this.lblTopInterestLoanDisbursed.Name = "lblTopInterestLoanDisbursed";
-            this.lblTopInterestLoanDisbursed.Size = new System.Drawing.Size(3, 2);
-            this.lblTopInterestLoanDisbursed.TabIndex = 99;
-            this.lblTopInterestLoanDisbursed.Text = null;
-            this.lblTopInterestLoanDisbursed.Visible = false;
-            // 
-            // guna2HtmlLabel12
-            // 
-            this.guna2HtmlLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel12.Location = new System.Drawing.Point(582, 114);
-            this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(98, 20);
-            this.guna2HtmlLabel12.TabIndex = 98;
-            this.guna2HtmlLabel12.Text = "Int & amount:";
-            this.guna2HtmlLabel12.Visible = false;
-            // 
-            // btnTopSearch
-            // 
-            this.btnTopSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTopSearch.BorderRadius = 12;
-            this.btnTopSearch.CheckedState.Parent = this.btnTopSearch;
-            this.btnTopSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTopSearch.CustomImages.Parent = this.btnTopSearch;
-            this.btnTopSearch.Font = new System.Drawing.Font("Myriad Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTopSearch.ForeColor = System.Drawing.Color.White;
-            this.btnTopSearch.HoverState.Parent = this.btnTopSearch;
-            this.btnTopSearch.Image = global::banqzManagement.Properties.Resources.search;
-            this.btnTopSearch.Location = new System.Drawing.Point(458, 22);
-            this.btnTopSearch.Name = "btnTopSearch";
-            this.btnTopSearch.ShadowDecoration.Parent = this.btnTopSearch;
-            this.btnTopSearch.Size = new System.Drawing.Size(140, 30);
-            this.btnTopSearch.TabIndex = 97;
-            this.btnTopSearch.Text = "Search";
-            // 
-            // txtTopExpiry
-            // 
-            this.txtTopExpiry.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTopExpiry.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopExpiry.BorderRadius = 6;
-            this.txtTopExpiry.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTopExpiry.DefaultText = "";
-            this.txtTopExpiry.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTopExpiry.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTopExpiry.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopExpiry.DisabledState.Parent = this.txtTopExpiry;
-            this.txtTopExpiry.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopExpiry.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopExpiry.FocusedState.Parent = this.txtTopExpiry;
-            this.txtTopExpiry.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTopExpiry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopExpiry.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopExpiry.HoverState.Parent = this.txtTopExpiry;
-            this.txtTopExpiry.Location = new System.Drawing.Point(299, 363);
-            this.txtTopExpiry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTopExpiry.Name = "txtTopExpiry";
-            this.txtTopExpiry.PasswordChar = '\0';
-            this.txtTopExpiry.PlaceholderText = "";
-            this.txtTopExpiry.ReadOnly = true;
-            this.txtTopExpiry.SelectedText = "";
-            this.txtTopExpiry.ShadowDecoration.Parent = this.txtTopExpiry;
-            this.txtTopExpiry.Size = new System.Drawing.Size(184, 30);
-            this.txtTopExpiry.TabIndex = 96;
+            this.lblOutOutstanding.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOutOutstanding.BackColor = System.Drawing.Color.Transparent;
+            this.lblOutOutstanding.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutOutstanding.ForeColor = System.Drawing.Color.Black;
+            this.lblOutOutstanding.Location = new System.Drawing.Point(319, 214);
+            this.lblOutOutstanding.Name = "lblOutOutstanding";
+            this.lblOutOutstanding.Size = new System.Drawing.Size(11, 22);
+            this.lblOutOutstanding.TabIndex = 116;
+            this.lblOutOutstanding.Text = "0";
             // 
             // guna2HtmlLabel13
             // 
@@ -908,137 +779,66 @@
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(191, 373);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(206, 214);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(90, 20);
-            this.guna2HtmlLabel13.TabIndex = 95;
-            this.guna2HtmlLabel13.Text = "Expiry Date:";
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(95, 20);
+            this.guna2HtmlLabel13.TabIndex = 115;
+            this.guna2HtmlLabel13.Text = "Outstanding:";
             // 
-            // dateTopDate
+            // lblOutSearchMsg
             // 
-            this.dateTopDate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTopDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateTopDate.BorderRadius = 6;
-            this.dateTopDate.CheckedState.Parent = this.dateTopDate;
-            this.dateTopDate.CustomFormat = "yyyy-MM-dd";
-            this.dateTopDate.FillColor = System.Drawing.Color.Transparent;
-            this.dateTopDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dateTopDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTopDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.dateTopDate.HoverState.Parent = this.dateTopDate;
-            this.dateTopDate.Location = new System.Drawing.Point(299, 269);
-            this.dateTopDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateTopDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateTopDate.Name = "dateTopDate";
-            this.dateTopDate.ShadowDecoration.Parent = this.dateTopDate;
-            this.dateTopDate.Size = new System.Drawing.Size(184, 35);
-            this.dateTopDate.TabIndex = 94;
-            this.dateTopDate.Value = new System.DateTime(2021, 11, 10, 23, 25, 47, 251);
+            this.lblOutSearchMsg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOutSearchMsg.BackColor = System.Drawing.Color.Transparent;
+            this.lblOutSearchMsg.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutSearchMsg.ForeColor = System.Drawing.Color.Red;
+            this.lblOutSearchMsg.Location = new System.Drawing.Point(287, 82);
+            this.lblOutSearchMsg.Name = "lblOutSearchMsg";
+            this.lblOutSearchMsg.Size = new System.Drawing.Size(3, 2);
+            this.lblOutSearchMsg.TabIndex = 114;
+            this.lblOutSearchMsg.Text = null;
             // 
-            // guna2HtmlLabel14
+            // btnOutSearch
             // 
-            this.guna2HtmlLabel14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(164, 284);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(117, 20);
-            this.guna2HtmlLabel14.TabIndex = 93;
-            this.guna2HtmlLabel14.Text = "Date Disbursed:";
+            this.btnOutSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOutSearch.BorderRadius = 12;
+            this.btnOutSearch.CheckedState.Parent = this.btnOutSearch;
+            this.btnOutSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOutSearch.CustomImages.Parent = this.btnOutSearch;
+            this.btnOutSearch.Font = new System.Drawing.Font("Myriad Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOutSearch.ForeColor = System.Drawing.Color.White;
+            this.btnOutSearch.HoverState.Parent = this.btnOutSearch;
+            this.btnOutSearch.Image = global::banqzManagement.Properties.Resources.search;
+            this.btnOutSearch.Location = new System.Drawing.Point(478, 52);
+            this.btnOutSearch.Name = "btnOutSearch";
+            this.btnOutSearch.ShadowDecoration.Parent = this.btnOutSearch;
+            this.btnOutSearch.Size = new System.Drawing.Size(140, 30);
+            this.btnOutSearch.TabIndex = 113;
+            this.btnOutSearch.Text = "Search";
+            this.btnOutSearch.Click += new System.EventHandler(this.btnOutSearch_Click);
             // 
-            // txtTopDuration
+            // lblOutPhone
             // 
-            this.txtTopDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTopDuration.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopDuration.BorderRadius = 6;
-            this.txtTopDuration.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTopDuration.DefaultText = "";
-            this.txtTopDuration.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTopDuration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTopDuration.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopDuration.DisabledState.Parent = this.txtTopDuration;
-            this.txtTopDuration.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopDuration.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopDuration.FocusedState.Parent = this.txtTopDuration;
-            this.txtTopDuration.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTopDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopDuration.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopDuration.HoverState.Parent = this.txtTopDuration;
-            this.txtTopDuration.Location = new System.Drawing.Point(299, 317);
-            this.txtTopDuration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTopDuration.Name = "txtTopDuration";
-            this.txtTopDuration.PasswordChar = '\0';
-            this.txtTopDuration.PlaceholderText = "";
-            this.txtTopDuration.SelectedText = "";
-            this.txtTopDuration.ShadowDecoration.Parent = this.txtTopDuration;
-            this.txtTopDuration.Size = new System.Drawing.Size(184, 30);
-            this.txtTopDuration.TabIndex = 92;
+            this.lblOutPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOutPhone.BackColor = System.Drawing.Color.Transparent;
+            this.lblOutPhone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutPhone.ForeColor = System.Drawing.Color.Black;
+            this.lblOutPhone.Location = new System.Drawing.Point(319, 172);
+            this.lblOutPhone.Name = "lblOutPhone";
+            this.lblOutPhone.Size = new System.Drawing.Size(7, 22);
+            this.lblOutPhone.TabIndex = 110;
+            this.lblOutPhone.Text = ".";
             // 
-            // guna2HtmlLabel15
+            // lblOutName
             // 
-            this.guna2HtmlLabel15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel15.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(182, 327);
-            this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(99, 20);
-            this.guna2HtmlLabel15.TabIndex = 91;
-            this.guna2HtmlLabel15.Text = "Duration (M):";
-            // 
-            // txtTopInterest
-            // 
-            this.txtTopInterest.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTopInterest.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopInterest.BorderRadius = 6;
-            this.txtTopInterest.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTopInterest.DefaultText = "";
-            this.txtTopInterest.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTopInterest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTopInterest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopInterest.DisabledState.Parent = this.txtTopInterest;
-            this.txtTopInterest.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopInterest.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopInterest.FocusedState.Parent = this.txtTopInterest;
-            this.txtTopInterest.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTopInterest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopInterest.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopInterest.HoverState.Parent = this.txtTopInterest;
-            this.txtTopInterest.Location = new System.Drawing.Point(299, 232);
-            this.txtTopInterest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTopInterest.Name = "txtTopInterest";
-            this.txtTopInterest.PasswordChar = '\0';
-            this.txtTopInterest.PlaceholderText = "";
-            this.txtTopInterest.ReadOnly = true;
-            this.txtTopInterest.SelectedText = "";
-            this.txtTopInterest.ShadowDecoration.Parent = this.txtTopInterest;
-            this.txtTopInterest.Size = new System.Drawing.Size(184, 30);
-            this.txtTopInterest.TabIndex = 90;
-            // 
-            // guna2HtmlLabel16
-            // 
-            this.guna2HtmlLabel16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel16.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(222, 242);
-            this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(59, 20);
-            this.guna2HtmlLabel16.TabIndex = 89;
-            this.guna2HtmlLabel16.Text = "Interest:";
-            // 
-            // lblTopInterestRate
-            // 
-            this.lblTopInterestRate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopInterestRate.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopInterestRate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopInterestRate.ForeColor = System.Drawing.Color.Black;
-            this.lblTopInterestRate.Location = new System.Drawing.Point(299, 150);
-            this.lblTopInterestRate.Name = "lblTopInterestRate";
-            this.lblTopInterestRate.Size = new System.Drawing.Size(8, 22);
-            this.lblTopInterestRate.TabIndex = 88;
-            this.lblTopInterestRate.Text = "r";
+            this.lblOutName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblOutName.BackColor = System.Drawing.Color.Transparent;
+            this.lblOutName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutName.ForeColor = System.Drawing.Color.Black;
+            this.lblOutName.Location = new System.Drawing.Point(319, 135);
+            this.lblOutName.Name = "lblOutName";
+            this.lblOutName.Size = new System.Drawing.Size(7, 22);
+            this.lblOutName.TabIndex = 109;
+            this.lblOutName.Text = ".";
             // 
             // guna2HtmlLabel18
             // 
@@ -1046,39 +846,11 @@
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel18.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(156, 150);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(248, 172);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(125, 20);
-            this.guna2HtmlLabel18.TabIndex = 87;
-            this.guna2HtmlLabel18.Text = "Interest rate (%) :";
-            // 
-            // txtTopAmountDisbursed
-            // 
-            this.txtTopAmountDisbursed.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTopAmountDisbursed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopAmountDisbursed.BorderRadius = 6;
-            this.txtTopAmountDisbursed.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTopAmountDisbursed.DefaultText = "";
-            this.txtTopAmountDisbursed.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTopAmountDisbursed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTopAmountDisbursed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopAmountDisbursed.DisabledState.Parent = this.txtTopAmountDisbursed;
-            this.txtTopAmountDisbursed.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopAmountDisbursed.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopAmountDisbursed.FocusedState.Parent = this.txtTopAmountDisbursed;
-            this.txtTopAmountDisbursed.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTopAmountDisbursed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopAmountDisbursed.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopAmountDisbursed.HoverState.Parent = this.txtTopAmountDisbursed;
-            this.txtTopAmountDisbursed.Location = new System.Drawing.Point(299, 186);
-            this.txtTopAmountDisbursed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTopAmountDisbursed.Name = "txtTopAmountDisbursed";
-            this.txtTopAmountDisbursed.PasswordChar = '\0';
-            this.txtTopAmountDisbursed.PlaceholderText = "";
-            this.txtTopAmountDisbursed.SelectedText = "";
-            this.txtTopAmountDisbursed.ShadowDecoration.Parent = this.txtTopAmountDisbursed;
-            this.txtTopAmountDisbursed.Size = new System.Drawing.Size(184, 30);
-            this.txtTopAmountDisbursed.TabIndex = 86;
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(53, 20);
+            this.guna2HtmlLabel18.TabIndex = 108;
+            this.guna2HtmlLabel18.Text = "Phone:";
             // 
             // guna2HtmlLabel19
             // 
@@ -1086,35 +858,39 @@
             this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel19.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(142, 196);
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(249, 135);
             this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(139, 20);
-            this.guna2HtmlLabel19.TabIndex = 85;
-            this.guna2HtmlLabel19.Text = "Amount Disbursed:";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(52, 20);
+            this.guna2HtmlLabel19.TabIndex = 107;
+            this.guna2HtmlLabel19.Text = "Name:";
             // 
-            // lblTopPhone
+            // txtOutSearch
             // 
-            this.lblTopPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopPhone.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopPhone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopPhone.ForeColor = System.Drawing.Color.Black;
-            this.lblTopPhone.Location = new System.Drawing.Point(299, 114);
-            this.lblTopPhone.Name = "lblTopPhone";
-            this.lblTopPhone.Size = new System.Drawing.Size(7, 22);
-            this.lblTopPhone.TabIndex = 84;
-            this.lblTopPhone.Text = ".";
-            // 
-            // lblTopName
-            // 
-            this.lblTopName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTopName.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopName.ForeColor = System.Drawing.Color.Black;
-            this.lblTopName.Location = new System.Drawing.Point(299, 77);
-            this.lblTopName.Name = "lblTopName";
-            this.lblTopName.Size = new System.Drawing.Size(7, 22);
-            this.lblTopName.TabIndex = 83;
-            this.lblTopName.Text = ".";
+            this.txtOutSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtOutSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtOutSearch.BorderRadius = 6;
+            this.txtOutSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOutSearch.DefaultText = "";
+            this.txtOutSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOutSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOutSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOutSearch.DisabledState.Parent = this.txtOutSearch;
+            this.txtOutSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOutSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtOutSearch.FocusedState.Parent = this.txtOutSearch;
+            this.txtOutSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOutSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtOutSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtOutSearch.HoverState.Parent = this.txtOutSearch;
+            this.txtOutSearch.Location = new System.Drawing.Point(288, 52);
+            this.txtOutSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOutSearch.Name = "txtOutSearch";
+            this.txtOutSearch.PasswordChar = '\0';
+            this.txtOutSearch.PlaceholderText = "Account number";
+            this.txtOutSearch.SelectedText = "";
+            this.txtOutSearch.ShadowDecoration.Parent = this.txtOutSearch;
+            this.txtOutSearch.Size = new System.Drawing.Size(171, 30);
+            this.txtOutSearch.TabIndex = 105;
             // 
             // guna2HtmlLabel22
             // 
@@ -1122,80 +898,11 @@
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel22.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(228, 114);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(144, 60);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(53, 20);
-            this.guna2HtmlLabel22.TabIndex = 82;
-            this.guna2HtmlLabel22.Text = "Phone:";
-            // 
-            // guna2HtmlLabel23
-            // 
-            this.guna2HtmlLabel23.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel23.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel23.Location = new System.Drawing.Point(229, 77);
-            this.guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            this.guna2HtmlLabel23.Size = new System.Drawing.Size(52, 20);
-            this.guna2HtmlLabel23.TabIndex = 81;
-            this.guna2HtmlLabel23.Text = "Name:";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Button2.BorderRadius = 12;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Myriad Pro", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(303, 415);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(180, 39);
-            this.guna2Button2.TabIndex = 80;
-            this.guna2Button2.Text = "Submit";
-            // 
-            // txtTopSearch
-            // 
-            this.txtTopSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTopSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopSearch.BorderRadius = 6;
-            this.txtTopSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTopSearch.DefaultText = "";
-            this.txtTopSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTopSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTopSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopSearch.DisabledState.Parent = this.txtTopSearch;
-            this.txtTopSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTopSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopSearch.FocusedState.Parent = this.txtTopSearch;
-            this.txtTopSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTopSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTopSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtTopSearch.HoverState.Parent = this.txtTopSearch;
-            this.txtTopSearch.Location = new System.Drawing.Point(268, 22);
-            this.txtTopSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTopSearch.Name = "txtTopSearch";
-            this.txtTopSearch.PasswordChar = '\0';
-            this.txtTopSearch.PlaceholderText = "Account number";
-            this.txtTopSearch.SelectedText = "";
-            this.txtTopSearch.ShadowDecoration.Parent = this.txtTopSearch;
-            this.txtTopSearch.Size = new System.Drawing.Size(171, 30);
-            this.txtTopSearch.TabIndex = 79;
-            // 
-            // guna2HtmlLabel24
-            // 
-            this.guna2HtmlLabel24.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel24.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel24.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel24.Location = new System.Drawing.Point(124, 30);
-            this.guna2HtmlLabel24.Name = "guna2HtmlLabel24";
-            this.guna2HtmlLabel24.Size = new System.Drawing.Size(131, 20);
-            this.guna2HtmlLabel24.TabIndex = 78;
-            this.guna2HtmlLabel24.Text = "Account number:";
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(131, 20);
+            this.guna2HtmlLabel22.TabIndex = 104;
+            this.guna2HtmlLabel22.Text = "Account number:";
             // 
             // AddTransaction
             // 
@@ -1238,31 +945,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.TabPage addTransfer;
         private System.Windows.Forms.TabPage addOutstandingCheck;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopAccount;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopSearchMsg;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopInterestLoanDisbursed;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2Button btnTopSearch;
-        private Guna.UI2.WinForms.Guna2TextBox txtTopExpiry;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dateTopDate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
-        private Guna.UI2.WinForms.Guna2TextBox txtTopDuration;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private Guna.UI2.WinForms.Guna2TextBox txtTopInterest;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopInterestRate;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Guna.UI2.WinForms.Guna2TextBox txtTopAmountDisbursed;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopPhone;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTopName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2TextBox txtTopSearch;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel24;
         private Guna.UI2.WinForms.Guna2TextBox txtRepaymentOutstanding;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtRepaymentCurreOutstanding;
@@ -1283,5 +965,15 @@
         private Guna.UI2.WinForms.Guna2Button btnTransferSubmit;
         private Guna.UI2.WinForms.Guna2TextBox txtTransferSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel29;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblOutOutstanding;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblOutSearchMsg;
+        private Guna.UI2.WinForms.Guna2Button btnOutSearch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblOutPhone;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblOutName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
+        private Guna.UI2.WinForms.Guna2TextBox txtOutSearch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
     }
 }

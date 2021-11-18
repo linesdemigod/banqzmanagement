@@ -95,6 +95,8 @@ namespace banqzManagement.View.userpanel
         //insert into repayment table
         private void insertRepayment()
         {
+            try
+            {
             //assign the values to the various textbox
             loan.officer = Login.Login_username;
             loan.account = lblRepaymentAccount.Text;
@@ -102,8 +104,7 @@ namespace banqzManagement.View.userpanel
             loan.remark = "Repayment";
             loan.outstanding = txtRepaymentOutstanding.Text;
 
-            //convert the oustanding to floating number
-            double outstandinng = Convert.ToDouble(txtRepaymentOutstanding.Text);
+           
 
             if (txtRepaymentAmount.Text == "" )
             {
@@ -126,8 +127,10 @@ namespace banqzManagement.View.userpanel
                 return;
             }
 
-            
-            if (outstandinng < 0)
+                //convert the oustanding to floating number
+                double outstandinng = Convert.ToDouble(txtRepaymentOutstanding.Text);
+
+                if (outstandinng < 0)
             {
                 MessageBox.Show("Oustanding cannot be negative");
 
@@ -145,6 +148,13 @@ namespace banqzManagement.View.userpanel
             txtRepaymentCurreOutstanding.Text = "";
             txtRepaymentAmount.Text = "0";
             txtRepaymentOutstanding.Text = "";
+
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
 
@@ -155,6 +165,8 @@ namespace banqzManagement.View.userpanel
         }
         #endregion REPAYMENT
 
+
+        #region TRANSFER
         //get client information
         private void getAccountInfosTransfer()
         {
@@ -232,70 +244,89 @@ namespace banqzManagement.View.userpanel
         //insert the transfer amount to repayment
         private void insertTransfer()
         {
-            loan.officer = Login.Login_username;
-            loan.account = lblTransferAccount.Text;
-            loan.amount = txtTransferAmount.Text;
-            loan.remark = "Transfer";
-            loan.outstanding = txtTransferOutstanding.Text;
-
-
-            //convert the oustanding to floating number
-            double outstandinng = Convert.ToDouble(txtTransferOutstanding.Text);
-
-            if (txtTransferAmount.Text == "0")
+            try
             {
-                MessageBox.Show("Client does not have any money to transfer");
 
-                return;
+                loan.officer = Login.Login_username;
+                loan.account = lblTransferAccount.Text;
+                loan.amount = txtTransferAmount.Text;
+                loan.remark = "Transfer";
+                loan.outstanding = txtTransferOutstanding.Text;
+           
+
+                if (txtTransferAmount.Text == "0")
+                {
+                    MessageBox.Show("Client does not have any money to transfer");
+
+                    return;
+                }
+
+                if (lblTransferAccount.Text == ".")
+                {
+                    MessageBox.Show("Search for Client Acoount Number");
+
+                    return;
+                }
+
+
+                if (txtTransferCurreOutstanding.Text == "0")
+                {
+                    MessageBox.Show("You cannot make transfer");
+
+                    return;
+                }
+
+
+                //convert the oustanding to floating number
+                double outstandinng = Convert.ToDouble(txtTransferOutstanding.Text);
+
+                if (outstandinng < 0)
+                {
+                    MessageBox.Show("Oustanding cannot be negative");
+
+                    return;
+                }
+
+
+
+                //call the insert loan method in the Loans class
+                loan.insertToRepayment();
+                updateTransfers();
+                MessageBox.Show("Transfer successful");
+
+                //clear textbox and label
+                lblTransferAccount.Text = ".";
+                lblTransferName.Text = ".";
+                lblTransferPhone.Text = ".";
+                txtTransferCurreOutstanding.Text = "";
+                txtTransferAmount.Text = "0";
+                txtTransferOutstanding.Text = "";
+
             }
-
-            if (lblTransferAccount.Text == ".")
+            catch (Exception)
             {
-                MessageBox.Show("Search for Client Acoount Number");
 
-                return;
             }
-            
-
-            if (txtTransferCurreOutstanding.Text == "0")
-            {
-                MessageBox.Show("You cannot make transfer");
-
-                return;
-            }
-
-            if (outstandinng < 0)
-            {
-                MessageBox.Show("Oustanding cannot be negative");
-
-                return;
-            }
-
-            
-
-            //call the insert loan method in the Loans class
-            loan.insertToRepayment();
-            updateTransfers();
-            MessageBox.Show("Transfer successful");
-
-            //clear textbox and label
-            lblTransferAccount.Text = ".";
-            lblTransferName.Text = ".";
-            lblTransferPhone.Text = ".";
-            txtTransferCurreOutstanding.Text = "";
-            txtTransferAmount.Text = "0";
-            txtTransferOutstanding.Text = "";
         }
 
         //update client transfer table
         private void updateTransfers()
         {
-            trans.accNum = lblTransferAccount.Text;
-            trans.officer = Login.Login_username;
-            trans.account = lblTransferAccount.Text;
-            trans.purpose = "Collateral";
-            trans.amount = "0";
-            trans.updateLoanFee();
+            try
+            {
+                trans.accNum = lblTransferAccount.Text;
+                trans.officer = Login.Login_username;
+                trans.account = lblTransferAccount.Text;
+                trans.purpose = "Collateral";
+                trans.amount = "0";
+                trans.updateLoanFee();
+            }
+            catch (Exception)
+            {
+
+               
+            }
+            
         }
 
         //call the insertTransfer here
@@ -303,5 +334,57 @@ namespace banqzManagement.View.userpanel
         {
             insertTransfer();
         }
+        #endregion TRANSFER
+
+
+        #region CHECK OUTSTANDING
+        //function to get the info of client and check the outstanding
+        private void getAccountInfosOutstanding()
+        {
+            loan.account = txtOutSearch.Text;
+            bool accExist = loan.accountExist(); // check if account number exist
+
+            if (accExist == false)
+            {
+                //get the various label to period(.) when account number is not found
+                lblOutName.Text = ".";
+                lblOutPhone.Text = ".";
+                lblOutOutstanding.Text = "0";
+                lblOutSearchMsg.Text = "Account Number does not exist";
+
+                return;
+            }
+
+            //call the method in the Loans class and insert the value to the various label
+            lblOutSearchMsg.Text = "";
+            loan.account = txtOutSearch.Text;
+            loan.getAccountInfo();
+            lblOutName.Text = loan.fname + " " + loan.lname;
+            lblOutPhone.Text = loan.phone;
+
+
+            loan.getOutstanding = "0"; //set the outstanding to zero
+
+            loan.checkForOutstanding(); //check the outstanding the account you search
+            lblOutOutstanding.Text = loan.getOutstanding; //assign the outstanding value to the label
+        }
+
+        private void btnOutSearch_Click(object sender, EventArgs e)
+        {
+            if (txtOutSearch.Text == "") //check the search textbox is empty
+            {
+                lblOutName.Text = ".";
+                lblOutPhone.Text = ".";
+                lblOutOutstanding.Text = "0";
+                lblOutSearchMsg.Text = "Enter client account number";
+
+                return;
+            }
+            else
+            {
+                getAccountInfosOutstanding(); //call the get info function here
+            }
+        }
+        #endregion CHECK OUTSTANDING
     }
 }
