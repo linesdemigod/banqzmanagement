@@ -203,8 +203,10 @@ namespace banqzManagement.View.userpanel
             trans.getAmount = "0"; //set the transfer amount
             trans.checkForTransfer(); //check the amount
             txtTransferAmount.Text = trans.getAmount; //assign the amount value to the textbox
+            lblTransferID.Text = trans.id;
         }
 
+        //
         private void btnTransferSearch_Click(object sender, EventArgs e)
         {
             if (txtTransferSearch.Text == "") //check the search textbox is empty
@@ -314,6 +316,7 @@ namespace banqzManagement.View.userpanel
         {
             try
             {
+                trans.id = lblTransferID.Text;
                 trans.accNum = lblTransferAccount.Text;
                 trans.officer = Login.Login_username;
                 trans.account = lblTransferAccount.Text;

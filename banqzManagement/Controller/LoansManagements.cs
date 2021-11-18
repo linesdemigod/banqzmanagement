@@ -12,6 +12,7 @@ namespace banqzManagement.Controller
     {
         public string id { get; set; }
         public string idFee { get; set; }
+        public string idRepay { get; set; }
 
         //Read data
         public DataTable dt = new DataTable();
@@ -19,6 +20,9 @@ namespace banqzManagement.Controller
 
         public DataTable dat = new DataTable();
         private DataSet das = new DataSet();
+
+        public DataTable dtaa = new DataTable();
+        private DataSet dsaa = new DataSet();
 
         //Get the loan from the database
         public void getLoans()
@@ -71,7 +75,7 @@ namespace banqzManagement.Controller
 
             string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = loanfee.client_account_num";
             dat.Clear();
-            string sql = "SELECT fee_id,(" + subsql2 + ") AS Client, client_account_num, fee_purpose, amount, (" + subsql + ") AS Officer FROM loanfee ORDER BY fee_id DESC";
+            string sql = "SELECT fee_id, (" + subsql2 + ") AS Client, client_account_num, fee_purpose, amount, created_at, (" + subsql + ") AS Officer FROM loanfee  ORDER BY fee_id DESC";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(das);
             dat = das.Tables[0];
@@ -108,5 +112,53 @@ namespace banqzManagement.Controller
             }
 
         }
+
+
+        //READ REPAYMENT DATA
+        public void getRepayment()
+        {
+            string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = repayment.officer_id";
+
+            string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = repayment.client_account_num";
+            dat.Clear();
+            string sql = "SELECT repay_id, (" + subsql2 + ") AS Client, client_account_num, amount, outstanding, remark, created_at, (" + subsql + ") AS Officer FROM repayment  ORDER BY repay_id DESC";
+            MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
+            dta.Fill(dsaa);
+            dtaa = dsaa.Tables[0];
+        }
+
+
+        //Delete repayment
+        public void deleteRepayment()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM repayment WHERE repay_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = idRepay;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+        
+
     }
 }

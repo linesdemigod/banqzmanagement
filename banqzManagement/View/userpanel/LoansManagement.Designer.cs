@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxOfficer = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControlClient = new System.Windows.Forms.TabControl();
             this.addLoanTab = new System.Windows.Forms.TabPage();
@@ -55,11 +58,25 @@
             this.txtLoanFeeSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dataGridViewLoanFee = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.addRepaymentTab = new System.Windows.Forms.TabPage();
+            this.txtRepaymentSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.dataGridViewRepayment = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.IDRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NameRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AccountRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OutstandindRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemarkRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OfficerRepay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteRepay = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IDFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClientFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AccountNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OfficerFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBoxOfficer.SuspendLayout();
@@ -68,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoan)).BeginInit();
             this.addLoanFeeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanFee)).BeginInit();
+            this.addRepaymentTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepayment)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxOfficer
@@ -94,6 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlClient.Controls.Add(this.addLoanTab);
             this.tabControlClient.Controls.Add(this.addLoanFeeTab);
+            this.tabControlClient.Controls.Add(this.addRepaymentTab);
             this.tabControlClient.Location = new System.Drawing.Point(13, 50);
             this.tabControlClient.Name = "tabControlClient";
             this.tabControlClient.SelectedIndex = 0;
@@ -117,22 +137,22 @@
             // 
             this.dataGridViewLoan.AllowUserToAddRows = false;
             this.dataGridViewLoan.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewLoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewLoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLoan.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewLoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewLoan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewLoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewLoan.ColumnHeadersHeight = 53;
             this.dataGridViewLoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -146,14 +166,14 @@
             this.ContractExpiry,
             this.Officer,
             this.Delete});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLoan.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLoan.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewLoan.EnableHeadersVisualStyles = false;
             this.dataGridViewLoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewLoan.Location = new System.Drawing.Point(20, 87);
@@ -364,22 +384,22 @@
             // 
             this.dataGridViewLoanFee.AllowUserToAddRows = false;
             this.dataGridViewLoanFee.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoanFee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewLoanFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewLoanFee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLoanFee.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewLoanFee.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewLoanFee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewLoanFee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLoanFee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLoanFee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewLoanFee.ColumnHeadersHeight = 36;
             this.dataGridViewLoanFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDFee,
@@ -387,16 +407,17 @@
             this.AccountNumber,
             this.Purpose,
             this.Amount,
+            this.DateFee,
             this.OfficerFee,
             this.DeleteColumn});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLoanFee.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLoanFee.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewLoanFee.EnableHeadersVisualStyles = false;
             this.dataGridViewLoanFee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewLoanFee.Location = new System.Drawing.Point(26, 94);
@@ -404,7 +425,7 @@
             this.dataGridViewLoanFee.ReadOnly = true;
             this.dataGridViewLoanFee.RowHeadersVisible = false;
             this.dataGridViewLoanFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewLoanFee.Size = new System.Drawing.Size(714, 351);
+            this.dataGridViewLoanFee.Size = new System.Drawing.Size(714, 333);
             this.dataGridViewLoanFee.TabIndex = 0;
             this.dataGridViewLoanFee.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -429,6 +450,196 @@
             this.dataGridViewLoanFee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewLoanFee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dataGridViewLoanFee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLoanFee_CellContentClick);
+            // 
+            // addRepaymentTab
+            // 
+            this.addRepaymentTab.Controls.Add(this.dataGridViewRepayment);
+            this.addRepaymentTab.Controls.Add(this.txtRepaymentSearch);
+            this.addRepaymentTab.Controls.Add(this.guna2HtmlLabel3);
+            this.addRepaymentTab.Location = new System.Drawing.Point(4, 26);
+            this.addRepaymentTab.Name = "addRepaymentTab";
+            this.addRepaymentTab.Padding = new System.Windows.Forms.Padding(3);
+            this.addRepaymentTab.Size = new System.Drawing.Size(763, 468);
+            this.addRepaymentTab.TabIndex = 2;
+            this.addRepaymentTab.Text = "Repayment";
+            this.addRepaymentTab.UseVisualStyleBackColor = true;
+            // 
+            // txtRepaymentSearch
+            // 
+            this.txtRepaymentSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRepaymentSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRepaymentSearch.BorderRadius = 6;
+            this.txtRepaymentSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRepaymentSearch.DefaultText = "";
+            this.txtRepaymentSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRepaymentSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRepaymentSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRepaymentSearch.DisabledState.Parent = this.txtRepaymentSearch;
+            this.txtRepaymentSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRepaymentSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtRepaymentSearch.FocusedState.Parent = this.txtRepaymentSearch;
+            this.txtRepaymentSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepaymentSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRepaymentSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtRepaymentSearch.HoverState.Parent = this.txtRepaymentSearch;
+            this.txtRepaymentSearch.Location = new System.Drawing.Point(378, 22);
+            this.txtRepaymentSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRepaymentSearch.Name = "txtRepaymentSearch";
+            this.txtRepaymentSearch.PasswordChar = '\0';
+            this.txtRepaymentSearch.PlaceholderText = "Account number";
+            this.txtRepaymentSearch.SelectedText = "";
+            this.txtRepaymentSearch.ShadowDecoration.Parent = this.txtRepaymentSearch;
+            this.txtRepaymentSearch.Size = new System.Drawing.Size(171, 30);
+            this.txtRepaymentSearch.TabIndex = 62;
+            this.txtRepaymentSearch.TextChanged += new System.EventHandler(this.txtRepaymentSearch_TextChanged);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(157, 30);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(204, 22);
+            this.guna2HtmlLabel3.TabIndex = 61;
+            this.guna2HtmlLabel3.Text = "Search by Account number";
+            // 
+            // dataGridViewRepayment
+            // 
+            this.dataGridViewRepayment.AllowUserToAddRows = false;
+            this.dataGridViewRepayment.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewRepayment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewRepayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRepayment.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRepayment.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewRepayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepayment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewRepayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRepayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDRepay,
+            this.NameRepay,
+            this.AccountRepay,
+            this.AmountRepay,
+            this.OutstandindRepay,
+            this.RemarkRepay,
+            this.DateRepay,
+            this.OfficerRepay,
+            this.DeleteRepay});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRepayment.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewRepayment.EnableHeadersVisualStyles = false;
+            this.dataGridViewRepayment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewRepayment.Location = new System.Drawing.Point(25, 75);
+            this.dataGridViewRepayment.Name = "dataGridViewRepayment";
+            this.dataGridViewRepayment.ReadOnly = true;
+            this.dataGridViewRepayment.RowHeadersVisible = false;
+            this.dataGridViewRepayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRepayment.Size = new System.Drawing.Size(715, 360);
+            this.dataGridViewRepayment.TabIndex = 63;
+            this.dataGridViewRepayment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dataGridViewRepayment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewRepayment.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewRepayment.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewRepayment.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewRepayment.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewRepayment.ThemeStyle.HeaderStyle.Height = 36;
+            this.dataGridViewRepayment.ThemeStyle.ReadOnly = true;
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.Height = 22;
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewRepayment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewRepayment.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRepayment_CellContentClick);
+            // 
+            // IDRepay
+            // 
+            this.IDRepay.DataPropertyName = "repay_id";
+            this.IDRepay.HeaderText = "ID";
+            this.IDRepay.Name = "IDRepay";
+            this.IDRepay.ReadOnly = true;
+            // 
+            // NameRepay
+            // 
+            this.NameRepay.DataPropertyName = "Client";
+            this.NameRepay.HeaderText = "Name";
+            this.NameRepay.Name = "NameRepay";
+            this.NameRepay.ReadOnly = true;
+            // 
+            // AccountRepay
+            // 
+            this.AccountRepay.DataPropertyName = "client_account_num";
+            this.AccountRepay.HeaderText = "Account Number";
+            this.AccountRepay.Name = "AccountRepay";
+            this.AccountRepay.ReadOnly = true;
+            // 
+            // AmountRepay
+            // 
+            this.AmountRepay.DataPropertyName = "amount";
+            this.AmountRepay.HeaderText = "Amount";
+            this.AmountRepay.Name = "AmountRepay";
+            this.AmountRepay.ReadOnly = true;
+            // 
+            // OutstandindRepay
+            // 
+            this.OutstandindRepay.DataPropertyName = "Outstanding";
+            this.OutstandindRepay.HeaderText = "Outstanding";
+            this.OutstandindRepay.Name = "OutstandindRepay";
+            this.OutstandindRepay.ReadOnly = true;
+            // 
+            // RemarkRepay
+            // 
+            this.RemarkRepay.DataPropertyName = "remark";
+            this.RemarkRepay.HeaderText = "Remark";
+            this.RemarkRepay.Name = "RemarkRepay";
+            this.RemarkRepay.ReadOnly = true;
+            // 
+            // DateRepay
+            // 
+            this.DateRepay.DataPropertyName = "created_at";
+            this.DateRepay.HeaderText = "Date";
+            this.DateRepay.Name = "DateRepay";
+            this.DateRepay.ReadOnly = true;
+            // 
+            // OfficerRepay
+            // 
+            this.OfficerRepay.DataPropertyName = "Officer";
+            this.OfficerRepay.HeaderText = "Officer";
+            this.OfficerRepay.Name = "OfficerRepay";
+            this.OfficerRepay.ReadOnly = true;
+            // 
+            // DeleteRepay
+            // 
+            this.DeleteRepay.HeaderText = "Delete";
+            this.DeleteRepay.Name = "DeleteRepay";
+            this.DeleteRepay.ReadOnly = true;
+            this.DeleteRepay.Text = "Delete";
+            this.DeleteRepay.UseColumnTextForButtonValue = true;
             // 
             // IDFee
             // 
@@ -465,6 +676,13 @@
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 
+            // DateFee
+            // 
+            this.DateFee.DataPropertyName = "created_at";
+            this.DateFee.HeaderText = "Date";
+            this.DateFee.Name = "DateFee";
+            this.DateFee.ReadOnly = true;
+            // 
             // OfficerFee
             // 
             this.OfficerFee.DataPropertyName = "Officer";
@@ -497,6 +715,9 @@
             this.addLoanFeeTab.ResumeLayout(false);
             this.addLoanFeeTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanFee)).EndInit();
+            this.addRepaymentTab.ResumeLayout(false);
+            this.addRepaymentTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepayment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -524,11 +745,25 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ContractExpiry;
         private System.Windows.Forms.DataGridViewTextBoxColumn Officer;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.TabPage addRepaymentTab;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewRepayment;
+        private Guna.UI2.WinForms.Guna2TextBox txtRepaymentSearch;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NameRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AccountRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AmountRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OutstandindRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RemarkRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateRepay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OfficerRepay;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteRepay;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn AccountNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Purpose;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateFee;
         private System.Windows.Forms.DataGridViewTextBoxColumn OfficerFee;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteColumn;
     }

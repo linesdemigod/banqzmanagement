@@ -26,7 +26,7 @@ namespace banqzManagement.Controller
             conn.Open();
             using (MySqlCommand cmd = new MySqlCommand())
             {
-                cmd.CommandText = "SELECT amount FROM loanfee WHERE client_account_num = @account AND fee_purpose = 'Collateral' ORDER BY fee_id DESC LIMIT 1";
+                cmd.CommandText = "SELECT fee_id, amount FROM loanfee WHERE client_account_num = @account AND fee_purpose = 'Collateral' ORDER BY fee_id DESC LIMIT 1";
                 cmd.CommandType = CommandType.Text;
                 cmd.Connection = conn;
 
@@ -36,6 +36,7 @@ namespace banqzManagement.Controller
                 {
 
                     getAmount = rd.GetString("amount");
+                    id = rd.GetString("fee_id");
                 }
             }
             conn.Close();
@@ -51,7 +52,7 @@ namespace banqzManagement.Controller
                 {
                     string subsql = "SELECT officer_id FROM officer WHERE officer_uid = @officer";
 
-                    cmd.CommandText = "UPDATE loanfee SET officer_id = ("+subsql+ "), client_account_num = @account, fee_purpose = @purpose, amount=@amount WHERE client_account_num = @accountNum AND fee_purpose = 'Collateral'";
+                    cmd.CommandText = "UPDATE loanfee SET officer_id = ("+subsql+ "), client_account_num = @account, fee_purpose = @purpose, amount=@amount WHERE client_account_num = @accountNum AND fee_id = @id AND fee_purpose = 'Collateral'";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@officer", MySqlDbType.VarChar).Value = officer;
@@ -59,6 +60,7 @@ namespace banqzManagement.Controller
                     cmd.Parameters.Add("@purpose", MySqlDbType.VarChar).Value = purpose;
                     cmd.Parameters.Add("@amount", MySqlDbType.VarChar).Value = amount;
                     cmd.Parameters.Add("@accountNum", MySqlDbType.VarChar).Value = accNum;
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }

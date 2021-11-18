@@ -77,6 +77,7 @@
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtOutSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblTransferID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBoxOfficer.SuspendLayout();
             this.tabControlClient.SuspendLayout();
             this.addRepayment.SuspendLayout();
@@ -430,6 +431,7 @@
             // 
             // addTransfer
             // 
+            this.addTransfer.Controls.Add(this.lblTransferID);
             this.addTransfer.Controls.Add(this.txtTransferCurreOutstanding);
             this.addTransfer.Controls.Add(this.txtTransferOutstanding);
             this.addTransfer.Controls.Add(this.guna2HtmlLabel5);
@@ -904,6 +906,19 @@
             this.guna2HtmlLabel22.TabIndex = 104;
             this.guna2HtmlLabel22.Text = "Account number:";
             // 
+            // lblTransferID
+            // 
+            this.lblTransferID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTransferID.BackColor = System.Drawing.Color.Transparent;
+            this.lblTransferID.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransferID.ForeColor = System.Drawing.Color.Black;
+            this.lblTransferID.Location = new System.Drawing.Point(611, 172);
+            this.lblTransferID.Name = "lblTransferID";
+            this.lblTransferID.Size = new System.Drawing.Size(16, 22);
+            this.lblTransferID.TabIndex = 104;
+            this.lblTransferID.Text = "id";
+            this.lblTransferID.Visible = false;
+            // 
             // AddTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -975,5 +990,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2TextBox txtOutSearch;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTransferID;
     }
 }
