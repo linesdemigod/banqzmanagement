@@ -258,8 +258,8 @@ namespace banqzManagement.View.userpanel
 
 
                     //clear the textbox 
-                    lblLoanName.Text = "";
-                    lblLoanPhone.Text = "";
+                    lblLoanName.Text = ".";
+                    lblLoanPhone.Text = ".";
                     txtLoanDisbursed.Text = "";
                     txtLoanInterest.Text = "";
                     txtLoanDuration.Text = "";
@@ -507,8 +507,8 @@ namespace banqzManagement.View.userpanel
 
 
                 //clear the textbox 
-                lblTopName.Text = "";
-                lblTopPhone.Text = "";
+                lblTopName.Text = ".";
+                lblTopPhone.Text = ".";
                 txtTopAmountDisbursed.Text = "";
                 txtTopInterest.Text = "";
                 txtTopDuration.Text = "";
@@ -619,8 +619,8 @@ namespace banqzManagement.View.userpanel
             MessageBox.Show(comboFeePurpose.Text + " inserted");
 
 
-            lblFeeName.Text = "";
-            lblFeePhone.Text = "";
+            lblFeeName.Text = ".";
+            lblFeePhone.Text = ".";
             txtFeeAmount.Text = "";
             txtFeeSearch.Text = "";
             comboFeePurpose.SelectedItem = null;
