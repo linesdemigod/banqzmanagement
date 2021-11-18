@@ -211,7 +211,7 @@ namespace banqzManagement.Controller
         }
 
 
-        //check if the username exist
+        //check if the account exist
         public bool accountExist()
         {
             bool check = false;
@@ -221,7 +221,7 @@ namespace banqzManagement.Controller
                 conn.Open();
                 using (var cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "SELECT * FROM client WHERE client_account_num = @account";
+                    cmd.CommandText = "SELECT client.client_account_num FROM client WHERE client.client_account_num = @account";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;

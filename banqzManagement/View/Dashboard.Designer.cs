@@ -29,43 +29,47 @@
         private void InitializeComponent()
         {
             this.PanelTopDashboard = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PanelPermission = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnPermission = new Guna.UI2.WinForms.Guna2Button();
+            this.PanelBackup = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnBackup = new Guna.UI2.WinForms.Guna2Button();
+            this.PanelSettings = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.PanelDasboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.panelOverview = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.PanelLogout = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.PanelReport = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.PanelProfile = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.PanelContract = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnContract = new Guna.UI2.WinForms.Guna2Button();
             this.PanelTransactions = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnRepayment = new Guna.UI2.WinForms.Guna2Button();
             this.PanelFee = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnLoan = new Guna.UI2.WinForms.Guna2Button();
             this.PanelClient = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnClient = new Guna.UI2.WinForms.Guna2Button();
             this.PanelOfficer = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnOfficer = new Guna.UI2.WinForms.Guna2Button();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.PanelSettings = new Guna.UI2.WinForms.Guna2Panel();
-            this.PanelBackup = new Guna.UI2.WinForms.Guna2Panel();
-            this.PanelPermission = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLoansMgmt = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnPermission = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBackup = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReport = new Guna.UI2.WinForms.Guna2Button();
+            this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
+            this.btnContract = new Guna.UI2.WinForms.Guna2Button();
+            this.btnRepayment = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLoan = new Guna.UI2.WinForms.Guna2Button();
+            this.btnClient = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOfficer = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.PanelTopDashboard.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.PanelPermission.SuspendLayout();
+            this.PanelBackup.SuspendLayout();
+            this.PanelSettings.SuspendLayout();
             this.PanelDasboard.SuspendLayout();
             this.panelOverview.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -78,10 +82,6 @@
             this.PanelFee.SuspendLayout();
             this.PanelClient.SuspendLayout();
             this.PanelOfficer.SuspendLayout();
-            this.PanelSettings.SuspendLayout();
-            this.PanelBackup.SuspendLayout();
-            this.PanelPermission.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTopDashboard
@@ -100,6 +100,38 @@
             this.PanelTopDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.PanelTopDashboard.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseMove);
             // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.btnLoansMgmt);
+            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel3.Location = new System.Drawing.Point(357, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(119, 76);
+            this.guna2Panel3.TabIndex = 26;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(40, 51);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(40, 19);
+            this.guna2HtmlLabel4.TabIndex = 23;
+            this.guna2HtmlLabel4.Text = "Loans";
+            // 
+            // PanelPermission
+            // 
+            this.PanelPermission.Controls.Add(this.btnPermission);
+            this.PanelPermission.Controls.Add(this.guna2HtmlLabel3);
+            this.PanelPermission.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelPermission.Location = new System.Drawing.Point(238, 0);
+            this.PanelPermission.Name = "PanelPermission";
+            this.PanelPermission.ShadowDecoration.Parent = this.PanelPermission;
+            this.PanelPermission.Size = new System.Drawing.Size(119, 76);
+            this.PanelPermission.TabIndex = 25;
+            // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
@@ -110,21 +142,16 @@
             this.guna2HtmlLabel3.TabIndex = 23;
             this.guna2HtmlLabel3.Text = "Permission";
             // 
-            // btnPermission
+            // PanelBackup
             // 
-            this.btnPermission.CheckedState.Parent = this.btnPermission;
-            this.btnPermission.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPermission.CustomImages.Parent = this.btnPermission;
-            this.btnPermission.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPermission.ForeColor = System.Drawing.Color.White;
-            this.btnPermission.HoverState.Parent = this.btnPermission;
-            this.btnPermission.Image = global::banqzManagement.Properties.Resources.package;
-            this.btnPermission.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPermission.Location = new System.Drawing.Point(23, 3);
-            this.btnPermission.Name = "btnPermission";
-            this.btnPermission.ShadowDecoration.Parent = this.btnPermission;
-            this.btnPermission.Size = new System.Drawing.Size(79, 44);
-            this.btnPermission.TabIndex = 22;
+            this.PanelBackup.Controls.Add(this.btnBackup);
+            this.PanelBackup.Controls.Add(this.guna2HtmlLabel2);
+            this.PanelBackup.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelBackup.Location = new System.Drawing.Point(119, 0);
+            this.PanelBackup.Name = "PanelBackup";
+            this.PanelBackup.ShadowDecoration.Parent = this.PanelBackup;
+            this.PanelBackup.Size = new System.Drawing.Size(119, 76);
+            this.PanelBackup.TabIndex = 25;
             // 
             // guna2HtmlLabel2
             // 
@@ -136,22 +163,16 @@
             this.guna2HtmlLabel2.TabIndex = 21;
             this.guna2HtmlLabel2.Text = "Backup";
             // 
-            // btnBackup
+            // PanelSettings
             // 
-            this.btnBackup.CheckedState.Parent = this.btnBackup;
-            this.btnBackup.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBackup.CustomImages.Parent = this.btnBackup;
-            this.btnBackup.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnBackup.ForeColor = System.Drawing.Color.White;
-            this.btnBackup.HoverState.Parent = this.btnBackup;
-            this.btnBackup.Image = global::banqzManagement.Properties.Resources.database;
-            this.btnBackup.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnBackup.Location = new System.Drawing.Point(16, 3);
-            this.btnBackup.Name = "btnBackup";
-            this.btnBackup.ShadowDecoration.Parent = this.btnBackup;
-            this.btnBackup.Size = new System.Drawing.Size(79, 44);
-            this.btnBackup.TabIndex = 20;
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.PanelSettings.Controls.Add(this.btnSettings);
+            this.PanelSettings.Controls.Add(this.guna2HtmlLabel1);
+            this.PanelSettings.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelSettings.Location = new System.Drawing.Point(0, 0);
+            this.PanelSettings.Name = "PanelSettings";
+            this.PanelSettings.ShadowDecoration.Parent = this.PanelSettings;
+            this.PanelSettings.Size = new System.Drawing.Size(119, 76);
+            this.PanelSettings.TabIndex = 24;
             // 
             // guna2HtmlLabel1
             // 
@@ -162,22 +183,6 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(52, 19);
             this.guna2HtmlLabel1.TabIndex = 19;
             this.guna2HtmlLabel1.Text = "Settings";
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.CheckedState.Parent = this.btnSettings;
-            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSettings.CustomImages.Parent = this.btnSettings;
-            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.HoverState.Parent = this.btnSettings;
-            this.btnSettings.Image = global::banqzManagement.Properties.Resources.settings;
-            this.btnSettings.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSettings.Location = new System.Drawing.Point(16, 3);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Size = new System.Drawing.Size(79, 44);
-            this.btnSettings.TabIndex = 18;
             // 
             // PanelDasboard
             // 
@@ -216,22 +221,6 @@
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(201, 57);
             this.guna2Panel2.TabIndex = 2;
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = global::banqzManagement.Properties.Resources.airplay;
-            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button2.Location = new System.Drawing.Point(8, 6);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 0;
-            this.guna2Button2.Text = "Overview";
             // 
             // guna2Button1
             // 
@@ -278,6 +267,151 @@
             this.PanelLogout.Size = new System.Drawing.Size(201, 45);
             this.PanelLogout.TabIndex = 9;
             // 
+            // PanelReport
+            // 
+            this.PanelReport.Controls.Add(this.btnReport);
+            this.PanelReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelReport.Location = new System.Drawing.Point(0, 516);
+            this.PanelReport.Name = "PanelReport";
+            this.PanelReport.ShadowDecoration.Parent = this.PanelReport;
+            this.PanelReport.Size = new System.Drawing.Size(201, 45);
+            this.PanelReport.TabIndex = 8;
+            // 
+            // PanelProfile
+            // 
+            this.PanelProfile.Controls.Add(this.btnProfile);
+            this.PanelProfile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelProfile.Location = new System.Drawing.Point(0, 471);
+            this.PanelProfile.Name = "PanelProfile";
+            this.PanelProfile.ShadowDecoration.Parent = this.PanelProfile;
+            this.PanelProfile.Size = new System.Drawing.Size(201, 45);
+            this.PanelProfile.TabIndex = 7;
+            // 
+            // PanelContract
+            // 
+            this.PanelContract.Controls.Add(this.btnContract);
+            this.PanelContract.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelContract.Location = new System.Drawing.Point(0, 426);
+            this.PanelContract.Name = "PanelContract";
+            this.PanelContract.ShadowDecoration.Parent = this.PanelContract;
+            this.PanelContract.Size = new System.Drawing.Size(201, 45);
+            this.PanelContract.TabIndex = 6;
+            // 
+            // PanelTransactions
+            // 
+            this.PanelTransactions.Controls.Add(this.btnRepayment);
+            this.PanelTransactions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTransactions.Location = new System.Drawing.Point(0, 381);
+            this.PanelTransactions.Name = "PanelTransactions";
+            this.PanelTransactions.ShadowDecoration.Parent = this.PanelTransactions;
+            this.PanelTransactions.Size = new System.Drawing.Size(201, 45);
+            this.PanelTransactions.TabIndex = 5;
+            // 
+            // PanelFee
+            // 
+            this.PanelFee.Controls.Add(this.btnLoan);
+            this.PanelFee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelFee.Location = new System.Drawing.Point(0, 336);
+            this.PanelFee.Name = "PanelFee";
+            this.PanelFee.ShadowDecoration.Parent = this.PanelFee;
+            this.PanelFee.Size = new System.Drawing.Size(201, 45);
+            this.PanelFee.TabIndex = 4;
+            // 
+            // PanelClient
+            // 
+            this.PanelClient.Controls.Add(this.btnClient);
+            this.PanelClient.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelClient.Location = new System.Drawing.Point(0, 291);
+            this.PanelClient.Name = "PanelClient";
+            this.PanelClient.ShadowDecoration.Parent = this.PanelClient;
+            this.PanelClient.Size = new System.Drawing.Size(201, 45);
+            this.PanelClient.TabIndex = 3;
+            // 
+            // PanelOfficer
+            // 
+            this.PanelOfficer.Controls.Add(this.btnOfficer);
+            this.PanelOfficer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelOfficer.Location = new System.Drawing.Point(0, 246);
+            this.PanelOfficer.Name = "PanelOfficer";
+            this.PanelOfficer.ShadowDecoration.Parent = this.PanelOfficer;
+            this.PanelOfficer.Size = new System.Drawing.Size(201, 45);
+            this.PanelOfficer.TabIndex = 2;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(201, 76);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.ShadowDecoration.Parent = this.panelMain;
+            this.panelMain.Size = new System.Drawing.Size(839, 624);
+            this.panelMain.TabIndex = 17;
+            // 
+            // btnLoansMgmt
+            // 
+            this.btnLoansMgmt.CheckedState.Parent = this.btnLoansMgmt;
+            this.btnLoansMgmt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoansMgmt.CustomImages.Parent = this.btnLoansMgmt;
+            this.btnLoansMgmt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLoansMgmt.ForeColor = System.Drawing.Color.White;
+            this.btnLoansMgmt.HoverState.Parent = this.btnLoansMgmt;
+            this.btnLoansMgmt.Image = global::banqzManagement.Properties.Resources.figma;
+            this.btnLoansMgmt.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLoansMgmt.Location = new System.Drawing.Point(23, 3);
+            this.btnLoansMgmt.Name = "btnLoansMgmt";
+            this.btnLoansMgmt.ShadowDecoration.Parent = this.btnLoansMgmt;
+            this.btnLoansMgmt.Size = new System.Drawing.Size(79, 44);
+            this.btnLoansMgmt.TabIndex = 22;
+            this.btnLoansMgmt.Click += new System.EventHandler(this.btnLoansMgmt_Click);
+            // 
+            // btnPermission
+            // 
+            this.btnPermission.CheckedState.Parent = this.btnPermission;
+            this.btnPermission.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPermission.CustomImages.Parent = this.btnPermission;
+            this.btnPermission.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPermission.ForeColor = System.Drawing.Color.White;
+            this.btnPermission.HoverState.Parent = this.btnPermission;
+            this.btnPermission.Image = global::banqzManagement.Properties.Resources.package;
+            this.btnPermission.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPermission.Location = new System.Drawing.Point(23, 3);
+            this.btnPermission.Name = "btnPermission";
+            this.btnPermission.ShadowDecoration.Parent = this.btnPermission;
+            this.btnPermission.Size = new System.Drawing.Size(79, 44);
+            this.btnPermission.TabIndex = 22;
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.CheckedState.Parent = this.btnBackup;
+            this.btnBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBackup.CustomImages.Parent = this.btnBackup;
+            this.btnBackup.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBackup.ForeColor = System.Drawing.Color.White;
+            this.btnBackup.HoverState.Parent = this.btnBackup;
+            this.btnBackup.Image = global::banqzManagement.Properties.Resources.database;
+            this.btnBackup.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnBackup.Location = new System.Drawing.Point(16, 3);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.ShadowDecoration.Parent = this.btnBackup;
+            this.btnBackup.Size = new System.Drawing.Size(79, 44);
+            this.btnBackup.TabIndex = 20;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.CheckedState.Parent = this.btnSettings;
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.CustomImages.Parent = this.btnSettings;
+            this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSettings.HoverState.Parent = this.btnSettings;
+            this.btnSettings.Image = global::banqzManagement.Properties.Resources.settings;
+            this.btnSettings.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSettings.Location = new System.Drawing.Point(16, 3);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
+            this.btnSettings.Size = new System.Drawing.Size(79, 44);
+            this.btnSettings.TabIndex = 18;
+            // 
             // btnLogout
             // 
             this.btnLogout.CheckedState.Parent = this.btnLogout;
@@ -298,16 +432,6 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // PanelReport
-            // 
-            this.PanelReport.Controls.Add(this.btnReport);
-            this.PanelReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelReport.Location = new System.Drawing.Point(0, 516);
-            this.PanelReport.Name = "PanelReport";
-            this.PanelReport.ShadowDecoration.Parent = this.PanelReport;
-            this.PanelReport.Size = new System.Drawing.Size(201, 45);
-            this.PanelReport.TabIndex = 8;
-            // 
             // btnReport
             // 
             this.btnReport.CheckedState.Parent = this.btnReport;
@@ -326,16 +450,6 @@
             this.btnReport.Size = new System.Drawing.Size(180, 40);
             this.btnReport.TabIndex = 0;
             this.btnReport.Text = "Report";
-            // 
-            // PanelProfile
-            // 
-            this.PanelProfile.Controls.Add(this.btnProfile);
-            this.PanelProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelProfile.Location = new System.Drawing.Point(0, 471);
-            this.PanelProfile.Name = "PanelProfile";
-            this.PanelProfile.ShadowDecoration.Parent = this.PanelProfile;
-            this.PanelProfile.Size = new System.Drawing.Size(201, 45);
-            this.PanelProfile.TabIndex = 7;
             // 
             // btnProfile
             // 
@@ -357,16 +471,6 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
-            // PanelContract
-            // 
-            this.PanelContract.Controls.Add(this.btnContract);
-            this.PanelContract.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelContract.Location = new System.Drawing.Point(0, 426);
-            this.PanelContract.Name = "PanelContract";
-            this.PanelContract.ShadowDecoration.Parent = this.PanelContract;
-            this.PanelContract.Size = new System.Drawing.Size(201, 45);
-            this.PanelContract.TabIndex = 6;
-            // 
             // btnContract
             // 
             this.btnContract.CheckedState.Parent = this.btnContract;
@@ -386,16 +490,6 @@
             this.btnContract.TabIndex = 0;
             this.btnContract.Text = "Contract";
             // 
-            // PanelTransactions
-            // 
-            this.PanelTransactions.Controls.Add(this.btnRepayment);
-            this.PanelTransactions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelTransactions.Location = new System.Drawing.Point(0, 381);
-            this.PanelTransactions.Name = "PanelTransactions";
-            this.PanelTransactions.ShadowDecoration.Parent = this.PanelTransactions;
-            this.PanelTransactions.Size = new System.Drawing.Size(201, 45);
-            this.PanelTransactions.TabIndex = 5;
-            // 
             // btnRepayment
             // 
             this.btnRepayment.CheckedState.Parent = this.btnRepayment;
@@ -414,16 +508,7 @@
             this.btnRepayment.Size = new System.Drawing.Size(180, 40);
             this.btnRepayment.TabIndex = 0;
             this.btnRepayment.Text = "Transaction";
-            // 
-            // PanelFee
-            // 
-            this.PanelFee.Controls.Add(this.btnLoan);
-            this.PanelFee.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelFee.Location = new System.Drawing.Point(0, 336);
-            this.PanelFee.Name = "PanelFee";
-            this.PanelFee.ShadowDecoration.Parent = this.PanelFee;
-            this.PanelFee.Size = new System.Drawing.Size(201, 45);
-            this.PanelFee.TabIndex = 4;
+            this.btnRepayment.Click += new System.EventHandler(this.btnRepayment_Click);
             // 
             // btnLoan
             // 
@@ -445,16 +530,6 @@
             this.btnLoan.Text = "Loan";
             this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
             // 
-            // PanelClient
-            // 
-            this.PanelClient.Controls.Add(this.btnClient);
-            this.PanelClient.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelClient.Location = new System.Drawing.Point(0, 291);
-            this.PanelClient.Name = "PanelClient";
-            this.PanelClient.ShadowDecoration.Parent = this.PanelClient;
-            this.PanelClient.Size = new System.Drawing.Size(201, 45);
-            this.PanelClient.TabIndex = 3;
-            // 
             // btnClient
             // 
             this.btnClient.CheckedState.Parent = this.btnClient;
@@ -474,16 +549,6 @@
             this.btnClient.TabIndex = 0;
             this.btnClient.Text = "Client";
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
-            // 
-            // PanelOfficer
-            // 
-            this.PanelOfficer.Controls.Add(this.btnOfficer);
-            this.PanelOfficer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelOfficer.Location = new System.Drawing.Point(0, 246);
-            this.PanelOfficer.Name = "PanelOfficer";
-            this.PanelOfficer.ShadowDecoration.Parent = this.PanelOfficer;
-            this.PanelOfficer.Size = new System.Drawing.Size(201, 45);
-            this.PanelOfficer.TabIndex = 2;
             // 
             // btnOfficer
             // 
@@ -505,85 +570,21 @@
             this.btnOfficer.Text = "Officer";
             this.btnOfficer.Click += new System.EventHandler(this.btnOfficer_Click);
             // 
-            // panelMain
+            // guna2Button2
             // 
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(201, 76);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.ShadowDecoration.Parent = this.panelMain;
-            this.panelMain.Size = new System.Drawing.Size(839, 624);
-            this.panelMain.TabIndex = 17;
-            // 
-            // PanelSettings
-            // 
-            this.PanelSettings.Controls.Add(this.btnSettings);
-            this.PanelSettings.Controls.Add(this.guna2HtmlLabel1);
-            this.PanelSettings.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelSettings.Location = new System.Drawing.Point(0, 0);
-            this.PanelSettings.Name = "PanelSettings";
-            this.PanelSettings.ShadowDecoration.Parent = this.PanelSettings;
-            this.PanelSettings.Size = new System.Drawing.Size(119, 76);
-            this.PanelSettings.TabIndex = 24;
-            // 
-            // PanelBackup
-            // 
-            this.PanelBackup.Controls.Add(this.btnBackup);
-            this.PanelBackup.Controls.Add(this.guna2HtmlLabel2);
-            this.PanelBackup.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelBackup.Location = new System.Drawing.Point(119, 0);
-            this.PanelBackup.Name = "PanelBackup";
-            this.PanelBackup.ShadowDecoration.Parent = this.PanelBackup;
-            this.PanelBackup.Size = new System.Drawing.Size(119, 76);
-            this.PanelBackup.TabIndex = 25;
-            // 
-            // PanelPermission
-            // 
-            this.PanelPermission.Controls.Add(this.btnPermission);
-            this.PanelPermission.Controls.Add(this.guna2HtmlLabel3);
-            this.PanelPermission.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelPermission.Location = new System.Drawing.Point(238, 0);
-            this.PanelPermission.Name = "PanelPermission";
-            this.PanelPermission.ShadowDecoration.Parent = this.PanelPermission;
-            this.PanelPermission.Size = new System.Drawing.Size(119, 76);
-            this.PanelPermission.TabIndex = 25;
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.Controls.Add(this.btnLoansMgmt);
-            this.guna2Panel3.Controls.Add(this.guna2HtmlLabel4);
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel3.Location = new System.Drawing.Point(357, 0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(119, 76);
-            this.guna2Panel3.TabIndex = 26;
-            // 
-            // btnLoansMgmt
-            // 
-            this.btnLoansMgmt.CheckedState.Parent = this.btnLoansMgmt;
-            this.btnLoansMgmt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLoansMgmt.CustomImages.Parent = this.btnLoansMgmt;
-            this.btnLoansMgmt.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLoansMgmt.ForeColor = System.Drawing.Color.White;
-            this.btnLoansMgmt.HoverState.Parent = this.btnLoansMgmt;
-            this.btnLoansMgmt.Image = global::banqzManagement.Properties.Resources.figma;
-            this.btnLoansMgmt.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLoansMgmt.Location = new System.Drawing.Point(23, 3);
-            this.btnLoansMgmt.Name = "btnLoansMgmt";
-            this.btnLoansMgmt.ShadowDecoration.Parent = this.btnLoansMgmt;
-            this.btnLoansMgmt.Size = new System.Drawing.Size(79, 44);
-            this.btnLoansMgmt.TabIndex = 22;
-            this.btnLoansMgmt.Click += new System.EventHandler(this.btnLoansMgmt_Click);
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(40, 51);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(40, 19);
-            this.guna2HtmlLabel4.TabIndex = 23;
-            this.guna2HtmlLabel4.Text = "Loans";
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Image = global::banqzManagement.Properties.Resources.airplay;
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.Location = new System.Drawing.Point(8, 6);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button2.TabIndex = 0;
+            this.guna2Button2.Text = "Overview";
             // 
             // Dashboard
             // 
@@ -600,6 +601,14 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseMove);
             this.PanelTopDashboard.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            this.PanelPermission.ResumeLayout(false);
+            this.PanelPermission.PerformLayout();
+            this.PanelBackup.ResumeLayout(false);
+            this.PanelBackup.PerformLayout();
+            this.PanelSettings.ResumeLayout(false);
+            this.PanelSettings.PerformLayout();
             this.PanelDasboard.ResumeLayout(false);
             this.panelOverview.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
@@ -612,14 +621,6 @@
             this.PanelFee.ResumeLayout(false);
             this.PanelClient.ResumeLayout(false);
             this.PanelOfficer.ResumeLayout(false);
-            this.PanelSettings.ResumeLayout(false);
-            this.PanelSettings.PerformLayout();
-            this.PanelBackup.ResumeLayout(false);
-            this.PanelBackup.PerformLayout();
-            this.PanelPermission.ResumeLayout(false);
-            this.PanelPermission.PerformLayout();
-            this.guna2Panel3.ResumeLayout(false);
-            this.guna2Panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

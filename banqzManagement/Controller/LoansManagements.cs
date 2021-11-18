@@ -24,8 +24,9 @@ namespace banqzManagement.Controller
         public void getLoans()
         {
             string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = loaninfo.officer_id";
+            string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = loaninfo.client_account_num";
             dt.Clear();
-            string sql = "SELECT loan_id, client_account_num, amount_disbursed, interest, loan_duration, interest_amount_disbursed, date_disbursed, date_expiry, ("+subsql+") AS Officer FROM loaninfo ORDER BY loan_id DESC";
+            string sql = "SELECT loan_id, (" + subsql2 + ") AS Client, client_account_num, amount_disbursed, interest, loan_duration, interest_amount_disbursed, date_disbursed, date_expiry, (" + subsql+ ") AS Officer FROM loaninfo ORDER BY loan_id DESC";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -67,8 +68,10 @@ namespace banqzManagement.Controller
         public void getLoanFee()
         {
             string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = loanfee.officer_id";
+
+            string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = loanfee.client_account_num";
             dat.Clear();
-            string sql = "SELECT fee_id, client_account_num, fee_purpose, amount, (" + subsql + ") AS Officer FROM loanfee ORDER BY fee_id DESC";
+            string sql = "SELECT fee_id,(" + subsql2 + ") AS Client, client_account_num, fee_purpose, amount, (" + subsql + ") AS Officer FROM loanfee ORDER BY fee_id DESC";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(das);
             dat = das.Tables[0];

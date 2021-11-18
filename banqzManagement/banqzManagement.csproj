@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AddClients.cs" />
+    <Compile Include="Controller\AddTransactions.cs" />
     <Compile Include="Controller\Clients.cs" />
     <Compile Include="Controller\AddOfficers.cs" />
     <Compile Include="Controller\Backups.cs" />
@@ -152,6 +153,12 @@
     </Compile>
     <Compile Include="View\userpanel\AddOfficer.Designer.cs">
       <DependentUpon>AddOfficer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\AddTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\AddTransaction.Designer.cs">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\Backup.cs">
       <SubType>Form</SubType>
@@ -225,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\AddOfficer.resx">
       <DependentUpon>AddOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\AddTransaction.resx">
+      <DependentUpon>AddTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>

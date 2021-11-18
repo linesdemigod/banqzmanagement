@@ -141,5 +141,17 @@ namespace banqzManagement.View
             user.BringToFront();
             user.Show();
         }
+
+        private void btnRepayment_Click(object sender, EventArgs e)
+        {
+            AddTransaction user = new AddTransaction();
+            user.TopLevel = false;
+            user.FormBorderStyle = FormBorderStyle.None;
+            user.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(user);
+            panelMain.Tag = user;
+            user.BringToFront();
+            user.Show();
+        }
     }
 }
