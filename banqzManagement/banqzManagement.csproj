@@ -116,6 +116,7 @@
     <Compile Include="Controller\Clients.cs" />
     <Compile Include="Controller\AddOfficers.cs" />
     <Compile Include="Controller\Backups.cs" />
+    <Compile Include="Controller\Contracts.cs" />
     <Compile Include="Controller\Database.cs" />
     <Compile Include="Controller\Loans.cs" />
     <Compile Include="Controller\LoansManagements.cs" />
@@ -171,6 +172,12 @@
     </Compile>
     <Compile Include="View\userpanel\Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\Contract.Designer.cs">
+      <DependentUpon>Contract.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\Loan.cs">
       <SubType>Form</SubType>
@@ -241,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\Contract.resx">
+      <DependentUpon>Contract.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Loan.resx">
       <DependentUpon>Loan.cs</DependentUpon>

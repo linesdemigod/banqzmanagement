@@ -31,6 +31,7 @@
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.tabControlClient = new System.Windows.Forms.TabControl();
             this.addClientTab = new System.Windows.Forms.TabPage();
+            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtIdNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.ComboIdType = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -63,7 +64,6 @@
             this.picMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox1.SuspendLayout();
             this.tabControlClient.SuspendLayout();
             this.addClientTab.SuspendLayout();
@@ -129,6 +129,34 @@
             this.addClientTab.Size = new System.Drawing.Size(763, 441);
             this.addClientTab.TabIndex = 0;
             this.addClientTab.Text = "Client";
+            // 
+            // txtID
+            // 
+            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.BorderRadius = 6;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.DefaultText = "";
+            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.DisabledState.Parent = this.txtID;
+            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtID.FocusedState.Parent = this.txtID;
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
+            this.txtID.HoverState.Parent = this.txtID;
+            this.txtID.Location = new System.Drawing.Point(40, 46);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Name = "txtID";
+            this.txtID.PasswordChar = '\0';
+            this.txtID.PlaceholderText = "";
+            this.txtID.SelectedText = "";
+            this.txtID.ShadowDecoration.Parent = this.txtID;
+            this.txtID.Size = new System.Drawing.Size(52, 30);
+            this.txtID.TabIndex = 62;
+            this.txtID.Visible = false;
             // 
             // txtIdNumber
             // 
@@ -265,6 +293,7 @@
             this.txtAccountNumber.Name = "txtAccountNumber";
             this.txtAccountNumber.PasswordChar = '\0';
             this.txtAccountNumber.PlaceholderText = "";
+            this.txtAccountNumber.ReadOnly = true;
             this.txtAccountNumber.SelectedText = "";
             this.txtAccountNumber.ShadowDecoration.Parent = this.txtAccountNumber;
             this.txtAccountNumber.Size = new System.Drawing.Size(438, 30);
@@ -702,34 +731,6 @@
             this.picClose.TabIndex = 21;
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtID.BorderRadius = 6;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.Parent = this.txtID;
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
-            this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(40, 46);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "";
-            this.txtID.SelectedText = "";
-            this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(52, 30);
-            this.txtID.TabIndex = 62;
-            this.txtID.Visible = false;
             // 
             // UpdateClient
             // 

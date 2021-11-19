@@ -153,5 +153,17 @@ namespace banqzManagement.View
             user.BringToFront();
             user.Show();
         }
+
+        private void btnContract_Click(object sender, EventArgs e)
+        {
+            Contract user = new Contract();
+            user.TopLevel = false;
+            user.FormBorderStyle = FormBorderStyle.None;
+            user.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(user);
+            panelMain.Tag = user;
+            user.BringToFront();
+            user.Show();
+        }
     }
 }
