@@ -239,6 +239,7 @@
             this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
             this.btnSettings.Size = new System.Drawing.Size(79, 44);
             this.btnSettings.TabIndex = 18;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // guna2HtmlLabel1
             // 

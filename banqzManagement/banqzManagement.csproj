@@ -123,6 +123,7 @@
     <Compile Include="Controller\Logins.cs" />
     <Compile Include="Controller\Officers.cs" />
     <Compile Include="Controller\Profiles.cs" />
+    <Compile Include="Controller\Settings.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +204,12 @@
     <Compile Include="View\userpanel\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\userpanel\Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\userpanel\UpdateClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\UpdateClient.resx">
       <DependentUpon>UpdateClient.cs</DependentUpon>

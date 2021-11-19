@@ -165,5 +165,17 @@ namespace banqzManagement.View
             user.BringToFront();
             user.Show();
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Setting user = new Setting();
+            user.TopLevel = false;
+            user.FormBorderStyle = FormBorderStyle.None;
+            user.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(user);
+            panelMain.Tag = user;
+            user.BringToFront();
+            user.Show();
+        }
     }
 }
