@@ -90,6 +90,11 @@ namespace banqzManagement.View.userpanel
                 }
             }
         }
+
+        private void btnRefreshLoans_Click(object sender, EventArgs e)
+        {
+            getAllLoans(); //loan all loans disbursed
+        }
         #endregion END OF LOAN
 
         #region LOAN FEE BEGINS
@@ -151,6 +156,11 @@ namespace banqzManagement.View.userpanel
                 }
             }
         }
+
+        private void btnRefreshFee_Click(object sender, EventArgs e)
+        {
+            getAllLoanFee(); //load the loanfee
+        }
         #endregion LOAN FEE ENDS
 
         #region REPAYMENT START
@@ -211,6 +221,15 @@ namespace banqzManagement.View.userpanel
                 }
             }
         }
+
+        private void btnRefreshRepayment_Click(object sender, EventArgs e)
+        {
+            getAllRepayment(); // load the repayment
+
+        }
+
         #endregion REPAYMENT END
+
+
     }
 }

@@ -274,12 +274,13 @@
             this.txtPassword.Location = new System.Drawing.Point(181, 422);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(438, 30);
             this.txtPassword.TabIndex = 14;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // guna2HtmlLabel7
             // 

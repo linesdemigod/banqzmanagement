@@ -299,6 +299,8 @@ namespace banqzManagement.View.userpanel
                 e.Handled = true;
             }
         }
+
+
         #endregion
 
 

@@ -37,6 +37,7 @@ namespace banqzManagement.View.userpanel
             txtCompanyInterestRate.Text = setting.interest;
         }
 
+        //update company info
         private void updateCompanyInfo()
         {
             setting.company = txtCompanyName.Text;
@@ -51,16 +52,18 @@ namespace banqzManagement.View.userpanel
                 return;
             }
 
-            setting.update_company();
+            setting.update_company(); //call the update_company method settings
 
             MessageBox.Show("Update Successful");
         }
 
+        //call the function updateCompany in this class
         private void txtSubmit_Click(object sender, EventArgs e)
         {
             updateCompanyInfo();
         }
 
+        //allow only numbers and decimal in a textbox
         private void getNumberDecimal (object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
