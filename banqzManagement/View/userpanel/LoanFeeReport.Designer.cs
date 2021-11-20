@@ -1,6 +1,6 @@
 ﻿namespace banqzManagement.View.userpanel
 {
-    partial class LoanReport
+    partial class LoanFeeReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.comboYear = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.dataGridViewLoan = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewLoanFee = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Purpose = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Interest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrincipalInterest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblDuration = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblPrincipalInterest = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblInterest = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblAmountDisbursed = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblApplication = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioMonthly = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -65,7 +57,7 @@
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.guna2GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanFee)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.PanelTopOfficer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -77,26 +69,20 @@
             // 
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2GroupBox1.Controls.Add(this.comboYear);
-            this.guna2GroupBox1.Controls.Add(this.dataGridViewLoan);
-            this.guna2GroupBox1.Controls.Add(this.lblDuration);
-            this.guna2GroupBox1.Controls.Add(this.lblPrincipalInterest);
-            this.guna2GroupBox1.Controls.Add(this.lblInterest);
-            this.guna2GroupBox1.Controls.Add(this.lblAmountDisbursed);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel6);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2GroupBox1.Controls.Add(this.dataGridViewLoanFee);
+            this.guna2GroupBox1.Controls.Add(this.lblApplication);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.groupBox1);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(13, 68);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(13, 77);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Depth = 10;
             this.guna2GroupBox1.ShadowDecoration.Enabled = true;
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(994, 534);
-            this.guna2GroupBox1.TabIndex = 26;
+            this.guna2GroupBox1.TabIndex = 30;
             // 
             // guna2HtmlLabel7
             // 
@@ -104,7 +90,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(741, 159);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(568, 171);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(89, 18);
             this.guna2HtmlLabel7.TabIndex = 12;
@@ -136,79 +122,77 @@
             "2029",
             "2030"});
             this.comboYear.ItemsAppearance.Parent = this.comboYear;
-            this.comboYear.Location = new System.Drawing.Point(741, 179);
+            this.comboYear.Location = new System.Drawing.Point(674, 171);
             this.comboYear.Name = "comboYear";
             this.comboYear.ShadowDecoration.Parent = this.comboYear;
             this.comboYear.Size = new System.Drawing.Size(140, 36);
             this.comboYear.TabIndex = 11;
             this.comboYear.SelectedIndexChanged += new System.EventHandler(this.comboYear_SelectedIndexChanged);
             // 
-            // dataGridViewLoan
+            // dataGridViewLoanFee
             // 
-            this.dataGridViewLoan.AllowUserToAddRows = false;
-            this.dataGridViewLoan.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewLoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewLoan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewLoan.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewLoan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewLoan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewLoan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewLoan.ColumnHeadersHeight = 19;
-            this.dataGridViewLoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewLoanFee.AllowUserToAddRows = false;
+            this.dataGridViewLoanFee.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewLoanFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewLoanFee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLoanFee.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewLoanFee.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewLoanFee.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewLoanFee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewLoanFee.ColumnHeadersHeight = 19;
+            this.dataGridViewLoanFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Account,
-            this.Amount,
-            this.Interest,
-            this.Duration,
-            this.PrincipalInterest});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewLoan.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewLoan.EnableHeadersVisualStyles = false;
-            this.dataGridViewLoan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewLoan.Location = new System.Drawing.Point(24, 236);
-            this.dataGridViewLoan.Name = "dataGridViewLoan";
-            this.dataGridViewLoan.ReadOnly = true;
-            this.dataGridViewLoan.RowHeadersVisible = false;
-            this.dataGridViewLoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewLoan.Size = new System.Drawing.Size(943, 280);
-            this.dataGridViewLoan.TabIndex = 10;
-            this.dataGridViewLoan.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.dataGridViewLoan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dataGridViewLoan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewLoan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dataGridViewLoan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dataGridViewLoan.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dataGridViewLoan.ThemeStyle.HeaderStyle.Height = 19;
-            this.dataGridViewLoan.ThemeStyle.ReadOnly = true;
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.Height = 22;
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewLoan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Purpose,
+            this.Amount});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewLoanFee.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewLoanFee.EnableHeadersVisualStyles = false;
+            this.dataGridViewLoanFee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewLoanFee.Location = new System.Drawing.Point(24, 224);
+            this.dataGridViewLoanFee.Name = "dataGridViewLoanFee";
+            this.dataGridViewLoanFee.ReadOnly = true;
+            this.dataGridViewLoanFee.RowHeadersVisible = false;
+            this.dataGridViewLoanFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewLoanFee.Size = new System.Drawing.Size(943, 281);
+            this.dataGridViewLoanFee.TabIndex = 10;
+            this.dataGridViewLoanFee.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewLoanFee.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewLoanFee.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewLoanFee.ThemeStyle.HeaderStyle.Height = 19;
+            this.dataGridViewLoanFee.ThemeStyle.ReadOnly = true;
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.Height = 22;
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewLoanFee.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // Account
             // 
@@ -217,117 +201,31 @@
             this.Account.Name = "Account";
             this.Account.ReadOnly = true;
             // 
+            // Purpose
+            // 
+            this.Purpose.DataPropertyName = "Purpose";
+            this.Purpose.HeaderText = "Purpose";
+            this.Purpose.Name = "Purpose";
+            this.Purpose.ReadOnly = true;
+            // 
             // Amount
             // 
             this.Amount.DataPropertyName = "Amount";
-            this.Amount.HeaderText = "Amount Disbursed";
+            this.Amount.HeaderText = "Amount";
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = true;
             // 
-            // Interest
+            // lblApplication
             // 
-            this.Interest.DataPropertyName = "Interest";
-            this.Interest.HeaderText = "Interest";
-            this.Interest.Name = "Interest";
-            this.Interest.ReadOnly = true;
-            // 
-            // Duration
-            // 
-            this.Duration.DataPropertyName = "Duration";
-            this.Duration.HeaderText = "Duration";
-            this.Duration.Name = "Duration";
-            this.Duration.ReadOnly = true;
-            // 
-            // PrincipalInterest
-            // 
-            this.PrincipalInterest.DataPropertyName = "Principal & Interest";
-            this.PrincipalInterest.HeaderText = "Principal & Interest";
-            this.PrincipalInterest.Name = "PrincipalInterest";
-            this.PrincipalInterest.ReadOnly = true;
-            // 
-            // lblDuration
-            // 
-            this.lblDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblDuration.BackColor = System.Drawing.Color.Transparent;
-            this.lblDuration.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDuration.Location = new System.Drawing.Point(524, 193);
-            this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(13, 22);
-            this.lblDuration.TabIndex = 9;
-            this.lblDuration.Text = "a";
-            // 
-            // lblPrincipalInterest
-            // 
-            this.lblPrincipalInterest.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPrincipalInterest.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrincipalInterest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrincipalInterest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblPrincipalInterest.Location = new System.Drawing.Point(524, 155);
-            this.lblPrincipalInterest.Name = "lblPrincipalInterest";
-            this.lblPrincipalInterest.Size = new System.Drawing.Size(13, 22);
-            this.lblPrincipalInterest.TabIndex = 8;
-            this.lblPrincipalInterest.Text = "a";
-            // 
-            // lblInterest
-            // 
-            this.lblInterest.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblInterest.BackColor = System.Drawing.Color.Transparent;
-            this.lblInterest.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInterest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblInterest.Location = new System.Drawing.Point(190, 193);
-            this.lblInterest.Name = "lblInterest";
-            this.lblInterest.Size = new System.Drawing.Size(13, 22);
-            this.lblInterest.TabIndex = 7;
-            this.lblInterest.Text = "a";
-            // 
-            // lblAmountDisbursed
-            // 
-            this.lblAmountDisbursed.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAmountDisbursed.BackColor = System.Drawing.Color.Transparent;
-            this.lblAmountDisbursed.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountDisbursed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAmountDisbursed.Location = new System.Drawing.Point(190, 155);
-            this.lblAmountDisbursed.Name = "lblAmountDisbursed";
-            this.lblAmountDisbursed.Size = new System.Drawing.Size(13, 22);
-            this.lblAmountDisbursed.TabIndex = 6;
-            this.lblAmountDisbursed.Text = "a";
-            // 
-            // guna2HtmlLabel6
-            // 
-            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(401, 197);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(116, 18);
-            this.guna2HtmlLabel6.TabIndex = 5;
-            this.guna2HtmlLabel6.Text = "Duration (Month): ";
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(388, 159);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(129, 18);
-            this.guna2HtmlLabel5.TabIndex = 4;
-            this.guna2HtmlLabel5.Text = "Principal & Interest: ";
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(130, 197);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(54, 18);
-            this.guna2HtmlLabel4.TabIndex = 3;
-            this.guna2HtmlLabel4.Text = "Interest: ";
+            this.lblApplication.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblApplication.BackColor = System.Drawing.Color.Transparent;
+            this.lblApplication.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplication.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblApplication.Location = new System.Drawing.Point(321, 167);
+            this.lblApplication.Name = "lblApplication";
+            this.lblApplication.Size = new System.Drawing.Size(13, 22);
+            this.lblApplication.TabIndex = 6;
+            this.lblApplication.Text = "a";
             // 
             // guna2HtmlLabel3
             // 
@@ -335,11 +233,11 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(59, 159);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(234, 171);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(125, 18);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(84, 18);
             this.guna2HtmlLabel3.TabIndex = 2;
-            this.guna2HtmlLabel3.Text = "Amount Disbursed: ";
+            this.guna2HtmlLabel3.Text = "Application: ";
             // 
             // groupBox1
             // 
@@ -549,7 +447,7 @@
             this.PanelTopOfficer.Name = "PanelTopOfficer";
             this.PanelTopOfficer.ShadowDecoration.Parent = this.PanelTopOfficer;
             this.PanelTopOfficer.Size = new System.Drawing.Size(1019, 55);
-            this.PanelTopOfficer.TabIndex = 25;
+            this.PanelTopOfficer.TabIndex = 29;
             this.PanelTopOfficer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Report_MouseDown);
             this.PanelTopOfficer.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Report_MouseMove);
             // 
@@ -591,7 +489,7 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // LoanReport
+            // LoanFeeReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -599,15 +497,13 @@
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.PanelTopOfficer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoanReport";
+            this.Name = "LoanFeeReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoanReport";
-            this.Load += new System.EventHandler(this.LoanReport_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Report_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Report_MouseMove);
+            this.Text = "LoanFeeReport";
+            this.Load += new System.EventHandler(this.LoanFeeReport_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanFee)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.PanelTopOfficer.ResumeLayout(false);
@@ -621,11 +517,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2Panel PanelTopOfficer;
-        private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
-        private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
-        private Guna.UI2.WinForms.Guna2PictureBox picClose;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2ComboBox comboYear;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewLoanFee;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblApplication;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private Guna.UI2.WinForms.Guna2RadioButton radioMonthly;
+        private Guna.UI2.WinForms.Guna2RadioButton radioWeekly;
         private Guna.UI2.WinForms.Guna2RadioButton radioDaily;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2Button btnExcel;
@@ -634,24 +533,13 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dateFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2RadioButton radioMonthly;
-        private Guna.UI2.WinForms.Guna2RadioButton radioWeekly;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDuration;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblPrincipalInterest;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblInterest;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblAmountDisbursed;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewLoan;
+        private Guna.UI2.WinForms.Guna2Panel PanelTopOfficer;
+        private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
+        private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
+        private Guna.UI2.WinForms.Guna2PictureBox picClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn Account;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Purpose;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Interest;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrincipalInterest;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2ComboBox comboYear;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

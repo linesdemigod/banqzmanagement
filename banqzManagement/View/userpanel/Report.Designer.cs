@@ -76,6 +76,7 @@
             this.btnRepaymentReport.Size = new System.Drawing.Size(187, 123);
             this.btnRepaymentReport.TabIndex = 1;
             this.btnRepaymentReport.Text = "Repayment";
+            this.btnRepaymentReport.Click += new System.EventHandler(this.btnRepaymentReport_Click);
             // 
             // btnLoanReport
             // 
@@ -113,6 +114,7 @@
             this.btnLoanFeeReport.Size = new System.Drawing.Size(187, 123);
             this.btnLoanFeeReport.TabIndex = 2;
             this.btnLoanFeeReport.Text = "Loan Fee";
+            this.btnLoanFeeReport.Click += new System.EventHandler(this.btnLoanFeeReport_Click);
             // 
             // btnTotalRport
             // 
@@ -147,6 +149,7 @@
             this.btnGrpahReport.Size = new System.Drawing.Size(187, 123);
             this.btnGrpahReport.TabIndex = 4;
             this.btnGrpahReport.Text = "Graph";
+            this.btnGrpahReport.Click += new System.EventHandler(this.btnGrpahReport_Click);
             // 
             // Report
             // 

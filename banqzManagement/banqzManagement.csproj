@@ -92,6 +92,7 @@
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -122,12 +123,14 @@
     <Compile Include="Controller\Backups.cs" />
     <Compile Include="Controller\Contracts.cs" />
     <Compile Include="Controller\Database.cs" />
+    <Compile Include="Controller\LoanFeeReports.cs" />
     <Compile Include="Controller\LoanReports.cs" />
     <Compile Include="Controller\Loans.cs" />
     <Compile Include="Controller\LoansManagements.cs" />
     <Compile Include="Controller\Logins.cs" />
     <Compile Include="Controller\Officers.cs" />
     <Compile Include="Controller\Profiles.cs" />
+    <Compile Include="Controller\RepaymentReports.cs" />
     <Compile Include="Controller\Settings.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -185,11 +188,23 @@
     <Compile Include="View\userpanel\Contract.Designer.cs">
       <DependentUpon>Contract.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\userpanel\Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\userpanel\Loan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\userpanel\Loan.Designer.cs">
       <DependentUpon>Loan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\LoanFeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\LoanFeeReport.Designer.cs">
+      <DependentUpon>LoanFeeReport.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\LoanReport.cs">
       <SubType>Form</SubType>
@@ -214,6 +229,12 @@
     </Compile>
     <Compile Include="View\userpanel\Profile.Designer.cs">
       <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\userpanel\RepaymentReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\RepaymentReport.Designer.cs">
+      <DependentUpon>RepaymentReport.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userpanel\Report.cs">
       <SubType>Form</SubType>
@@ -276,8 +297,14 @@
     <EmbeddedResource Include="View\userpanel\Contract.resx">
       <DependentUpon>Contract.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\Graph.resx">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Loan.resx">
       <DependentUpon>Loan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\LoanFeeReport.resx">
+      <DependentUpon>LoanFeeReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\LoanReport.resx">
       <DependentUpon>LoanReport.cs</DependentUpon>
@@ -290,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Profile.resx">
       <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\RepaymentReport.resx">
+      <DependentUpon>RepaymentReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>

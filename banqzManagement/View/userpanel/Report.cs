@@ -22,5 +22,23 @@ namespace banqzManagement.View.userpanel
             LoanReport loan = new LoanReport();
             loan.ShowDialog();
         }
+
+        private void btnRepaymentReport_Click(object sender, EventArgs e)
+        {
+            RepaymentReport loan = new RepaymentReport();
+            loan.ShowDialog();
+        }
+
+        private void btnLoanFeeReport_Click(object sender, EventArgs e)
+        {
+            LoanFeeReport loan = new LoanFeeReport();
+            loan.ShowDialog();
+        }
+
+        private void btnGrpahReport_Click(object sender, EventArgs e)
+        {
+            Graph loan = new Graph();
+            loan.ShowDialog();
+        }
     }
 }
