@@ -398,6 +398,7 @@
             this.btnReport.Size = new System.Drawing.Size(180, 40);
             this.btnReport.TabIndex = 0;
             this.btnReport.Text = "Report";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // PanelProfile
             // 

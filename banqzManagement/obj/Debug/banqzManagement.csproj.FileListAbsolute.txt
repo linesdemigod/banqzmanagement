@@ -55,3 +55,5 @@ C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManag
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.AddTransaction.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Contract.resources
 C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Setting.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.Report.resources
+C:\Users\Banks\source\repos\BanqzManagement\banqzManagement\obj\Debug\banqzManagement.View.userpanel.LoanReport.resources
