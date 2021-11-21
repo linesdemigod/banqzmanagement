@@ -104,12 +104,12 @@ namespace banqzManagement.View.userpanel
             {
                 repayment += Convert.ToDouble(dataGridViewRepayment.Rows[i].Cells[1].Value);
                 outstanding += Convert.ToDouble(dataGridViewRepayment.Rows[i].Cells[2].Value);
-                result = outstanding - repayment;
+              
 
             }
 
             //this format the numbers to make it easier to read
-            lblOutstanding.Text = String.Format("GHS {0:n}", result);
+            lblOutstanding.Text = String.Format("GHS {0:n}", outstanding);
             lblRepayment.Text = String.Format("GHS {0:n}", repayment);
         }
 
