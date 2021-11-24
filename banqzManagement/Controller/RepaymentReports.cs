@@ -23,7 +23,7 @@ namespace banqzManagement.Controller
         //query to get the loans from the db
         public void getRepaymentReport()
         {
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment GROUP BY client_account_num";
+            string sql = "SELECT a.client_account_num AS 'Account Number', t.amount AS Repayment, a.outstanding As Outstanding, a.remark AS Remark, t.date FROM repayment a JOIN(SELECT client_account_num, MAX(created_at) AS date, SUM(amount) AS amount FROM repayment GROUP BY client_account_num) AS t ON a.client_account_num = t.client_account_num AND a.created_at = t.date";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -34,7 +34,7 @@ namespace banqzManagement.Controller
         {
             //string subsql = "SELECT CONCAT(users_fname, ' ', users_lname) FROM users WHERE users_id = orders.users_id";
 
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment WHERE created_at BETWEEN cast('" + fromDate + "' AS DATE) AND CAST('" + toDate + "' AS DATE) GROUP BY client_account_num";
+            string sql = "SELECT dd.client_account_num AS 'Account Number', dd.amount AS Repayment, dd.outstanding AS Outstanding, dd.remark AS Remark, dd.created_at AS date FROM (SELECT client_account_num, sum(amount) as Amount, max(created_at) as MaxTime FROM repayment GROUP BY client_account_num) r INNER JOIN repayment dd ON dd.client_account_num = r.client_account_num AND dd.created_at = r.MaxTime INNER JOIN (select client_account_num, sum(amount) as Amount from repayment group by client_account_num) as a ON r.Amount = a.Amount AND r.client_account_num = a.client_account_num WHERE created_at BETWEEN cast('" + fromDate + "' AS DATE) AND CAST('" + toDate + "' AS DATE)";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -42,7 +42,7 @@ namespace banqzManagement.Controller
 
         public void dailyReport()
         {
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment WHERE date(created_at) = curdate() GROUP BY client_account_num";
+            string sql = "SELECT dd.client_account_num AS 'Account Number', dd.amount AS Repayment, dd.outstanding AS Outstanding, dd.remark AS Remark, dd.created_at AS date FROM (SELECT client_account_num, sum(amount) as Amount, max(created_at) as MaxTime FROM repayment GROUP BY client_account_num) r INNER JOIN repayment dd ON dd.client_account_num = r.client_account_num AND dd.created_at = r.MaxTime INNER JOIN (select client_account_num, sum(amount) as Amount from repayment group by client_account_num) as a ON r.Amount = a.Amount AND r.client_account_num = a.client_account_num WHERE date(created_at) = curdate()";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -50,7 +50,7 @@ namespace banqzManagement.Controller
 
         public void weeklyReport()
         {
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment WHERE WEEK(created_at) = WEEK(NOW()) GROUP BY client_account_num";
+            string sql = "SELECT dd.client_account_num AS 'Account Number', dd.amount AS Repayment, dd.outstanding AS Outstanding, dd.remark AS Remark, dd.created_at AS date FROM (SELECT client_account_num, sum(amount) as Amount, max(created_at) as MaxTime FROM repayment GROUP BY client_account_num) r INNER JOIN repayment dd ON dd.client_account_num = r.client_account_num AND dd.created_at = r.MaxTime INNER JOIN (select client_account_num, sum(amount) as Amount from repayment group by client_account_num) as a ON r.Amount = a.Amount AND r.client_account_num = a.client_account_num WHERE WEEK(created_at) = WEEK(NOW())";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -59,7 +59,7 @@ namespace banqzManagement.Controller
         public void monthlyReport()
         {
 
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment WHERE MONTH(created_at) = MONTH(NOW()) GROUP BY client_account_num";
+            string sql = "SELECT dd.client_account_num AS 'Account Number', dd.amount AS Repayment, dd.outstanding AS Outstanding, dd.remark AS Remark, dd.created_at AS date FROM (SELECT client_account_num, sum(amount) as Amount, max(created_at) as MaxTime FROM repayment GROUP BY client_account_num) r INNER JOIN repayment dd ON dd.client_account_num = r.client_account_num AND dd.created_at = r.MaxTime INNER JOIN (select client_account_num, sum(amount) as Amount from repayment group by client_account_num) as a ON r.Amount = a.Amount AND r.client_account_num = a.client_account_num WHERE MONTH(created_at) = MONTH(NOW())";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];
@@ -67,7 +67,7 @@ namespace banqzManagement.Controller
 
         public void getReportByYear()
         {
-            string sql = "SELECT DISTINCT client_account_num AS 'Account Number', SUM(amount) AS Repayment, MIN(outstanding) As Outstanding, Remark AS Remark FROM repayment WHERE Year(created_at) = '" + getYear + "' GROUP BY client_account_num";
+            string sql = "SELECT dd.client_account_num AS 'Account Number', dd.amount AS Repayment, dd.outstanding AS Outstanding, dd.remark AS Remark, dd.created_at AS date FROM (SELECT client_account_num, sum(amount) as Amount, max(created_at) as MaxTime FROM repayment GROUP BY client_account_num) r INNER JOIN repayment dd ON dd.client_account_num = r.client_account_num AND dd.created_at = r.MaxTime INNER JOIN (select client_account_num, sum(amount) as Amount from repayment group by client_account_num) as a ON r.Amount = a.Amount AND r.client_account_num = a.client_account_num WHERE Year(created_at) = '" + getYear + "'";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(ds);
             dt = ds.Tables[0];

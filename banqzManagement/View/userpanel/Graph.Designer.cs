@@ -32,27 +32,28 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.comboYear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.chartLoans = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.PanelTopOfficer = new Guna.UI2.WinForms.Guna2Panel();
             this.picMinimize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picMaximize = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picClose = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.comboYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLoans)).BeginInit();
             this.PanelTopOfficer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GroupBox1
             // 
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2GroupBox1.Controls.Add(this.comboYear);
-            this.guna2GroupBox1.Controls.Add(this.chart1);
+            this.guna2GroupBox1.Controls.Add(this.chartLoans);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(228)))), ((int)(((byte)(247)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -63,6 +64,77 @@
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
             this.guna2GroupBox1.Size = new System.Drawing.Size(994, 534);
             this.guna2GroupBox1.TabIndex = 32;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(81, 73);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(89, 18);
+            this.guna2HtmlLabel7.TabIndex = 14;
+            this.guna2HtmlLabel7.Text = "Filter by year";
+            // 
+            // comboYear
+            // 
+            this.comboYear.BackColor = System.Drawing.Color.Transparent;
+            this.comboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboYear.DropDownHeight = 80;
+            this.comboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboYear.FocusedColor = System.Drawing.Color.Empty;
+            this.comboYear.FocusedState.Parent = this.comboYear;
+            this.comboYear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboYear.FormattingEnabled = true;
+            this.comboYear.HoverState.Parent = this.comboYear;
+            this.comboYear.IntegralHeight = false;
+            this.comboYear.ItemHeight = 30;
+            this.comboYear.Items.AddRange(new object[] {
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026",
+            "2027",
+            "2028",
+            "2029",
+            "2030"});
+            this.comboYear.ItemsAppearance.Parent = this.comboYear;
+            this.comboYear.Location = new System.Drawing.Point(187, 56);
+            this.comboYear.Name = "comboYear";
+            this.comboYear.ShadowDecoration.Parent = this.comboYear;
+            this.comboYear.Size = new System.Drawing.Size(140, 36);
+            this.comboYear.TabIndex = 13;
+            this.comboYear.SelectedIndexChanged += new System.EventHandler(this.comboYear_SelectedIndexChanged);
+            // 
+            // chartLoans
+            // 
+            this.chartLoans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chartLoans.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartLoans.Legends.Add(legend1);
+            this.chartLoans.Location = new System.Drawing.Point(29, 115);
+            this.chartLoans.Name = "chartLoans";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Amount Disbursed";
+            series1.YValueMembers = "Amount Disbursed";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Repayment";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Outstanding";
+            this.chartLoans.Series.Add(series1);
+            this.chartLoans.Series.Add(series2);
+            this.chartLoans.Series.Add(series3);
+            this.chartLoans.Size = new System.Drawing.Size(938, 409);
+            this.chartLoans.TabIndex = 0;
+            this.chartLoans.Text = "chart1";
             // 
             // PanelTopOfficer
             // 
@@ -116,71 +188,6 @@
             this.picClose.TabStop = false;
             this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
-            // chart1
-            // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(29, 115);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Amount Disbursed";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Amount";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(938, 409);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            // 
-            // guna2HtmlLabel7
-            // 
-            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(81, 73);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(89, 18);
-            this.guna2HtmlLabel7.TabIndex = 14;
-            this.guna2HtmlLabel7.Text = "Filter by year";
-            // 
-            // comboYear
-            // 
-            this.comboYear.BackColor = System.Drawing.Color.Transparent;
-            this.comboYear.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboYear.DropDownHeight = 80;
-            this.comboYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboYear.FocusedColor = System.Drawing.Color.Empty;
-            this.comboYear.FocusedState.Parent = this.comboYear;
-            this.comboYear.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboYear.FormattingEnabled = true;
-            this.comboYear.HoverState.Parent = this.comboYear;
-            this.comboYear.IntegralHeight = false;
-            this.comboYear.ItemHeight = 30;
-            this.comboYear.Items.AddRange(new object[] {
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030"});
-            this.comboYear.ItemsAppearance.Parent = this.comboYear;
-            this.comboYear.Location = new System.Drawing.Point(187, 56);
-            this.comboYear.Name = "comboYear";
-            this.comboYear.ShadowDecoration.Parent = this.comboYear;
-            this.comboYear.Size = new System.Drawing.Size(140, 36);
-            this.comboYear.TabIndex = 13;
-            // 
             // Graph
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,11 +201,11 @@
             this.Text = "Graph";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLoans)).EndInit();
             this.PanelTopOfficer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,7 +217,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox picMinimize;
         private Guna.UI2.WinForms.Guna2PictureBox picMaximize;
         private Guna.UI2.WinForms.Guna2PictureBox picClose;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLoans;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox comboYear;
     }
