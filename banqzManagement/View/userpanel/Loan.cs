@@ -14,6 +14,7 @@ namespace banqzManagement.View.userpanel
     public partial class Loan : Form
     {
         Loans loan = new Loans();
+        AddTransactions trans = new AddTransactions();
 
         public Loan()
         {
@@ -462,7 +463,7 @@ namespace banqzManagement.View.userpanel
         }
 
 
-        //insert into as new loan
+        //insert into loaninfo as new loan
         private void createTopUpLoan()
         {
             try
@@ -504,7 +505,7 @@ namespace banqzManagement.View.userpanel
 
 
                 loan.insertNewLoan();
-                insertRepaymentTop(amount); //call the isertrepayment function and pass amount left as argument
+                updateRepaymentTop(amount); //call the insertrepayment function and pass amount left as argument
                 MessageBox.Show("Loan is Top-up");
 
 
@@ -530,17 +531,17 @@ namespace banqzManagement.View.userpanel
         }
 
         //insert the new loan to repayment
-        private void insertRepaymentTop(double amountLeft)
+        private void updateRepaymentTop(double amountLeft)
         {
-            loan.officer = Login.Login_username;
-            loan.account = txtTopSearch.Text;
-            loan.amount = "0";
-            loan.remark = "Repayment";
+            trans.officer = Login.Login_username;
+            trans.account = txtTopSearch.Text;
+            trans.amount = "0";
+            trans.remark = "Repayment";
             double interestAmountDisbursed = Convert.ToDouble(lblTopInterestLoanDisbursed.Text);
 
             double result = interestAmountDisbursed + amountLeft;
-            loan.outstanding = result.ToString();
-            loan.insertToRepayment();
+            trans.outstanding = result.ToString();
+            trans.updateToRepayment();
 
         }
 

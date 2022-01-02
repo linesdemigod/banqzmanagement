@@ -18,6 +18,8 @@ namespace banqzManagement.Controller
         public string purpose { get; set; }
         public string amount { get; set; }
         public string accNum { get; set; }
+        public string outstanding { get; set; }
+        public string remark { get; set; }
 
 
         public void checkForTransfer()
@@ -67,6 +69,39 @@ namespace banqzManagement.Controller
             
            
 
+        }
+
+        public void updateToRepayment()
+        {
+            try
+            {
+                conn.Open();
+                using (var cmd = new MySqlCommand())
+                {
+                    string sql = "SELECT officer_id FROM officer WHERE officer_uid = @officer";
+                    cmd.CommandText = "UPDATE repayment SET officer_id = ("+sql+"), client_account_num = @account, amount = @amount, outstanding = @outstanding, remark = @remark WHERE client_account_num = @account";
+
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@officer", MySqlDbType.VarChar).Value = officer;
+                    cmd.Parameters.Add("@account", MySqlDbType.VarChar).Value = account;
+                    cmd.Parameters.Add("@amount", MySqlDbType.VarChar).Value = amount;
+                    cmd.Parameters.Add("@outstanding", MySqlDbType.VarChar).Value = outstanding;
+                    cmd.Parameters.Add("@remark", MySqlDbType.VarChar).Value = remark;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
 

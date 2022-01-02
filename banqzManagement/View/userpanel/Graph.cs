@@ -68,7 +68,7 @@ namespace banqzManagement.View.userpanel
                 db.conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand())
                 {
-                    cmd.CommandText = "SELECT Sum(loaninfo.interest_amount_disbursed) AS Principal, SUM(repayment.amount) AS Repayment,  MONTH(loaninfo.created_at) as created FROM loaninfo INNER JOIN repayment WHERE YEAR(loaninfo.created_at) = '" + comboYear.Text + "' group by month(loaninfo.created_at)";
+                    cmd.CommandText = "SELECT Sum(loaninfo.interest_amount_disbursed) AS Principal, SUM(repayment.amount) AS Repayment,  MONTH(loaninfo.created_at) as created FROM loaninfo INNER JOIN repayment WHERE YEAR(repayment.created_at) = '" + comboYear.Text + "' group by month(loaninfo.created_at)";
                     cmd.CommandType = CommandType.Text;
                     cmd.Connection = db.conn;
                     db.rd = cmd.ExecuteReader();
@@ -117,8 +117,8 @@ namespace banqzManagement.View.userpanel
                                 break;
                         }
 
-                        //chartLoans.Series["Amount Disbursed"].Points.AddXY(month, values);
-                        //chartLoans.Series["Amount Disbursed"].Points.AddXY(month, repayment);
+                        chartLoans.Series["Amount Disbursed"].Points.AddXY(month, values);
+                        chartLoans.Series["Amount Disbursed"].Points.AddXY(month, repayment);
                         //chartLoans.Series["Repayment"].YValueMembers = ""
                     }
                 }

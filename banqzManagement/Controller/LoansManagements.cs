@@ -24,6 +24,9 @@ namespace banqzManagement.Controller
         public DataTable dtaa = new DataTable();
         private DataSet dsaa = new DataSet();
 
+        public DataTable dtas = new DataTable();
+        private DataSet dsas = new DataSet();
+
         //Get the loan from the database
         public void getLoans()
         {
@@ -120,7 +123,7 @@ namespace banqzManagement.Controller
             string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = repayment.officer_id";
 
             string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = repayment.client_account_num";
-            dat.Clear();
+            dtaa.Clear();
             string sql = "SELECT repay_id, (" + subsql2 + ") AS Client, client_account_num, amount, outstanding, remark, created_at, (" + subsql + ") AS Officer FROM repayment  ORDER BY repay_id DESC";
             MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
             dta.Fill(dsaa);
@@ -158,7 +161,51 @@ namespace banqzManagement.Controller
             }
 
         }
-        
+
+        //READ REPAYMENT DATA
+        public void getRepaymentHistory()
+        {
+            string subsql = "SELECT CONCAT(officer_fname, ' ', officer_lname) FROM officer WHERE officer_id = repaymenthistory.officer_id";
+
+            string subsql2 = "SELECT CONCAT(client_fname, ' ', client_lname) FROM client WHERE client_account_num = repaymenthistory.client_account_num";
+            dtas.Clear();
+            string sql = "SELECT repayhistory_id, (" + subsql2 + ") AS Client, client_account_num, amount, outstanding, remark, created_at, (" + subsql + ") AS Officer FROM repaymenthistory  ORDER BY repayhistory_id DESC";
+            MySqlDataAdapter dta = new MySqlDataAdapter(sql, conn);
+            dta.Fill(dsas);
+            dtas = dsas.Tables[0];
+        }
+
+        //Delete repayment
+        public void deleteRepaymentHistory()
+        {
+            try
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand())
+                {
+                    cmd.CommandText = "DELETE FROM repaymenthistory WHERE repayhistory_id=@id";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = conn;
+
+                    cmd.Parameters.Add("@id", MySqlDbType.VarChar).Value = idRepay;
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
 
     }
 }

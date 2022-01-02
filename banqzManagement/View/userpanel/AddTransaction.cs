@@ -98,11 +98,11 @@ namespace banqzManagement.View.userpanel
             try
             {
             //assign the values to the various textbox
-            loan.officer = Login.Login_username;
-            loan.account = lblRepaymentAccount.Text;
-            loan.amount = txtRepaymentAmount.Text;
-            loan.remark = "Repayment";
-            loan.outstanding = txtRepaymentOutstanding.Text;
+            trans.officer = Login.Login_username;
+            trans.account = lblRepaymentAccount.Text;
+            trans.amount = txtRepaymentAmount.Text;
+            trans.remark = "Repayment";
+            trans.outstanding = txtRepaymentOutstanding.Text;
 
            
 
@@ -138,7 +138,7 @@ namespace banqzManagement.View.userpanel
             }
 
             //call the insert loan method in the Loans class
-            loan.insertToRepayment();
+            trans.updateToRepayment();
             MessageBox.Show("Repayment successful");
 
             //clear textbox and label
@@ -249,11 +249,11 @@ namespace banqzManagement.View.userpanel
             try
             {
 
-                loan.officer = Login.Login_username;
-                loan.account = lblTransferAccount.Text;
-                loan.amount = txtTransferAmount.Text;
-                loan.remark = "Transfer";
-                loan.outstanding = txtTransferOutstanding.Text;
+                trans.officer = Login.Login_username;
+                trans.account = lblTransferAccount.Text;
+                trans.amount = txtTransferAmount.Text;
+                trans.remark = "Transfer";
+                trans.outstanding = txtTransferOutstanding.Text;
            
 
                 if (txtTransferAmount.Text == "0")
@@ -292,7 +292,7 @@ namespace banqzManagement.View.userpanel
 
 
                 //call the insert loan method in the Loans class
-                loan.insertToRepayment();
+                trans.updateToRepayment();
                 updateTransfers();
                 MessageBox.Show("Transfer successful");
 

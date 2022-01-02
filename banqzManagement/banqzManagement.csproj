@@ -132,6 +132,7 @@
     <Compile Include="Controller\Profiles.cs" />
     <Compile Include="Controller\RepaymentReports.cs" />
     <Compile Include="Controller\Settings.cs" />
+    <Compile Include="Controller\UpdateRepayments.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +261,12 @@
     <Compile Include="View\userpanel\UpdateOfficer.Designer.cs">
       <DependentUpon>UpdateOfficer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\userpanel\UpdateRepayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\userpanel\UpdateRepayment.Designer.cs">
+      <DependentUpon>UpdateRepayment.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\userpanel\UpdateOfficer.resx">
       <DependentUpon>UpdateOfficer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\userpanel\UpdateRepayment.resx">
+      <DependentUpon>UpdateRepayment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
